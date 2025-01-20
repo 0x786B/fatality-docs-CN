@@ -1,13 +1,13 @@
 ## ref_holder_t
 
-This type acts as a proxy for reference variables that are used internally. Since Lua is a **value-only** language, it does not support references. Instead, an instance of this type is used to preserve interoperability with C++.
+此类型作为内部使用的引用变量的代理。由于 Lua 是一种**仅值**语言，它不支持引用。相反，使用此类型的实例来保持与 C++ 的互操作性。
 
-> Note that `<type>` indicates the specific type this instance holds. For example, if you see `ref_holder_t<float>`, it means the `val` field holds a float value and will **only** accept float values when it’s updated.
+> 注意 `<type>` 表示此实例持有的特定类型。例如，如果您看到 `ref_holder_t<float>`，则意味着 `val` 字段持有一个浮点值，并且仅接受浮点值进行更新。
 
 ## val
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点 (.) 访问的常规字段。]rw]
 
-Type: `<type>`
+类型：`<type>`
 
-Value holder. Use as the source value, or override it to change internally.
+值持有者。用作源值，或覆盖它以在内部进行更改。

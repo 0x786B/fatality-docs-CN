@@ -1,15 +1,15 @@
 ## csweapon_mode
 
-This enum represents the firing mode for a weapon.
+此枚举表示武器的射击模式。
 
 ## primary_mode
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Primary mode (usually left mouse button).
+主要模式（通常是鼠标左键）。
 
 ## secondary_mode
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Secondary mode (usually right mouse button).
+次要模式（通常是鼠标右键）。

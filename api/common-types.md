@@ -1,5 +1,5 @@
-## Common Types
+## 通用类型
 
-In this section, you’ll find the most common types that aren’t tied to any specific service or module.
+本节包含了最常用的类型，这些类型并不与任何特定服务或模块绑定。
 
-> Use the left menu (or hamburger menu on mobile) to navigate between enums.
+> 使用左侧菜单（如果您在移动设备上，则使用汉堡菜单）在枚举之间导航。

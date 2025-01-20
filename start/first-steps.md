@@ -1,26 +1,26 @@
-## First Steps
+## 第一步
 
-Now that you’ve covered the essentials, it’s time to start scripting.
+现在您已经了解了基本知识，是时候开始编写脚本了。
 
-## Fire up a text editor
-Feel free to use any text editor you prefer: [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/downloads/), or even a simple Notepad.
+## 启动文本编辑器
+随意使用您喜欢的文本编辑器：[Visual Studio Code](https://code.visualstudio.com/)、[Notepad++](https://notepad-plus-plus.org/downloads/)，甚至是简单的记事本。
 
-Local scripts are located here: `<CS2_Directory>/game/csgo/fatality/scripts`. You may notice there's also a `lib` directory, but we’ll get to that later.
+本地脚本位于此处：`<CS2_目录>/game/csgo/fatality/scripts`。您可能会注意到还有一个 `lib` 目录，但我们稍后再讨论。
 
-Create a new file ending with `.lua`, and begin your work on the script.
+创建一个以 `.lua` 结尾的新文件，并开始您的脚本工作。
 
-> `.ljbc` format cannot be loaded from local sources.
+> `.ljbc` 格式不能从本地源加载。
 
-## Writing your first script
+## 编写您的第一个脚本
 
-A typical “Hello world!” example can be a bit trivial, so let’s try something slightly more advanced instead.
+一个典型的"Hello world!"示例可能有点平淡，所以让我们尝试一些稍微高级一点的东西。
 
 ```lua
 local function on_present_queue()
     local d = draw.surface;
     d.font = draw.fonts['gui_main'];
     d:add_text(draw.vec2(50, 50),
-        'Hello drawing! My first script speaking.',
+        'hello world',
          draw.color.white()
     );
 end
@@ -28,64 +28,31 @@ end
 events.present_queue:add(on_present_queue);
 ```
 
-Now, let's break down this example script:
+现在，让我们分解这个示例脚本：
 
-### Defining a callback function
+### 定义回调函数
 
-Most of your scripting will run within [several callbacks](/api/events "There are a number of events that Fatality provides to use in the API - from various hooks, to in-game events. Each event entry is an object of event_t. This table documents events to be used by your scripts.") we provide. Each event has its own **signature**, so pay attention to the parameters your callback function should accept. `present_queue` doesn’t provide any parameters, so our function doesn’t need any either.
+在这个示例中，我们定义了一个名为 `on_present_queue` 的函数。这是一个**回调函数**，它将在每个渲染帧被调用。
 
-```lua
-local function on_present_queue()
-end
-```
+### 获取绘图表面
 
-> Defining something local is optional, although recommended for clearer scope management.
+`draw.surface` 是一个全局绘图表面，允许您在屏幕上绘制各种图形和文本。
 
-### Accessing drawing layer
+### 设置字体
 
-With the callback function defined, let’s actually render something on the screen!
+`draw.fonts['gui_main']` 是一个预定义的字体，用于在用户界面中绘制文本。您可以稍后探索其他可用的字体。
 
-To do this, you first need to access the [drawing layer](/api/draw#surface "Type: layer"). We provide a single drawing layer that’s safe to use **within the game thread**. Due to how the game functions internally, it’s strongly discouraged to call game functions in other threads. Luckily **all of our events run in the game thread**.
+### 添加文本
 
-This setup allows you not only to draw but also to query information on player health or other entities.
+`d:add_text()` 方法用于在屏幕上绘制文本。它接受以下参数：
+- 文本位置（使用 `draw.vec2` 创建的 2D 向量）
+- 要显示的文本字符串
+- 文本颜色（使用 `draw.color.white()` 创建的白色）
 
-To access the layer, simply reference the `surface` field in the `draw` table:
+### 注册事件
 
-```lua
-local d = draw.surface;
-```
+`events.present_queue:add(on_present_queue)` 将我们的回调函数注册到渲染队列事件中。这意味着每次渲染帧时都会调用 `on_present_queue` 函数。
 
-> You don't have to store it in a variable, but it would be nicer if you don't have to type out `draw.surface` every time, right?
+## 下一步
 
-### Setting a font
-
-After retrieving the layer, you must set a font object before drawing any text on the screen. This is purely for performance reasons, so you don’t have to pass a heavy font object every time you draw text.
-
-All fonts are stored in [`draw.fonts`](## "Type: accessor<font_base>"). To access a font, either use dot syntax, or treat it like a dictionary:
-
-```lua
-d.font = draw.fonts['gui_main'];
-```
-
-### Drawing text
-
-With the font set, it’s time to draw some text.
-
-Invoke the [`add_text`](## "Adds text.") method on the layer. Notice that it’s called using the colon syntax: `obj:fn()`, because it’s a **method**.
-
-> You can also invoke methods with a dot syntax, as long as you provide the object in the first argument. Both calls: `obj:fn()` and `obj.fn(obj)` are identical.
-
-```lua
-d:add_text(draw.vec2(50, 50),
-    'Hello drawing! My first script speaking brev.',
-    draw.color.white()
-);
-```
-
-### Registering a callback
-
-Now that you’ve created your first callback, you need to register it so Fatality knows to invoke it. This is done by calling the [`add`](## "Adds a callback to the event.") method on [`events.present_queue`](## "Invoked each time the game queues a frame for rendering. This is the only permitted location for drawing on screen.").
-
-```lua
-events.present_queue:add(on_present_queue);
-```
+现在您已经编写了第一个脚本，请查看[添加用户界面](/start/adding-ui)部分，了解如何为您的脚本添加交互性控件。

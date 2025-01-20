@@ -1,39 +1,39 @@
 ## csweapon_category
 
-This enum represents the category classification for weapons in the game.
+此枚举表示游戏中武器的分类。
 
 ## other
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents weapons or items that don't fit into any specific category.
+表示不属于任何特定类别的武器或物品。
 
 ## melee
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents melee weapons, such as knives or other close-combat tools.
+表示近战武器，如刀具或其他近战工具。
 
 ## secondary
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents secondary weapons, such as pistols.
+表示副武器，如手枪。
 
 ## smg
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents submachine guns (SMGs).
+表示冲锋枪(SMGs)。
 
 ## rifle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents rifles, including assault rifles and sniper rifles.
+表示步枪，包括突击步枪和狙击步枪。
 
 ## heavy
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents heavy weapons, such as machine guns and shotguns.
+表示重型武器，如机枪和霰弹枪。

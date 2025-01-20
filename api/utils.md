@@ -1,28 +1,28 @@
 ## utils
 
-Usage: `utils.{function}`
+用法：`utils.{function}`
 
-This table exposes various utility functions.
+此表公开了各种实用函数。
 
 ## base64_encode
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
 
-Encode a string to Base64 format.
+将字符串编码为 Base64 格式。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | Source string. |
+| `str` | `string` | 源字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Base64-encoded string. |
+| `string` | Base64 编码的字符串。 |
 
-**Example**
+**示例**
 
 ```lua
 local enc = utils.base64_encode('Hello!'); -- SGVsbG8h
@@ -30,23 +30,23 @@ local enc = utils.base64_encode('Hello!'); -- SGVsbG8h
 
 ## base64_decode
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
 
-Decode Base64-encoded string.
+解码 Base64 编码的字符串。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | Base64-encoded string. |
+| `str` | `string` | Base64 编码的字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Source string. |
+| `string` | 源字符串。 |
 
-**Example**
+**示例**
 
 ```lua
 local dec = utils.base64_decode('SGVsbG8h'); -- Hello!
@@ -54,21 +54,21 @@ local dec = utils.base64_decode('SGVsbG8h'); -- Hello!
 
 ## get_unix_time
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
 
-Returns current time as UNIX timestamp.
+返回当前时间的 UNIX 时间戳。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Timestamp. |
+| `int` | 时间戳。 |
 
-**Example**
+**示例**
 
 ```lua
 local ts = utils.get_unix_time();
@@ -76,23 +76,23 @@ local ts = utils.get_unix_time();
 
 ## murmur2
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
 
-Returns MURMUR2-hashed string.
+返回 MURMUR2 哈希的字符串。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | Source string. |
+| `str` | `string` | 源字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Hash. |
+| `int` | 哈希值。 |
 
-**Example**
+**示例**
 
 ```lua
 local hash = utils.murmur2('Hello');
@@ -100,23 +100,23 @@ local hash = utils.murmur2('Hello');
 
 ## fnv1a
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
 
-Returns FNV1A-hashed string.
+返回 FNV1A 哈希的字符串。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | Source string. |
+| `str` | `string` | 源字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Hash. |
+| `int` | 哈希值。 |
 
-**Example**
+**示例**
 
 ```lua
 local hash = utils.fnv1a('Hello');
@@ -124,25 +124,25 @@ local hash = utils.fnv1a('Hello');
 
 ## find_export
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
-[![Insecure Only][This function exists only when "Allow insecure" is enabled.]i]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
+[![仅不安全模式][此函数仅在启用"允许不安全"时存在。]i]
 
-Returns an address to an export in an image.
+返回映像中导出的地址。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mod` | `string` | Image to look in. |
-| `exp` | `string` | Export symbol. |
+| `mod` | `string` | 要查找的映像。 |
+| `exp` | `string` | 导出符号。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Address, or `0` on failure. |
+| `int` | 地址，失败时返回 `0`。 |
 
-**Example**
+**示例**
 
 ```lua
 local message_box = utils.find_export('user32.dll', 'MessageBoxA');
@@ -150,25 +150,25 @@ local message_box = utils.find_export('user32.dll', 'MessageBoxA');
 
 ## find_pattern
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
-[![Insecure Only][This function exists only when "Allow insecure" is enabled.]i]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
+[![仅不安全模式][此函数仅在启用"允许不安全"时存在。]i]
 
-Searches for a code pattern in an image.
+在映像中搜索代码模式。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mod` | `string` | Image to search in. |
-| `pattern` | `string` | Code pattern. |
+| `mod` | `string` | 要搜索的映像。 |
+| `pattern` | `string` | 代码模式。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Address, or `0` on failure. |
+| `int` | 地址，失败时返回 `0`。 |
 
-**Example**
+**示例**
 
 ```lua
 local something = utils.find_pattern('engine2.dll', 'DE AD ? ? ? ? BE EF');
@@ -176,22 +176,22 @@ local something = utils.find_pattern('engine2.dll', 'DE AD ? ? ? ? BE EF');
 
 ## clipboard_get
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
-[![Insecure Only][This function exists only when "Allow insecure" is enabled.]i]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
+[![仅不安全模式][此函数仅在启用"允许不安全"时存在。]i]
 
-Returns current clipboard content.
+返回当前剪贴板内容。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Clipboard content. |
+| `string` | 剪贴板内容。 |
 
-**Example**
+**示例**
 
 ```lua
 local clip = utils.clipboard_get();
@@ -199,22 +199,22 @@ local clip = utils.clipboard_get();
 
 ## clipboard_set
 
-[![Function][This is a regular function that must be called using a dot (.).]rw]
-[![Insecure Only][This function exists only when "Allow insecure" is enabled.]i]
+[![函数][这是一个必须使用点(.)调用的常规函数。]rw]
+[![仅不安全模式][此函数仅在启用"允许不安全"时存在。]i]
 
-Sets new clipboard content.
+设置新的剪贴板内容。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | New content. |
+| `str` | `string` | 新内容。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 utils.clipboard_set('Hello!');

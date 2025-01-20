@@ -1,171 +1,171 @@
 ## control_type
 
-This enum determines the current control's type.
+此枚举确定当前控件的类型。
 
 ## default
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Default control. You are very unlikely to ever stumble upon this type.
+默认控件。你不太可能遇到这种类型。
 
 ## button
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Button control.
+按钮控件。
 
 ## checkbox
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Checkbox control.
+复选框控件。
 
 ## child_tab
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Child tab control. Only possible to find within `tab_layout` controls.
+子标签页控件。只能在 `tab_layout` 控件中找到。
 
 ## color_picker
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Color picker control.
+颜色选择器控件。
 
 ## combo_box
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Combo box control.
+组合框控件。
 
 ## control_container
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Default control with a container. You are very unlikely to ever stumble upon this type.
+带有容器的默认控件。你不太可能遇到这种类型。
 
 ## group
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Groupbox control.
+分组框控件。
 
 ## hotkey
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Hotkey input control.
+热键输入控件。
 
 ## hsv_slider
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-HSB slider (Saturation/Brightness box, Hue slider and Opacity slider).
+HSB 滑块（饱和度/亮度框、色相滑块和不透明度滑块）。
 
 ## label
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Label control.
+标签控件。
 
 ## layout
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Layout control.
+布局控件。
 
 ## list
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Listbox control.
+列表框控件。
 
 ## loading
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Loading spinner.
+加载旋转器。
 
 ## notification_control
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Notification item control. One of the types in the core UI framework, never actually used within Fatality.
+通知项控件。核心UI框架中的一种类型，在 Fatality 中从未实际使用过。
 
 ## popup
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Basic popup window.
+基本弹出窗口。
 
 ## selectable
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Basic selectable item.
+基本可选择项。
 
 ## slider
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Slider item. This type doesn't tell the internal value type used.
+滑块项。此类型不表示内部使用的值类型。
 
 ## spacer
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Spacer control.
+间隔控件。
 
 ## tab
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Horizontal or vertical tab.
+水平或垂直标签页。
 
 ## tabs_layout
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-A variant of `layout` that is used specifically to operate tabs.
+专门用于操作标签页的 `layout` 变体。
 
 ## weapon_tabs_layout
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-A variant of `layout` that is used specifically to operate weapon tabs.
+专门用于操作武器标签页的 `layout` 变体。
 
 ## text_input
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Text input control.
+文本输入控件。
 
 ## toggle_button
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-A variant of button that looks like button, but works like a checkbox.
+看起来像按钮但工作方式像复选框的按钮变体。
 
 ## window
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Basic window control.
+基本窗口控件。
 
 ## widget
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Basic widget control.
+基本小部件控件。
 
 ## settings
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Settings control.
+设置控件。
 
 ## image
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Image control.
+图像控件。

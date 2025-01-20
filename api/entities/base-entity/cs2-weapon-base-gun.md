@@ -1,26 +1,26 @@
 ## cs2_weapon_base_gun
 
-This type represents a `CCSWeaponBaseGun` class.
+此类型表示一个 `CCSWeaponBaseGun` 类。
 
-> This type inherits [`base_entity`](/api/entities/base-entity "This type represents a base game entity.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`base_entity`](/api/entities/base-entity "此类型表示一个基础游戏实体。") 类型。其所有基础方法和字段在此类型中同样可用。
 
 ## get_abs_origin
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the absolute origin (the one that is used for rendering).
+返回绝对原点位置（用于渲染的位置）。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Origin. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 原点位置。 |
 
-**Example**
+**示例**
 
 ```lua
 local org = wep:get_abs_origin();
@@ -28,21 +28,21 @@ local org = wep:get_abs_origin();
 
 ## get_max_speed
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the maximal player speed when holding this weapon.
+返回持有此武器时的最大玩家速度。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Max speed, in UPS. |
+| `float` | 最大速度，单位为 UPS。 |
 
-**Example**
+**示例**
 
 ```lua
 local spd = wep:get_max_speed();
@@ -50,23 +50,23 @@ local spd = wep:get_max_speed();
 
 ## get_inaccuracy
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the current inaccuracy value.
+返回当前的不准确度值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mode` | [`csweapon_mode`](/api/entities/csweapon-mode "This enum represents the firing mode for a weapon.") | Weapon mode. |
+| `mode` | [`csweapon_mode`](/api/entities/csweapon-mode "此枚举表示武器的射击模式。") | 武器模式。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Inaccuracy value. |
+| `float` | 不准确度值。 |
 
-**Example**
+**示例**
 
 ```lua
 local inacc = wep:get_inaccuracy(csweapon_mode.primary_mode);
@@ -74,23 +74,23 @@ local inacc = wep:get_inaccuracy(csweapon_mode.primary_mode);
 
 ## get_spread
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the current spread value.
+返回当前的扩散值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mode` | [`csweapon_mode`](/api/entities/csweapon-mode "This enum represents the firing mode for a weapon.") | Weapon mode. |
+| `mode` | [`csweapon_mode`](/api/entities/csweapon-mode "此枚举表示武器的射击模式。") | 武器模式。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Inaccuracy value. |
+| `float` | 扩散值。 |
 
-**Example**
+**示例**
 
 ```lua
 local spread = wep:get_spread(csweapon_mode.primary_mode);
@@ -98,21 +98,21 @@ local spread = wep:get_spread(csweapon_mode.primary_mode);
 
 ## get_id
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the weapon ID.
+返回武器ID。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`weapon_id`](/api/entities/weapon-id "This enum represents the unique identifier for various weapons in the game.") | Weapon ID. |
+| [`weapon_id`](/api/entities/weapon-id "此枚举表示游戏中各种武器的唯一标识符。") | 武器ID。 |
 
-**Example**
+**示例**
 
 ```lua
 local wep_id = wep:get_id();
@@ -120,21 +120,21 @@ local wep_id = wep:get_id();
 
 ## get_type
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the weapon type.
+返回武器类型。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`csweapon_type`](/api/entities/csweapon-type "This enum represents the weapon type in the game.") | Weapon type. |
+| [`csweapon_type`](/api/entities/csweapon-type "此枚举表示游戏中的武器类型。") | 武器类型。 |
 
-**Example**
+**示例**
 
 ```lua
 local type = wep:get_type();
@@ -142,21 +142,21 @@ local type = wep:get_type();
 
 ## get_data
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the weapon static data.
+返回武器的静态数据。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`ccsweapon_base_vdata`](/api/entities/ccsweapon-base-vdata "This type represents a weapon's static data.") | Weapon data. |
+| [`ccsweapon_base_vdata`](/api/entities/ccsweapon-base-vdata "此类型表示武器的静态数据。") | 武器数据。 |
 
-**Example**
+**示例**
 
 ```lua
 local data = wep:get_data();
@@ -164,21 +164,21 @@ local data = wep:get_data();
 
 ## is_gun
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns `true` if this weapon is a **firearm**.
+如果此武器是**枪械**，则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if a firearm. |
+| `bool` | 如果是枪械则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if wep:is_gun() then
@@ -188,21 +188,21 @@ end
 
 ## is_attackable
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns `true` if you can attack with this weapon.
+如果你可以用此武器攻击，则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if can attack. |
+| `bool` | 如果可以攻击则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if wep:is_attackable() then
@@ -212,21 +212,21 @@ end
 
 ## has_secondary_attack
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns `true` if this weapon has a secondary attack mode.
+如果此武器有次要攻击模式，则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if has the secondary attack mode. |
+| `bool` | 如果有次要攻击模式则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if wep:has_secondary_attack() then
@@ -236,24 +236,24 @@ end
 
 ## has_spread
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns true if this weapon has spread (e.g. knives do not have any spread).
+如果此武器有扩散（例如，刀没有任何扩散），则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if has spread. |
+| `bool` | 如果有扩散则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if wep:has_spread() then
     -- ...
 end
-```
+``` 

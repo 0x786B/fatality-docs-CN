@@ -1,5 +1,5 @@
-## Common Enums
+## 通用枚举
 
-In this section, the most common enums are listed, that are not particularly bound to a service or module.
+本节列出了最常用的枚举，这些枚举并不特别绑定到某个服务或模块。
 
-> Use the left menu (or hamburger menu, if you are on mobile) to navigate between enums.
+> 使用左侧菜单（如果您在移动设备上，则使用汉堡菜单）在枚举之间导航。

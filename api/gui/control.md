@@ -1,109 +1,109 @@
 ## control
 
-This type represents an abstract GUI control.
+此类型表示一个抽象的GUI控件。
 
 ## id
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][这是一个只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `int`
+类型: `int`
 
-Control ID.
+控件ID。
 
 ## id_string
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][这是一个只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `string`
+类型: `string`
 
-String representation of control's ID. This may be empty for some controls.
+控件ID的字符串表示。某些控件可能为空。
 
 ## is_visible
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][这是一个只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `bool`
+类型: `bool`
 
-Control's visibility state.
+控件的可见性状态。
 
 ## parent
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][这是一个只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `control?`
+类型: `control?`
 
-Parent control. Might be `nil` on some controls.
+父控件。某些控件可能为 `nil`。
 
 ## type
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][这是一个只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: [`control_type`](/api/gui/control/control-type "This enum determines the current control's type.")
+类型: [`control_type`](/api/gui/control/control-type "此枚举确定当前控件的类型。")
 
-Control's type.
+控件类型。
 
 ## inactive
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型: `bool`
 
-If set to `true`, will mark this control to the inactive state.
+如果设置为 `true`，将把此控件标记为非活动状态。
 
 ## inactive_text
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `string`
+类型: `string`
 
-Tooltip replacement to show when control is inactive.
+当控件处于非活动状态时显示的工具提示替代文本。
 
 ## inactive_color
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.")
+类型: [`color`](/api/draw/common-types/color "这是渲染系统中使用的颜色类型。")
 
-Label color override for inactive controls.
+非活动控件的标签颜色覆盖。
 
 ## tooltip
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `string`
+类型: `string`
 
-Tooltip text.
+工具提示文本。
 
 ## aliases
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `table[string]`
+类型: `table[string]`
 
-Alias list for this control. Used in search box to support different naming (e.g. if a user searches for "Double tap", will find "Rapid fire" instead).
+此控件的别名列表。用于搜索框支持不同的命名（例如，如果用户搜索"Double tap"，将找到"Rapid fire"）。
 
 ## get_hotkey_state
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Returns true if any of the control's hotkeys are active.
+如果控件的任何热键处于活动状态，则返回 true。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if any hotkey is active. |
+| `bool` | 如果任何热键处于活动状态则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if ctrl:get_hotkey_state() then
@@ -113,23 +113,23 @@ end
 
 ## set_visible
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Changes visibility state for this control.
+更改此控件的可见性状态。
 
-> Calling this method on controls that are located in layouts with large amount of other controls will inevitably cause performance issues due to auto-stacking.
+> 在包含大量其他控件的布局中调用此方法将不可避免地因自动堆叠而导致性能问题。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `bool` | Visibility state. |
+| `val` | `bool` | 可见性状态。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 ctrl:set_visible(false);
@@ -137,47 +137,47 @@ ctrl:set_visible(false);
 
 ## add_callback
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Adds a callback to this control.
+向此控件添加回调。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `cbk` | `function` | Callback. |
+| `cbk` | `function` | 回调函数。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 ctrl:add_callback(function ()
-    print('Callback invoked!');
+    print('回调被调用！');
 end);
 ```
 
 ## cast
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Attempts to downcast the control to the correct type.
+尝试将控件向下转换为正确的类型。
 
-> Due to Lua engine's limitations, it is impossible to automatically downcast variables. Usually there is no need to call this method, unless you found some control that wasn't somehow already cast to the desired type. `find()` methods automatically perform the cast to the correct type.
+> 由于 Lua 引擎的限制，无法自动向下转换变量。通常不需要调用此方法，除非你找到了某个尚未以某种方式转换为所需类型的控件。`find()` 方法会自动执行到正确类型的转换。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<control>` | New type, if any. |
+| `<control>` | 新类型（如果有）。 |
 
-**Example**
+**示例**
 
 ```lua
 local checkbox = maybe_checkbox:cast();
@@ -185,19 +185,19 @@ local checkbox = maybe_checkbox:cast();
 
 ## reset
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Resets control's state. This action is usually required if you change control's value directly by interacting with [`value_param`](/api/gui/control/value-param "This type represents a value data used by some control types.").
+重置控件的状态。如果你通过与 [`value_param`](/api/gui/control/value-param "此类型表示某些控件类型使用的值数据。") 交互直接更改控件的值，通常需要此操作。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 ctrl:reset();

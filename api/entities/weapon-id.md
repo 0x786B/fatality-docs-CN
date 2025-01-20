@@ -1,501 +1,501 @@
 ## weapon_id
 
-This enum represents the unique identifier for various weapons in the game.
+此枚举表示游戏中各种武器的唯一标识符。
 
 ## none
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents no weapon.
+表示无武器。
 
 ## deagle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Desert Eagle.
+表示沙漠之鹰。
 
 ## elite
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the Dual Berettas.
+表示双持贝瑞塔。
 
 ## fiveseven
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Five-SeveN.
+表示FN57手枪。
 
 ## glock
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Glock-18.
+表示格洛克18。
 
 ## ak47
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an AK-47.
+表示AK-47。
 
 ## aug
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an AUG.
+表示AUG。
 
 ## awp
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an AWP.
+表示AWP狙击步枪。
 
 ## famas
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a FAMAS.
+表示法玛斯。
 
 ## g3sg1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a G3SG1.
+表示G3SG1。
 
 ## galilar
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Galil AR.
+表示加利尔AR。
 
 ## m249
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an M249.
+表示M249。
 
 ## m4a1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an M4A4.
+表示M4A4。
 
 ## mac10
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a MAC-10.
+表示MAC-10。
 
 ## p90
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a P90.
+表示P90。
 
 ## zone_repulsor
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a zone repulsor device.
+表示区域排斥器。
 
 ## mp5sd
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an MP5-SD.
+表示MP5-SD。
 
 ## ump45
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a UMP-45.
+表示UMP-45。
 
 ## xm1014
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an XM1014.
+表示XM1014。
 
 ## bizon
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a PP-Bizon.
+表示PP-野牛。
 
 ## mag7
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a MAG-7.
+表示MAG-7。
 
 ## negev
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Negev.
+表示内格夫。
 
 ## sawedoff
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Sawed-Off.
+表示截短霰弹枪。
 
 ## tec9
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Tec-9.
+表示Tec-9。
 
 ## taser
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Zeus x27 taser.
+表示宙斯电击枪。
 
 ## hkp2000
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a P2000.
+表示P2000。
 
 ## mp7
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an MP7.
+表示MP7。
 
 ## mp9
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an MP9.
+表示MP9。
 
 ## nova
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Nova.
+表示新星霰弹枪。
 
 ## p250
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a P250.
+表示P250。
 
 ## shield
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a shield.
+表示防暴盾。
 
 ## scar20
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a SCAR-20.
+表示SCAR-20。
 
 ## sg556
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an SG 553.
+表示SG 553。
 
 ## ssg08
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an SSG 08.
+表示SSG 08。
 
 ## knifegg
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the Golden Knife.
+表示黄金匕首。
 
 ## knife
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the default knife.
+表示默认匕首。
 
 ## flashbang
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a flashbang.
+表示闪光弹。
 
 ## hegrenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an HE grenade.
+表示高爆手雷。
 
 ## smokegrenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a smoke grenade.
+表示烟雾弹。
 
 ## molotov
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Molotov.
+表示燃烧瓶。
 
 ## decoy
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a decoy grenade.
+表示诱饵弹。
 
 ## incgrenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an incendiary grenade.
+表示燃烧手雷。
 
 ## c4
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a C4 explosive.
+表示C4炸弹。
 
 ## healthshot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a health shot.
+表示生命注射器。
 
 ## knife_t
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the Terrorist knife.
+表示恐怖分子匕首。
 
 ## m4a1_silencer
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the M4A1-S.
+表示M4A1消音版。
 
 ## usp_silencer
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the USP-S.
+表示USP消音版。
 
 ## cz75a
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a CZ75-Auto.
+表示CZ75自动手枪。
 
 ## revolver
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an R8 Revolver.
+表示R8左轮手枪。
 
 ## tagrenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a tactical awareness grenade.
+表示战术感知手雷。
 
 ## fists
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents fists.
+表示拳头。
 
 ## breachcharge
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a breach charge.
+表示爆破炸药。
 
 ## tablet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a tablet.
+表示平板电脑。
 
 ## melee
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a generic melee weapon.
+表示通用近战武器。
 
 ## axe
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an axe.
+表示斧头。
 
 ## hammer
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a hammer.
+表示锤子。
 
 ## spanner
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a spanner (wrench).
+表示扳手。
 
 ## knife_ghost
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a ghost knife.
+表示幽灵匕首。
 
 ## firebomb
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a firebomb grenade.
+表示火焰炸弹。
 
 ## diversion
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a diversion device.
+表示诱导装置。
 
 ## fraggrenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a fragmentation grenade.
+表示破片手雷。
 
 ## snowball
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a snowball.
+表示雪球。
 
 ## bumpmine
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a bump mine.
+表示弹跳地雷。
 
 ## knife_bayonet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Bayonet.
+表示刺刀。
 
 ## knife_css
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents the Classic Knife.
+表示经典匕首。
 
 ## knife_flip
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Flip Knife.
+表示折叠刀。
 
 ## knife_gut
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Gut Knife.
+表示穿肠刀。
 
 ## knife_karambit
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Karambit.
+表示爪子刀。
 
 ## knife_m9bayonet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an M9 Bayonet.
+表示M9刺刀。
 
 ## knife_tactical
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Huntsman Knife.
+表示猎杀者匕首。
 
 ## knife_falchion
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Falchion Knife.
+表示弯刀。
 
 ## knife_survival_bowie
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Bowie Knife.
+表示鲍伊猎刀。
 
 ## knife_butterfly
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Butterfly Knife.
+表示蝴蝶刀。
 
 ## knife_push
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Shadow Daggers.
+表示暗影双匕。
 
 ## knife_cord
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Paracord Knife.
+表示伞绳刀。
 
 ## knife_canis
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Survival Knife.
+表示求生刀。
 
 ## knife_ursus
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an Ursus Knife.
+表示熊刀。
 
 ## knife_gypsy_jackknife
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Navaja Knife.
+表示折刀。
 
 ## knife_outdoor
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Nomad Knife.
+表示流浪者匕首。
 
 ## knife_stiletto
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Stiletto Knife.
+表示细刃匕首。
 
 ## knife_widowmaker
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Talon Knife.
+表示锯齿爪刀。
 
 ## knife_skeleton
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Skeleton Knife.
+表示骷髅匕首。
 
 ## knife_kukri
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a Kukri Knife.
+表示库克里弯刀。

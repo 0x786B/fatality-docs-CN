@@ -1,5 +1,5 @@
-## Common Types
+## 常用类型
 
-In this section, the most common **renderer** types are listed, that are not particularly bound to a specific part of the renderer.
+在本节中，列出了渲染器中最常用的类型，这些类型并不特别绑定到渲染器的特定部分。
 
-> Use the left menu (or hamburger menu on mobile) to navigate between types.
+> 使用左侧菜单（或移动设备上的汉堡菜单）在类型之间导航。

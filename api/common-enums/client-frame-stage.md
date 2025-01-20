@@ -1,69 +1,45 @@
 ## client_frame_stage
 
-Contains keys for various frame rendering stages.
+此枚举包含帧渲染阶段的键。
 
-## undefined
+## frame_undefined
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-This describes a stage that is not defined. You should realistically never receive this type.
+未定义的帧阶段。
 
-## start
+## frame_start
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Frame build process is starting.
+帧开始阶段。
 
-## render_start
+## frame_net_update_start
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Frame render process is starting.
+网络更新开始阶段。
 
-## net_update_start
+## frame_net_update_end
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Network update process is starting.
+网络更新结束阶段。
 
-## net_update_preprocess
+## frame_render_start
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Network update is about to be processed by the engine.
+渲染开始阶段。
 
-## net_pre_entity_packet
+## frame_render_end
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Incoming entity packets are about to be processed by the game.
+渲染结束阶段。
 
-## net_update_postdataupdate_start
+## frame_net_full_frame
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![枚举][这是一个枚举值，必须使用点 (.) 访问。]rw]
 
-Entity information is about to be updated.
-
-## net_update_postdataupdate_end
-
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-
-Entity information is about to finish updating.
-
-## net_update_end
-
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-
-Network update process is ending.
-
-## net_creation
-
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-
-New entities are about to be created.
-
-## render_end
-
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-
-Frame rendering process is ending.
+完整网络帧阶段。

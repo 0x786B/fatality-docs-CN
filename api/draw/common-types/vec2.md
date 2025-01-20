@@ -1,39 +1,39 @@
 ## vec2
 
-This type is a 2D vector used within the rendering system.
+此类型是渲染系统中使用的 2D 向量。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Creates a new 2D vector instance.
+创建一个新的 2D 向量实例。
 
-**Arguments**
+**参数**
 
-*1. Default vector (0, 0).*
+*1. 默认向量 (0, 0)*
 
-None.
+无。
 
-*2. Single value.*
+*2. 单个值*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | X and Y coordinates. |
+| `value` | `float` | X 和 Y 坐标。 |
 
-*3. XY values.*
+*3. XY 值*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `x` | `float` | X coordinate. |
-| `y` | `float` | Y coordinate. |
+| `x` | `float` | X 坐标。 |
+| `y` | `float` | Y 坐标。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `vec2` | New vector. |
+| `vec2` | 新向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local vec = draw.vec2(5, 10);
@@ -41,37 +41,37 @@ local vec = draw.vec2(5, 10);
 
 ## x
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点 (.) 访问的常规字段。]rw]
 
-Type: `float`
+类型：`float`
 
-X coordinate.
+X 坐标。
 
 ## y
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点 (.) 访问的常规字段。]rw]
 
-Type: `float`
+类型：`float`
 
-Y coordinate.
+Y 坐标。
 
 ## floor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns floored variant of this vector.
+返回此向量的向下取整变体。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `vec2` | Floored variant. |
+| `vec2` | 向下取整变体。 |
 
-**Example**
+**示例**
 
 ```lua
 local fl = vec:floor();
@@ -79,21 +79,21 @@ local fl = vec:floor();
 
 ## ceil
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns ceiled variant of this vector.
+返回此向量的向上取整变体。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `vec2` | Ceiled variant. |
+| `vec2` | 向上取整变体。 |
 
-**Example**
+**示例**
 
 ```lua
 local ceiled = vec:ceil();
@@ -101,21 +101,21 @@ local ceiled = vec:ceil();
 
 ## round
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns rounded variant of this vector.
+返回此向量的四舍五入变体。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `vec2` | Rounded variant. |
+| `vec2` | 四舍五入变体。 |
 
-**Example**
+**示例**
 
 ```lua
 local rounded = vec:round();
@@ -123,21 +123,21 @@ local rounded = vec:round();
 
 ## len
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns length of this vector.
+返回此向量的长度。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Length. |
+| `float` | 长度。 |
 
-**Example**
+**示例**
 
 ```lua
 local len = vec:len();
@@ -145,23 +145,23 @@ local len = vec:len();
 
 ## len_sqr
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns squared length of this vector.
+返回此向量的平方长度。
 
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
+> 此方法实际上比非平方变体更快。如果需要额外的性能，请使用它。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Length. |
+| `float` | 长度。 |
 
-**Example**
+**示例**
 
 ```lua
 local len = vec:len_sqr();
@@ -169,23 +169,23 @@ local len = vec:len_sqr();
 
 ## dist
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns distance to another vector.
+返回到另一个向量的距离。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `vec2` | Other vector. |
+| `other` | `vec2` | 另一个向量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Distance. |
+| `float` | 距离。 |
 
-**Example**
+**示例**
 
 ```lua
 local dist = vec1:dist(vec2);
@@ -193,25 +193,25 @@ local dist = vec1:dist(vec2);
 
 ## dist_sqr
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns squared distance to another vector.
+返回到另一个向量的平方距离。
 
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
+> 此方法实际上比非平方变体更快。如果需要额外的性能，请使用它。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `vec2` | Other vector. |
+| `other` | `vec2` | 另一个向量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Distance. |
+| `float` | 距离。 |
 
-**Example**
+**示例**
 
 ```lua
 local dist = vec1:dist_sqr(vec2);

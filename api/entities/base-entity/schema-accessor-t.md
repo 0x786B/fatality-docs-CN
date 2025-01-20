@@ -1,28 +1,28 @@
 ## schema_accessor_t
 
-This type represents a special structure that references a certain field in the entity object.
+此类型表示一个特殊的结构，用于引用实体对象中的某个字段。
 
-> You can check the returned type by using `type()` function.
+> 你可以使用 `type()` 函数检查返回的类型。
 
-> Do not **ever** store an instance of this type anywhere but in a scope of an event because entity might be removed.
+> 切勿在事件作用域之外的任何地方存储此类型的实例，因为实体可能会被移除。
 
 ## get
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the value.
+返回值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<type>` | Value. |
+| `<type>` | 值。 |
 
-**Example**
+**示例**
 
 ```lua
 local health = player.m_iHealth:get();
@@ -30,22 +30,22 @@ local health = player.m_iHealth:get();
 
 ## set
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Sets the value.
+设置值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `<type>` | Value. |
+| `value` | `<type>` | 值。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
-player.m_iHealth:set(50); -- won't really do anything with the health
-```
+player.m_iHealth:set(50); -- 实际上不会对生命值产生任何影响
+``` 

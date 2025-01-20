@@ -1,28 +1,28 @@
 ## text_input
 
-This type represents a text input control.
+此类型表示一个文本输入控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the text input.
+构造文本输入控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | [`control_id`](/api/gui/common-types/control-id "This type represents a control ID.") | ID. |
+| `id` | [`control_id`](/api/gui/common-types/control-id "此类型表示一个控件ID。") | ID。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_input` | Text input instance. |
+| `text_input` | 文本输入实例。 |
 
-**Example**
+**示例**
 
 ```lua
 local sp = gui.text_input(gui.control_id('my_id'));
@@ -30,39 +30,39 @@ local sp = gui.text_input(gui.control_id('my_id'));
 
 ## placeholder
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `string`
+类型：`string`
 
-Placeholder text.
+占位符文本。
 
 ## value
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][此字段是只读字段，您不能更改其值。这不适用于子字段（如果有）。]r]
 
-Type: `string`
+类型：`string`
 
-Value.
+值。
 
 ## set_value
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Sets the new text.
+设置新文本。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `str` | `string` | New value. |
+| `str` | `string` | 新值。 |
 
-**Returns**
+**返回值**
 
-Nothing
+无
 
-**Example**
+**示例**
 
 ```lua
-input:set_value('Hello!');
+input:set_value('你好！');
 ```

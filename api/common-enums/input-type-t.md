@@ -1,21 +1,21 @@
 ## input_type_t
 
-Contains keys for value input options.
+包含值输入选项的键。
 
 ## yaw
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Yaw (Y coordinate) input. This means the mouse is moving horizontally.
+偏航角（Y 坐标）输入。这表示鼠标正在水平移动。
 
 ## pitch
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Pitch (X coordinate) input. This means the mouse is moving vertically.
+俯仰角（X 坐标）输入。这表示鼠标正在垂直移动。
 
 ## scroll
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Scroll input. This means that the mouse wheel is being scrolled.
+滚轮输入。这表示鼠标滚轮正在滚动。

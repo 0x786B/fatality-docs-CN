@@ -1,60 +1,49 @@
-## layer
+## 图层
 
-A layer is a type that is used to store render commands, as well as vertex and index data. This is the only way to push shapes and control rendering state.
+图层是一种用于存储渲染命令以及顶点和索引数据的类型。这是推送形状和控制渲染状态的唯一方式。
 
 ## g
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+类型：[`command`](/api/draw/layer/command "此类型用于更改渲染命令参数。")
 
-Type: [`command`](/api/draw/layer/command "This type is used to change render command parameters.")
+要推送到队列的下一个渲染命令。这是您要更改的对象，例如，设置纹理或更改渲染模式。
 
-The next render command to be pushed to the queue. This is the object you want to change to, for example, set a texture, or change rendering modes.
+## 字体
 
-## font
+类型：[`font_base`](/api/draw/managed/font-base "此类型表示字体类型的基类。您不能创建此类型的实例。相反，请使用子类型。")
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-
-Type: [`font_base`](/api/draw/managed/font-base "This type represents the base class for font types. You cannot create an instance of this type. Instead, use the children types.")
-
-Font to use with `add_text`. If nothing has been set, no text will get rendered.
+用于 `add_text` 的字体。如果未设置任何内容，则不会渲染文本。
 
 ## tex_sz
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+类型：[`vec2?`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。")
 
-Type: [`vec2?`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
-
-Texture dimensions. This value is only required if you are trying to render rounded shapes with a texture, so the rendering system will correctly map your UV coordinates to whatever shape you are rendering.
+纹理尺寸。仅当您尝试使用纹理渲染圆形形状时才需要此值，以便渲染系统正确地将您的 UV 坐标映射到您正在渲染的任何形状。
 
 ## skip_dpi
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+类型：`bool`
 
-Type: `bool`
-
-If set to `true`, will skip global DPI scale. Defaults to `true`.
+如果设置为 `true`，将跳过全局 DPI 缩放。默认为 `true`。
 
 ## add_triangle_filled
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个具有单一颜色的填充三角形。
 
-Adds a filled triangle with a single color.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | A point. |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | B point. |
-| `c` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | C point. |
-| `col` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Shape color. |
+| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | A 点。 |
+| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | B 点。 |
+| `c` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | C 点。 |
+| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_triangle_filled(
@@ -64,25 +53,23 @@ layer:add_triangle_filled(
 
 ## add_quad_filled
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个具有单一颜色的填充四边形。
 
-Adds a filled quad with a single color.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top left point. |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top right point. |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom right point. |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom left point. |
-| `col` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Shape color. |
+| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
+| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
+| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
+| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
+| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_quad_filled(
@@ -93,22 +80,20 @@ layer:add_quad_filled(
 
 ## add_rect_filled
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个具有单一颜色的填充矩形。
 
-Adds a filled rectangle with a single color.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `col` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Shape color. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect_filled(draw.rect(50, 50, 150, 150), draw.color(255, 255, 255));
@@ -116,25 +101,23 @@ layer:add_rect_filled(draw.rect(50, 50, 150, 150), draw.color(255, 255, 255));
 
 ## add_circle_filled
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个具有单一颜色的填充圆形。
 
-Adds a filled circle with a single color.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `center` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Center point. |
-| `radius` | `float` | Circle radius. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Shape color. |
-| `segments` | `int` | Circle segments. If set to `0`, will attempt automatic segment deduction. Defaults to `0`. |
-| `fill` | `float` | Fill amount (clockwise, `0` to `1`). Defaults to `1`. |
+| `center` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 中心点。 |
+| `radius` | `float` | 圆形半径。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
+| `segments` | `int` | 圆形分段。如果设置为 `0`，将尝试自动分段推导。默认为 `0`。 |
+| `fill` | `float` | 填充量（顺时针，`0` 到 `1`）。默认为 `1`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_circle_filled(draw.vec2(50, 50), 10, draw.color(255, 255, 255));
@@ -142,24 +125,22 @@ layer:add_circle_filled(draw.vec2(50, 50), 10, draw.color(255, 255, 255));
 
 ## add_triangle_filled_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的多色三角形。
 
-Adds a filled, multicolor triangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | A point. |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | B point. |
-| `c` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | C point. |
-| `cols` | `table[color, color, color]` | Colors for each point. Colors go in the very same order as the parameter list. |
+| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | A 点。 |
+| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | B 点。 |
+| `c` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | C 点。 |
+| `cols` | `table[color, color, color]` | 每个点的颜色。颜色顺序与参数列表相同。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_triangle_filled_multicolor(
@@ -173,22 +154,20 @@ layer:add_triangle_filled_multicolor(
 
 ## add_rect_filled_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的多色矩形。
 
-Adds a filled, multicolor rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `cols` | `table[color, color, color, color]` | Colors for each corner of the rectangle, in clockwise order starting from top-left. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `cols` | `table[color, color, color, color]` | 矩形每个角的颜色，顺时针顺序从左上开始。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect_filled_multicolor(
@@ -202,25 +181,23 @@ layer:add_rect_filled_multicolor(
 
 ## add_circle_filled_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的多色圆形。
 
-Adds a filled, multicolor circle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `center` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Center point. |
-| `radius` | `float` | Circle radius. |
-| `cols` | `table[color, color]` | Colors for the gradient, starting with the inner and ending with the outer color. |
-| `segments` | `int` | The number of segments to approximate the circle. Defaults to `36`. |
-| `fill` | `float` | The portion of the circle to fill, where 1.0 is a full circle. Defaults to `1.0`. |
+| `center` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 中心点。 |
+| `radius` | `float` | 圆形半径。 |
+| `cols` | `table[color, color]` | 渐变颜色，从内到外。 |
+| `segments` | `int` | 近似圆形的分段数。默认为 `36`。 |
+| `fill` | `float` | 圆形的填充部分，其中 1.0 是完整圆。默认为 `1.0`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_circle_filled_multicolor(
@@ -232,25 +209,23 @@ layer:add_circle_filled_multicolor(
 
 ## add_quad_filled_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的多色四边形。
 
-Adds a filled, multicolor quad.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top left point. |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top right point. |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom right point. |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom left point. |
-| `cols` | `table[color, color]` | Colors for the gradient, applied from bottom to top. |
+| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
+| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
+| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
+| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
+| `cols` | `table[color, color]` | 渐变颜色，从下到上应用。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_quad_filled_multicolor(
@@ -263,26 +238,24 @@ layer:add_quad_filled_multicolor(
 
 ## add_pill_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个多色药丸形状。
 
-Adds a multicolor pill shape.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mins` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top left point of the pill. |
-| `maxs` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom right point of the pill. |
-| `radius_min` | `float` | The minimum radius of the pill's rounded edges. |
-| `radius_max` | `float` | The maximum radius of the pill's rounded edges. |
-| `cols` | `table[color, color]` | Colors for the gradient, applied from bottom to top. |
-| `segments` | `int` | The number of segments for approximating rounded edges. Defaults to `16`. |
+| `mins` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 药丸的左上点。 |
+| `maxs` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 药丸的右下点。 |
+| `radius_min` | `float` | 药丸圆角的最小半径。 |
+| `radius_max` | `float` | 药丸圆角的最大半径。 |
+| `cols` | `table[color, color]` | 渐变颜色，从下到上应用。 |
+| `segments` | `int` | 近似圆角的分段数。默认为 `16`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_pill_multicolor(
@@ -295,23 +268,21 @@ layer:add_pill_multicolor(
 
 ## add_shadow_line
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个阴影线。
 
-Adds a shadow line.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Bounding box for the shadow line. |
-| `dir` | [`shadow_dir`](/api/draw/layer/shadow-dir "This enum is used to determine shadow direction for add_shadow_line method.") | Shadow direction. |
-| `a` | `float` | Max opacity. Defaults to `0.25`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 阴影线的边界框。 |
+| `dir` | [`shadow_dir`](/api/draw/layer/shadow-dir "此枚举用于确定 add_shadow_line 方法的阴影方向。") | 阴影方向。 |
+| `a` | `float` | 最大不透明度。默认为 `0.25`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_shadow_line(
@@ -320,24 +291,22 @@ layer:add_shadow_line(
 
 ## add_shadow_rect
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个带阴影的矩形。
 
-Adds a shadowed rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `radius` | `float` | Shadow distance, in pixels, outwards. |
-| `bg` | `bool` | Whether to draw a background for the rectangle. Defaults to `true`. |
-| `a` | `float` | Max opacity of the shadow. Defaults to `0.25`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `radius` | `float` | 阴影距离，以像素为单位，向外。 |
+| `bg` | `bool` | 是否为矩形绘制背景。默认为 `true`。 |
+| `a` | `float` | 阴影的最大不透明度。默认为 `0.25`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_shadow_rect(
@@ -346,24 +315,22 @@ layer:add_shadow_rect(
 
 ## add_glow
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个发光框。
 
-Adds a glow box.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Box rectangle. |
-| `radius` | `float` | Glow distance, in pixels, outwards. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Glow color. |
-| `parts` | [`glow_parts`](/api/draw/layer/glow-parts "This enum is used to determine which parts of the glow around the shape should get rendered.") | Parts of the glow to enable. Defaults to `all`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 框矩形。 |
+| `radius` | `float` | 发光距离，以像素为单位，向外。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 发光颜色。 |
+| `parts` | [`glow_parts`](/api/draw/layer/glow-parts "此枚举用于确定形状周围的发光部分应渲染哪些部分。") | 要启用的发光部分。默认为 `all`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_glow(draw.rect(50, 50, 150, 150), 15, draw.color(255, 0, 0));
@@ -371,24 +338,22 @@ layer:add_glow(draw.rect(50, 50, 150, 150), 15, draw.color(255, 0, 0));
 
 ## add_rect_filled_rounded
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的圆角矩形。
 
-Adds a filled, rounded rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Fill color. |
-| `amount` | `float` | Rounding amount. |
-| `rnd` | [`rounding`](/api/draw/layer/rounding "This enum is used to determine the rounding for rounded shapes.") | Rounding mode. Defaults to `all`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 填充颜色。 |
+| `amount` | `float` | 圆角量。 |
+| `rnd` | [`rounding`](/api/draw/layer/rounding "此枚举用于确定圆角形状的圆角。") | 圆角模式。默认为 `all`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect_filled_rounded(
@@ -401,24 +366,22 @@ layer:add_rect_filled_rounded(
 
 ## add_rect_filled_rounded_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个填充的多色圆角矩形。
 
-Adds a filled, multicolor rounded rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `c` | `table[color, color, color, color]` | Fill colors. Used clockwise, starting from top left. |
-| `amount` | `float` | Rounding amount. |
-| `rnd` | [`rounding`](/api/draw/layer/rounding "This enum is used to determine the rounding for rounded shapes.") | Rounding mode. Defaults to `all`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `c` | `table[color, color, color, color]` | 填充颜色。按顺时针顺序使用，从左上开始。 |
+| `amount` | `float` | 圆角量。 |
+| `rnd` | [`rounding`](/api/draw/layer/rounding "此枚举用于确定圆角形状的圆角。") | 圆角模式。默认为 `all`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect_filled_rounded_multicolor(
@@ -435,26 +398,24 @@ layer:add_rect_filled_rounded_multicolor(
 
 ## add_triangle
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个描边三角形。
 
-Adds a stroked triangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Point A. |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Point B. |
-| `c` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Point C. |
-| `col` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
-| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "This enum is used to determine the outline mode for outlined shapes.") | Outline mode. Defaults to `inset`. |
+| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | A 点。 |
+| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | B 点。 |
+| `c` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | C 点。 |
+| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
+| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_triangle(
@@ -469,27 +430,25 @@ layer:add_triangle(
 
 ## add_quad
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个描边四边形。
 
-Adds a stroked quad.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top-left point. |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top-right point. |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom-right point. |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom-left point. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
-| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "This enum is used to determine the outline mode for outlined shapes.") | Outline mode. Defaults to `inset`. |
+| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
+| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
+| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
+| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
+| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_quad(
@@ -505,24 +464,22 @@ layer:add_quad(
 
 ## add_rect
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个描边矩形。
 
-Adds a stroked rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
-| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "This enum is used to determine the outline mode for outlined shapes.") | Outline mode. Defaults to `inset`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
+| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect(
@@ -535,27 +492,25 @@ layer:add_rect(
 
 ## add_circle
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个描边圆形。
 
-Adds a stroked circle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `center` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Center point. |
-| `radius` | `float` | Circle radius. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `segments` | `int` | Circle segments. Defaults to `36`. |
-| `fill` | `float` | Fill amount. Defaults to `1.0`. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
-| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "This enum is used to determine the outline mode for outlined shapes.") | Outline mode. Defaults to `inset`. |
+| `center` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 中心点。 |
+| `radius` | `float` | 圆形半径。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `segments` | `int` | 圆形分段。默认为 `36`。 |
+| `fill` | `float` | 填充量。默认为 `1.0`。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
+| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_circle(
@@ -571,24 +526,22 @@ layer:add_circle(
 
 ## add_line
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一条线。
 
-Adds a line.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Start point. |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | End point. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0` |
+| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 起点。 |
+| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 终点。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0` |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_line(
@@ -600,25 +553,23 @@ layer:add_line(
 
 ## add_line_multicolor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一条多色线。
 
-Adds a multicolor line.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Start point. |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | End point. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Start color. |
-| `c2` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | End color. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
+| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 起点。 |
+| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 终点。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 起始颜色。 |
+| `c2` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 终止颜色。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_line_multicolor(
@@ -632,26 +583,24 @@ layer:add_line_multicolor(
 
 ## add_rect_rounded
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加一个圆角填充矩形。
 
-Adds a rounded, filled rectangle.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | Rectangle. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Line color. |
-| `amount` | `float` | Rounding amount. |
-| `rnd` | [`rounding`](/api/draw/layer/rounding "This enum is used to determine the rounding for rounded shapes.") | Rounding mode. Defaults to `all`. |
-| `thickness` | `float` | Line thickness. Defaults to `1.0`. |
-| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "This enum is used to determine the outline mode for outlined shapes.") | Outline mode. Defaults to `inset`. |
+| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
+| `amount` | `float` | 圆角量。 |
+| `rnd` | [`rounding`](/api/draw/layer/rounding "此枚举用于确定圆角形状的圆角。") | 圆角模式。默认为 `all`。 |
+| `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
+| `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_rect_rounded(draw.rect(50, 50, 150, 150),
@@ -660,26 +609,24 @@ layer:add_rect_rounded(draw.rect(50, 50, 150, 150),
 
 ## add_text
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+添加文本。
 
-Adds text.
+> 如果未设置字体，此函数将不执行任何操作。
 
-> If font wasn't set, this function will do nothing.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `p` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Text origin point. |
-| `text` | `string` | Text. |
-| `c` | [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.") | Text color. |
-| `params` | [`text_params?`](/api/draw/layer/text-params "This type is used to determine text alignment.") | Text aligning parameters. Defaults to `nil`. |
+| `p` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 文本起始点。 |
+| `text` | `string` | 文本。 |
+| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 文本颜色。 |
+| `params` | [`text_params?`](/api/draw/layer/text-params "此类型用于确定文本对齐。") | 文本对齐参数。默认为 `nil`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:add_text(draw.vec2(50, 50), 'Hello world!', draw.color(255, 255, 255));
@@ -687,22 +634,20 @@ layer:add_text(draw.vec2(50, 50), 'Hello world!', draw.color(255, 255, 255));
 
 ## override_clip_rect
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+覆盖剪辑矩形并支持交集。
 
-Overrides clip rectangle with support of intersection.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | [`rect?`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.") | New clip rect. |
-| `intersect` | `bool` | Whether this function should intersect previous rect with the new one. Defaults to `true`. |
+| `r` | [`rect?`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 新的剪辑矩形。 |
+| `intersect` | `bool` | 此函数是否应将先前的矩形与新矩形相交。默认为 `true`。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 layer:override_clip_rect(draw.rect(50, 50, 150, 150));

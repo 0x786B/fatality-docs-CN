@@ -1,45 +1,45 @@
 ## game
 
-Usage: `game.{interface_or_function}`
+用法：`game.{interface_or_function}`
 
-This table exposes various internal services and global objects used by Fatality, and also provides a way to retrieve any additional services you need.
+此表公开了 Fatality 使用的各种内部服务和全局对象，并提供了一种获取您需要的任何其他服务的方法。
 
 ## global_vars
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Type: [`global_vars_t`](/api/game/global-vars-t "An instance of this type provides a way to read several global variables that are used by the game. Changing any of the values is not and will never be supported.")
+类型：[`global_vars_t`](/api/game/global-vars-t "此类型的实例提供了一种读取游戏使用的几个全局变量的方法。不支持且永远不会支持更改任何值。")
 
-This service exposes global variables used by the game, such as frame time or current server time.
+此服务公开了游戏使用的全局变量，如帧时间或当前服务器时间。
 
 ## engine
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Type: [`cengine_client`](/api/game/cengine-client "An instance of this type provides a way to interface with Source 2's Engine-to-Client service.")
+类型：[`cengine_client`](/api/game/cengine-client "此类型的实例提供了一种与 Source 2 的引擎到客户端服务交互的方法。")
 
-This service exposes the engine client, which includes commonly used engine-related functions.
+此服务公开了引擎客户端，其中包括常用的引擎相关函数。
 
 ## input
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Type: [`ccsgo_input`](/api/game/ccsgo-input "This type represents the game's command input system.")
+类型：[`ccsgo_input`](/api/game/ccsgo-input "此类型表示游戏的命令输入系统。")
 
-This service exposes the command input system.
+此服务公开了命令输入系统。
 
 ## input_system
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Type: [`cinput_system`](/api/game/cinput-system "This type represents the game's control input system.")
+类型：[`cinput_system`](/api/game/cinput-system "此类型表示游戏的控制输入系统。")
 
-This service exposes the control input system.
+此服务公开了控制输入系统。
 
 ## game_ui_funcs
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Type: [`cgame_ui_funcs`](/api/game/cgame-ui-funcs "This type represents the game's UI functions.")
+类型：[`cgame_ui_funcs`](/api/game/cgame-ui-funcs "此类型表示游戏的 UI 函数。")
 
-This service exposes the game's UI functions.
+此服务公开了游戏的 UI 函数。

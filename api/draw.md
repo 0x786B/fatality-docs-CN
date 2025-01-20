@@ -1,114 +1,114 @@
 ## draw
 
-Usage: `draw.{func_or_field}`
+用法: `draw.{func_or_field}`
 
-This table describes the rendering system of the software.
+此表描述了软件的渲染系统。
 
-> All types and enums described in the child sections **must** be prefixed with `draw.`. This is done so specific types are not confused with others, such as the separate `color` types present in rendering and the game.
+> 子章节中描述的所有类型和枚举**必须**以`draw.`为前缀。这样做是为了避免特定类型与其他类型混淆，比如在渲染和游戏中存在的不同的`color`类型。
 
 ## adapter
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: `adapter`
+类型: `adapter`
 
-Rendering adapter.
+渲染适配器。
 
 ## frame_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: `float`
+类型: `float`
 
-Rendering frame time. An alias to [`global_vars_t.frame_time`](/api/game/global-vars-t?id=frame_time "Type: float").
+渲染帧时间。是[`global_vars_t.frame_time`](/api/game/global-vars-t?id=frame_time "类型: float")的别名。
 
 ## time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: `float`
+类型: `float`
 
-Time, in seconds. An alias to [`global_vars_t.real_time`](/api/game/global-vars-t?id=real_time "Type: float").
+时间，以秒为单位。是[`global_vars_t.real_time`](/api/game/global-vars-t?id=real_time "类型: float")的别名。
 
 ## scale
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: `float`
+类型: `float`
 
-Global DPI scale.
+全局DPI缩放。
 
 ## display
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
+类型: [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量类型。")
 
-Display area size (viewport dimensions). [`cengine_client:get_screen_size`](/api/game/cengine-client?id=get_screen_size "Returns client window screen size.") will return exactly the same values. Overriding any of this vector's values will lead to an undefined behavior.
+显示区域大小（视口尺寸）。[`cengine_client:get_screen_size`](/api/game/cengine-client?id=get_screen_size "返回客户端窗口屏幕大小。")将返回完全相同的值。覆盖此向量的任何值都将导致未定义的行为。
 
 ## textures
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: [`accessor<texture>`](/api/draw/common-types/accessor "This type represents a safe way to access maps.")
+类型: [`accessor<texture>`](/api/draw/common-types/accessor "这种类型代表了一种安全访问映射的方式。")
 
-A string to [`texture`](/api/draw/managed/texture "This type represents a texture object.") map of all managed textures. You can query and push textures with custom IDs. When you add a texture to this map, it will be automatically destroyed and recreated when required (such as when DX11 device gets lost).
+一个字符串到[`texture`](/api/draw/managed/texture "这种类型代表一个纹理对象。")的映射，包含所有托管纹理。你可以使用自定义ID查询和推送纹理。当你将纹理添加到此映射时，它会在需要时自动销毁和重新创建（例如当DX11设备丢失时）。
 
-> Built-in textures:
-> * `gui_loading`: loading spinner
-> * `gui_user_avatar`: current user's profile picture. May be nil if you don't have any avatar set
-> * `gui_icon_up`: up chevron
-> * `gui_icon_down`: down chevron
-> * `gui_icon_copy`: copy icon
-> * `gui_icon_paste`: paste icon
-> * `gui_icon_add`: add icon
-> * `gui_icon_search`: search icon
-> * `gui_icon_settings`: settings icon (a cogwheel)
-> * `gui_icon_bug`: bug icon
-> * `gui_icon_key`.N: keyboard/mouse key icons. Replace N with the char code of a required button
-> * `icon_rage`: RAGE tab icon
-> * `icon_legit`: LEGIT tab icon
-> * `icon_visuals`: VISUALS tab icon
-> * `icon_misc`: MISC tab icon
-> * `icon_scripts`: LUA tab icon
-> * `icon_skins`: SKINS tab icon
-> * `icon_cloud`: cloud icon
-> * `icon_file`: file icon
-> * `icon_refresh`: refresh icon
-> * `icon_save`: save icon
-> * `icon_configs`: "Configs" popup icon
-> * `icon_keys`: keyboard icon
-> * `icon_info`: "About" popup icon
-> * `icon_close`: close icon (cross)
-> * `icon_load`: load icon
-> * `icon_import`: import icon
-> * `icon_export`: export icon
-> * `icon_delete`: delete icon
-> * `icon_autoload`: "Autoload" icon
-> * `icon_allow_insecure`: "Allow insecure" icon
-> * `icon_cloud_upd`: cloud update icon
-> * `player_texture`: player preview texture
+> 内置纹理:
+> * `gui_loading`: 加载旋转器
+> * `gui_user_avatar`: 当前用户的头像。如果你没有设置头像可能为nil
+> * `gui_icon_up`: 向上箭头
+> * `gui_icon_down`: 向下箭头
+> * `gui_icon_copy`: 复制图标
+> * `gui_icon_paste`: 粘贴图标
+> * `gui_icon_add`: 添加图标
+> * `gui_icon_search`: 搜索图标
+> * `gui_icon_settings`: 设置图标（齿轮）
+> * `gui_icon_bug`: 错误图标
+> * `gui_icon_key`.N: 键盘/鼠标按键图标。将N替换为所需按钮的字符代码
+> * `icon_rage`: RAGE标签图标
+> * `icon_legit`: LEGIT标签图标
+> * `icon_visuals`: VISUALS标签图标
+> * `icon_misc`: MISC标签图标
+> * `icon_scripts`: LUA标签图标
+> * `icon_skins`: SKINS标签图标
+> * `icon_cloud`: 云图标
+> * `icon_file`: 文件图标
+> * `icon_refresh`: 刷新图标
+> * `icon_save`: 保存图标
+> * `icon_configs`: "配置"弹窗图标
+> * `icon_keys`: 键盘图标
+> * `icon_info`: "关于"弹窗图标
+> * `icon_close`: 关闭图标（叉号）
+> * `icon_load`: 加载图标
+> * `icon_import`: 导入图标
+> * `icon_export`: 导出图标
+> * `icon_delete`: 删除图标
+> * `icon_autoload`: "自动加载"图标
+> * `icon_allow_insecure`: "允许不安全"图标
+> * `icon_cloud_upd`: 云更新图标
+> * `player_texture`: 玩家预览纹理
 
 ## fonts
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: [`accessor<font_base>`](/api/draw/common-types/accessor "This type represents a safe way to access maps.")
+类型: [`accessor<font_base>`](/api/draw/common-types/accessor "这种类型代表了一种安全访问映射的方式。")
 
-A string to [`font_base`](/api/draw/managed/font-base "This type represents the base class for font types. You cannot create an instance of this type. Instead, use the children types.") map of all managed fonts. You can query and push fonts with custom IDs. When you add a font to this map, it will be automatically destroyed and recreated when required (such as when DX11 device gets lost).
+一个字符串到[`font_base`](/api/draw/managed/font-base "这种类型代表字体类型的基类。你不能创建此类型的实例。请使用子类型。")的映射，包含所有托管字体。你可以使用自定义ID查询和推送字体。当你将字体添加到此映射时，它会在需要时自动销毁和重新创建（例如当DX11设备丢失时）。
 
-> Built-in fonts:
+> 内置字体:
 > * `gui_debug`: Verdana, 13px
 > * `gui_title`: Figtree ExtraBold, 23px
 > * `gui_main`: Figtree Medium, 14px
-> * `gui_main_shadow`: Figree Medium, 14px, with shadow
+> * `gui_main_shadow`: Figree Medium, 14px, 带阴影
 > * `gui_main_fb`: Segoe UI Semibold, 14px
 > * `gui_bold`: Figtree ExtraBold, 14px
 > * `gui_bold_fb`: Segoe UI Black, 14px
@@ -117,21 +117,21 @@ A string to [`font_base`](/api/draw/managed/font-base "This type represents the 
 
 ## shaders
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: [`accessor<shader>`](/api/draw/common-types/accessor "This type represents a safe way to access maps.")
+类型: [`accessor<shader>`](/api/draw/common-types/accessor "这种类型代表了一种安全访问映射的方式。")
 
-A string to [`shader`](/api/draw/managed/shader "This type represents a shader. HLSL documentation") map of all managed shader. You can query and push shader with custom IDs. When you add a shader to this map, it will be automatically destroyed and recreated when required (such as when DX11 device gets lost).
+一个字符串到[`shader`](/api/draw/managed/shader "这种类型代表一个着色器。HLSL文档")的映射，包含所有托管着色器。你可以使用自定义ID查询和推送着色器。当你将着色器添加到此映射时，它会在需要时自动销毁和重新创建（例如当DX11设备丢失时）。
 
-> Built-in shaders:
-> * `blur_f`: gaussian blur shader
+> 内置着色器:
+> * `blur_f`: 高斯模糊着色器
 
 ## surface
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: [`layer`](/api/draw/layer "A layer is a type that is used to store render commands, as well as vertex and index data. This is the only way to push shapes and control rendering state.")
+类型: [`layer`](/api/draw/layer "图层是用于存储渲染命令以及顶点和索引数据的类型。这是推送形状和控制渲染状态的唯一方式。")
 
-The layer you can render on.
+你可以在其上进行渲染的图层。

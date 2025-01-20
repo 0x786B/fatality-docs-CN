@@ -1,12 +1,12 @@
 ## cfiring_mode
 
-Firing mode information.
+射击模式信息。
 
 ## values_arr
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][这是一个常规字段，必须使用点(.)来访问。]rw]
+[![Read Only][这是一个只读字段，你不能更改它的值。这不适用于子字段(如果有的话)。]r]
 
-Type: `<type>`
+类型: `<type>`
 
-Values.
+值数组。

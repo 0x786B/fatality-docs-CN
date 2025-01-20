@@ -1,5 +1,5 @@
-## Common Types
+## 常用类型
 
-In this section, the most common **gui** types are listed, that are not particularly bound to a specific part of the gui.
+本节列出了最常见的 **gui** 类型，这些类型并不特别绑定到 gui 的特定部分。
 
-> Use the left menu (or hamburger menu, if you are on mobile) to navigate between types.
+> 使用左侧菜单（如果你在移动设备上，则使用汉堡菜单）在类型之间导航。

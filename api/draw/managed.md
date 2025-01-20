@@ -1,35 +1,30 @@
-## managed
+## 管理对象
 
-This type represents a managed object. You cannot create an instance of this type directly.
+此类型表示一个管理对象。您不能直接创建此类型的实例。
 
-Every object, that inherits from this type, **must** be `create`d before use. The rendering system will only create them automatically, if you happen to lose a device object (e.g. minimize the game window, and then restore it) and **only** if you add your objects to manage table in [`draw`](/api/draw "This table describes the rendering system of the software.").
+每个继承自此类型的对象在使用前**必须**被 `create`。如果您丢失了设备对象（例如，最小化游戏窗口，然后恢复它），渲染系统将自动创建它们，并且**仅当**您将对象添加到 [`draw`](/api/draw "此表描述了软件的渲染系统。") 中的管理表时。
 
 ## obj
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+类型：[`ptr`](/api/common-types/ptr "此类型是一个字面指针。")
 
-Type: [`ptr`](/api/common-types/ptr "This type is a literal pointer.")
-
-Pointer to a GPU object. If this object is not created, this field will be `nil`. You can use the value of this field to pass it to [`command`](/api/draw/layer/command "This type is used to change render command parameters.") directly for example, or if you (for whatever reason we don't recommend you doing) want to have a direct control over the pointer - cast it to FFI's `cdata`.
+指向 GPU 对象的指针。如果此对象未创建，此字段将为 `nil`。您可以使用此字段的值直接传递给 [`command`](/api/draw/layer/command "此类型用于更改渲染命令参数。")，例如，或者如果您（出于我们不推荐的任何原因）想要直接控制指针 - 将其转换为 FFI 的 `cdata`。
 
 ## create
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+在 GPU 内存中创建一个管理对象。
 
-Creates a managed object in GPU memory.
+> 您应该只创建一次对象。在对象创建后调用此方法将毫无意义。
 
-> You should `create()` an object only once. Invoking this method after the object was created will be meaningless.
+**参数**
 
-**Arguments**
+无。
 
-None.
+**返回**
 
-**Returns**
+无。
 
-Nothing.
-
-**Example**
+**示例**
 
 ```lua
 tex:create();
@@ -37,21 +32,19 @@ tex:create();
 
 ## destroy
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+在 GPU 内存中销毁一个管理对象。
 
-Destroys a managed object in GPU memory.
+> **绝不要**在渲染中使用 GPU 对象时销毁它（例如，当您推送了一些使用纹理的形状，然后销毁了该纹理）。这将导致未定义的行为，并且很可能**导致游戏崩溃**。
 
-> **Never** destroy a GPU object if it is being used in rendering (for example, when you have pushed some shape that uses a texture, and then destroyed that texture). This will lead to undefined behavior, and most likely, **crash the game**.
+**参数**
 
-**Arguments**
+无。
 
-None.
+**返回**
 
-**Returns**
+无。
 
-Nothing.
-
-**Example**
+**示例**
 
 ```lua
 font:destroy();

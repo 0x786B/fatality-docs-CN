@@ -1,5 +1,5 @@
 ## color
 
-This type is a color used within the game.
+此类型是游戏中使用的颜色。
 
-> Do not mistake this type with [`color`](/api/draw/common-types/color "This type is the color used within the rendering system.") that is used for rendering! While these types are interchangeable internally, they are **NOT** in the API.
+> 请不要将此类型与渲染系统中使用的 [`color`](/api/draw/common-types/color "这是渲染系统中使用的颜色类型。") 混淆！虽然这些类型在内部是可以互换的，但在 API 中它们**不是**互换的。

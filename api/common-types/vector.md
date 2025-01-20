@@ -1,66 +1,66 @@
 ## vector
 
-This type is a common 3D vector (x, y, z).
+这是一个通用的3D向量类型(x, y, z)。
 
-> This type supports operations, such as `+`, `-`, `/`, `*` and `==`.
+> 此类型支持运算符操作,如 `+`, `-`, `/`, `*` 和 `==`。
 
 ## x
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段,必须使用点(.)访问]rw]
 
-Type: `float`
+类型: `float`
 
-X coordinate.
+X坐标。
 
 ## y
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段,必须使用点(.)访问]rw]
 
-Type: `float`
+类型: `float`
 
-Y coordinate.
+Y坐标。
 
 ## z
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段,必须使用点(.)访问]rw]
 
-Type: `float`
+类型: `float`
 
-Z coordinate.
+Z坐标。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义]rw]
 
-Constructs a vector.
+构造一个向量。
 
-**Arguments**
+**参数**
 
-*1. Default vector (0, 0, 0).*
+*1. 默认向量 (0, 0, 0)。*
 
-None.
+无。
 
-*2. Single value.*
+*2. 单个值。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | X and Y coordinates. |
+| `value` | `float` | X和Y坐标。 |
 
-*3. XYZ values.*
+*3. XYZ值。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `x` | `float` | X coordinate. |
-| `y` | `float` | Y coordinate. |
-| `z` | `float` | Z coordinate. |
+| `x` | `float` | X坐标。 |
+| `y` | `float` | Y坐标。 |
+| `z` | `float` | Z坐标。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `vector` | Vector. |
+| `vector` | 向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local vec = vector(5, 25, 12);
@@ -68,306 +68,139 @@ local vec = vector(5, 25, 12);
 
 ## is_zero
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
 
-Returns `true` if this vector is within tolerance range.
+如果该向量在容差范围内则返回`true`。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tolerance` | `float` | Max allowed tolerance. Defaults to `0.01`. |
+| `tolerance` | `float` | 最大允许容差。默认为`0.01`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if ranges between `-tolerance` and `tolerance`. |
+| `bool` | 如果值在`-tolerance`和`tolerance`之间则返回`true`。 |
 
-**Example**
+**示例**
 
 ```lua
-local vec = vector(0, 0.1, 0.5);
-print(tostring(vec:is_zero(1))); -- will print 'true', because every value fits in the range of -1 and 1
-```
-
-## dist
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns distance to another vector.
-
-**Arguments**
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate distance against. |
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `float` | Distance to other vector. |
-
-**Example**
-
-```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-print(tostring(vec1:dist(vec2)));
-```
-
-## dist_sqr
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns squared distance to another vector.
-
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
-
-**Arguments**
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate distance against. |
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `float` | Squared distance to other vector. |
-
-**Example**
-
-```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-print(tostring(vec1:dist_sqr(vec2)));
-```
-
-## dist_2d
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns 2D (only `x` and `y` values) distance to another vector.
-
-**Arguments**
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate distance against. |
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `float` | Distance to other vector. |
-
-**Example**
-
-```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-print(tostring(vec1:dist_2d(vec2)));
-```
-
-## dist_2d_sqr
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns squared 2D (only `x` and `y` values) distance to another vector.
-
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
-
-**Arguments**
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate distance against. |
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `float` | Squared distance to other vector. |
-
-**Example**
-
-```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-print(tostring(vec1:dist_2d_sqr(vec2)));
-```
-
-## cross
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns a cross product to another vector.
-
-**Arguments**
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate cross product against. |
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `vector` | Cross product. |
-
-**Example**
-
-```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-local cross = vec1:cross(vec2);
-```
-
-## is_valid
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns `true` if all values in this vector are finite.
-
-**Arguments**
-
-None
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `bool` | `true` if values are finite. |
-
-**Example**
-
-```lua
-local vec = vector(5, 1, 6);
-if vec:is_valid() then
-    -- ...
-end
+local is_zero = vec:is_zero(); -- 使用默认容差
+local is_zero_custom = vec:is_zero(0.1); -- 自定义容差
 ```
 
 ## length
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
 
-Returns length of this vector.
+计算向量的长度。
 
-**Arguments**
+**参数**
 
-None
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Length of this vector. |
+| `float` | 向量的长度。 |
 
-**Example**
+**示例**
 
 ```lua
-local vec = vector(5, 1, 6);
-local length = vec:length();
+local len = vec:length();
 ```
 
 ## length_sqr
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
 
-Returns squared length of this vector.
+计算向量长度的平方。
 
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
+**参数**
 
-**Arguments**
+无。
 
-None
+**返回值**
 
-**Returns**
-
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Length of this vector. |
+| `float` | 向量长度的平方。 |
 
-**Example**
+**示例**
 
 ```lua
-local vec = vector(5, 1, 6);
-local length = vec:length_sqr();
+local len_sqr = vec:length_sqr();
 ```
 
-## length_2d
+## normalize
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
 
-Returns 2D length of this vector.
+标准化向量。
 
-**Arguments**
+**参数**
 
-None
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Length of this vector. |
+| `vector` | 标准化后的向量。 |
 
-**Example**
+**示例**
 
 ```lua
-local vec = vector(5, 1, 6);
-local length = vec:length_2d();
-```
-
-## length_2d_sqr
-
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-
-Returns squared 2D length of this vector.
-
-> This method is de-facto faster than the non-squared variant. Use it, if you need extra performance.
-
-**Arguments**
-
-None
-
-**Returns**
-
-| Type | Description |
-| ---- | ----------- |
-| `float` | Length of this vector. |
-
-**Example**
-
-```lua
-local vec = vector(5, 1, 6);
-local length = vec:length_2d_sqr();
+local norm_vec = vec:normalize();
 ```
 
 ## dot
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
 
-Returns dot product of 2 vectors.
+计算两个向量的点积。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `vector` | Vector to calculate dot product against. |
+| `other` | `vector` | 另一个向量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Dot product. |
+| `float` | 点积结果。 |
 
-**Example**
+**示例**
 
 ```lua
-local vec1 = vector(0, 0, 0);
-local vec2 = vector(1, 1, 5);
-local dot = vec1:dot(vec2);
+local dot_product = vec1:dot(vec2);
+```
+
+## cross
+
+[![方法][这是一个方法,必须使用冒号(:)调用]rw]
+
+计算两个向量的叉积。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `other` | `vector` | 另一个向量。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `vector` | 叉积结果。 |
+
+**示例**
+
+```lua
+local cross_product = vec1:cross(vec2);
 ```

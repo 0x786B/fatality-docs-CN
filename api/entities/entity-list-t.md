@@ -1,24 +1,24 @@
 ## entity_list_t
 
-This type represents an entity list.
+此类型表示一个实体列表。
 
-> Never save any entities you get from this list if you don't know what you are doing! You may be left with dangling pointers, which will inevitably lead to a crash.
+> 如果你不知道自己在做什么，切勿保存从此列表获取的任何实体！你可能会留下悬空指针，这将不可避免地导致崩溃。
 
 ## for_each
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用]rw]
 
-Loops the entities.
+遍历实体。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `fn` | `function(entity_entry_t)` | Function callback. |
+| `fn` | `function(entity_entry_t)` | 回调函数。 |
 
-Nothing
+无返回值
 
-**Example**
+**示例**
 
 ```lua
 entities.players:for_each(function (entry)
@@ -28,19 +28,19 @@ end);
 
 ## for_each_z
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用]rw]
 
-Loops the entities in the reverse order.
+按相反顺序遍历实体。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `fn` | `function(entity_entry_t)` | Function callback. |
+| `fn` | `function(entity_entry_t)` | 回调函数。 |
 
-Nothing
+无返回值
 
-**Example**
+**示例**
 
 ```lua
 entities.players:for_each_z(function (entry)

@@ -1,30 +1,716 @@
-## math
+## 数学
 
-Usage:
-`math.{func}`
+用法：`math.{func}`
 
-This table extends the existing `math` table that is a part of Lua.
+此表扩展了作为 Lua 一部分的现有 `math` 表。
+
+## abs
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的绝对值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 绝对值。 |
+
+**示例**
+
+```lua
+local abs = math.abs(-5); -- 5
+```
+
+## acos
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的反余弦值（弧度）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字（-1 到 1 之间）。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 反余弦值，以弧度表示。 |
+
+**示例**
+
+```lua
+local angle = math.acos(0.5); -- ~1.0472 (60度的弧度值)
+```
+
+## asin
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的反正弦值（弧度）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字（-1 到 1 之间）。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 反正弦值，以弧度表示。 |
+
+**示例**
+
+```lua
+local angle = math.asin(0.5); -- ~0.5236 (30度的弧度值)
+```
+
+## atan
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的反正切值（弧度）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 反正切值，以弧度表示。 |
+
+**示例**
+
+```lua
+local angle = math.atan(1); -- ~0.7854 (45度的弧度值)
+```
+
+## atan2
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回 y/x 的反正切值（弧度）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `y` | `number` | Y 坐标。 |
+| `x` | `number` | X 坐标。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 反正切值，以弧度表示。 |
+
+**示例**
+
+```lua
+local angle = math.atan2(1, 1); -- ~0.7854 (45度的弧度值)
+```
+
+## ceil
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回大于或等于给定数字的最小整数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 向上取整的结果。 |
+
+**示例**
+
+```lua
+local ceil = math.ceil(3.3); -- 4
+```
+
+## cos
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个角度的余弦值（角度以弧度表示）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 角度（弧度）。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 余弦值。 |
+
+**示例**
+
+```lua
+local cos = math.cos(0); -- 1
+```
+
+## cosh
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的双曲余弦值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 双曲余弦值。 |
+
+**示例**
+
+```lua
+local cosh = math.cosh(0); -- 1
+```
+
+## deg
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+将弧度转换为角度。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 弧度值。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 角度值。 |
+
+**示例**
+
+```lua
+local deg = math.deg(math.pi); -- 180
+```
+
+## exp
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回 e 的 x 次幂。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 指数。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | e 的 x 次幂。 |
+
+**示例**
+
+```lua
+local exp = math.exp(1); -- ~2.7183 (e)
+```
+
+## floor
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回小于或等于给定数字的最大整数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 向下取整的结果。 |
+
+**示例**
+
+```lua
+local floor = math.floor(3.7); -- 3
+```
+
+## fmod
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回 x 除以 y 的余数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 被除数。 |
+| `y` | `number` | 除数。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 余数。 |
+
+**示例**
+
+```lua
+local mod = math.fmod(5.3, 2); -- 1.3
+```
+
+## frexp
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+将浮点数分解为尾数和指数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 尾数。 |
+| `number` | 指数。 |
+
+**示例**
+
+```lua
+local m, e = math.frexp(3.14); -- ~0.785, 2
+```
+
+## huge
+
+最大可表示的数字。
+
+## ldexp
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回 m * (2 ^ e)。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `m` | `number` | 尾数。 |
+| `e` | `number` | 指数。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 计算结果。 |
+
+**示例**
+
+```lua
+local x = math.ldexp(0.785, 2); -- ~3.14
+```
+
+## log
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的自然对数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 自然对数值。 |
+
+**示例**
+
+```lua
+local log = math.log(2.7183); -- ~1
+```
+
+## log10
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字以10为底的对数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 以10为底的对数值。 |
+
+**示例**
+
+```lua
+local log10 = math.log10(100); -- 2
+```
+
+## max
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回参数中的最大值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `...` | `number` | 数字列表。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 最大值。 |
+
+**示例**
+
+```lua
+local max = math.max(1, 2, 3); -- 3
+```
+
+## min
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回参数中的最小值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `...` | `number` | 数字列表。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 最小值。 |
+
+**示例**
+
+```lua
+local min = math.min(1, 2, 3); -- 1
+```
+
+## modf
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的整数部分和小数部分。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 整数部分。 |
+| `number` | 小数部分。 |
+
+**示例**
+
+```lua
+local i, f = math.modf(3.14); -- 3, 0.14
+```
+
+## pi
+
+圆周率的值。
+
+## pow
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回 x 的 y 次幂。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 底数。 |
+| `y` | `number` | 指数。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | x 的 y 次幂。 |
+
+**示例**
+
+```lua
+local pow = math.pow(2, 3); -- 8
+```
+
+## rad
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+将角度转换为弧度。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 角度值。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 弧度值。 |
+
+**示例**
+
+```lua
+local rad = math.rad(180); -- ~3.1416 (π)
+```
+
+## random
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+生成随机数。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `m` | `number` | （可选）下限或上限。 |
+| `n` | `number` | （可选）上限。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 随机数。 |
+
+**示例**
+
+```lua
+local rand1 = math.random();    -- 0 到 1 之间的随机数
+local rand2 = math.random(6);   -- 1 到 6 之间的整数
+local rand3 = math.random(1,6); -- 1 到 6 之间的整数
+```
+
+## randomseed
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+设置随机数生成器的种子。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 种子值。 |
+
+**返回值**
+
+无。
+
+**示例**
+
+```lua
+math.randomseed(os.time());
+```
+
+## sin
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个角度的正弦值（角度以弧度表示）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 角度（弧度）。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 正弦值。 |
+
+**示例**
+
+```lua
+local sin = math.sin(math.pi/2); -- 1
+```
+
+## sinh
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的双曲正弦值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 双曲正弦值。 |
+
+**示例**
+
+```lua
+local sinh = math.sinh(0); -- 0
+```
+
+## sqrt
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的平方根。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 平方根。 |
+
+**示例**
+
+```lua
+local sqrt = math.sqrt(16); -- 4
+```
+
+## tan
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个角度的正切值（角度以弧度表示）。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 角度（弧度）。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 正切值。 |
+
+**示例**
+
+```lua
+local tan = math.tan(math.pi/4); -- ~1
+```
+
+## tanh
+
+[![函数][这是一个必须使用点(.)调用的函数]rw]
+
+返回一个数字的双曲正切值。
+
+**参数**
+
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| `x` | `number` | 输入数字。 |
+
+**返回值**
+
+| 类型 | 描述 |
+| ---- | ----------- |
+| `number` | 双曲正切值。 |
+
+**示例**
+
+```lua
+local tanh = math.tanh(0); -- 0
+```
 
 ## calc_angle
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Calculates angles between 2 vectors.
+计算两个向量之间的角度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `src` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Source vector. |
-| `dst` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Destination vector. |
+| `src` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 源向量。 |
+| `dst` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 目标向量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Angles. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 角度。 |
 
-**Example**
+**示例**
 
 ```lua
 local ang = math.calc_angle(vec1, vec2);
@@ -32,23 +718,23 @@ local ang = math.calc_angle(vec1, vec2);
 
 ## angle_normalize
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Normalizes an angle.
+标准化一个角度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `angle` | `float` | Input angle. |
+| `angle` | `float` | 输入角度。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Normalized angle. |
+| `float` | 标准化后的角度。 |
 
-**Example**
+**示例**
 
 ```lua
 local norm = math.angle_normalize(560);
@@ -56,25 +742,25 @@ local norm = math.angle_normalize(560);
 
 ## approach_angles
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Approaches an angle over time.
+随时间接近一个角度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `from` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Start angle. |
-| `to` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | End angle. |
-| `speed` | `float` | Approach speed. |
+| `from` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 起始角度。 |
+| `to` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 目标角度。 |
+| `speed` | `float` | 接近速度。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Delta angle. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 差值角度。 |
 
-**Example**
+**示例**
 
 ```lua
 local ang = math.approach_angles(from, to, 1.0 / game.global_vars.frametime);
@@ -82,26 +768,26 @@ local ang = math.approach_angles(from, to, 1.0 / game.global_vars.frametime);
 
 ## edge_point
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Returns a point on the edge of a box.
+返回盒子边缘上的一个点。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mins` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Box mins. |
-| `maxs` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Box maxs. |
-| `dir` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Point direction (angle). |
-| `radius` | `float` | Area radius. |
+| `mins` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 盒子最小值。 |
+| `maxs` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 盒子最大值。 |
+| `dir` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 点的方向（角度）。 |
+| `radius` | `float` | 区域半径。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Point. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 点。 |
 
-**Example**
+**示例**
 
 ```lua
 local point = math.edge_point(mins, maxs, dir, 5);
@@ -109,25 +795,25 @@ local point = math.edge_point(mins, maxs, dir, 5);
 
 ## lerp
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Linear interpolation.
+线性插值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `t1` | `float` | Start value. |
-| `t2` | `float` | End value. |
-| `progress` | `float` | Interpolation amount. |
+| `t1` | `float` | 起始值。 |
+| `t2` | `float` | 结束值。 |
+| `progress` | `float` | 插值量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Interpolated value. |
+| `float` | 插值后的值。 |
 
-**Example**
+**示例**
 
 ```lua
 local mid = math.lerp(0, 100, 0.5);
@@ -135,24 +821,24 @@ local mid = math.lerp(0, 100, 0.5);
 
 ## vector_angles
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Calculates angles from a vector.
+从向量计算角度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `forward` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Source vector. |
-| `up` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Up vector. Defaults to `nil`. |
+| `forward` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 源向量。 |
+| `up` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 上向量。默认为 `nil`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Angles. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 角度。 |
 
-**Example**
+**示例**
 
 ```lua
 local ang = math.vector_angles(fw);
@@ -160,24 +846,24 @@ local ang = math.vector_angles(fw);
 
 ## world_to_screen
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Transforms a point in the game world onto the viewport.
+将3D向量转换成2D向量用于渲染在窗口中。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `xyz` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Point in the world. |
-| `round` | `bool` | Whether should round the output. Defaults to `true`. |
+| `xyz` | [`vector`](/api/common-types/vector "此类型是一个常见的 3D 向量 (x, y, z)。") | 世界中的位置。 |
+| `round` | `bool` | 是否应该四舍五入输出。默认为 `true`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Point on the viewport. |
+| [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的 2D 向量。") | 窗口上的点。 |
 
-**Example**
+**示例**
 
 ```lua
 local point = math.world_to_screen(game_point);
@@ -185,25 +871,25 @@ local point = math.world_to_screen(game_point);
 
 ## clamp
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Clamps a value between min and max.
+将值限制在最小值和最大值之间。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `n` | `float` | Value. |
-| `lower` | `float` | Lowest value. |
-| `upper` | `float` | Highest value. |
+| `n` | `float` | 值。 |
+| `lower` | `float` | 最小值。 |
+| `upper` | `float` | 最大值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Clamped value. |
+| `float` | 限制后的值。 |
 
-**Example**
+**示例**
 
 ```lua
 local x = math.clamp(50, 5, 25); -- 25
@@ -211,27 +897,27 @@ local x = math.clamp(50, 5, 25); -- 25
 
 ## remap_val
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Maps the value from one range to another range.
+将值从一个范围映射到另一个范围。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `float` | Value. |
-| `a` | `float` | Lowest source value. |
-| `b` | `float` | Highest source value. |
-| `c` | `float` | Lowest destination value. |
-| `d` | `float` | Highest destination value. |
+| `val` | `float` | 值。 |
+| `a` | `float` | 源范围最小值。 |
+| `b` | `float` | 源范围最大值。 |
+| `c` | `float` | 目标范围最小值。 |
+| `d` | `float` | 目标范围最大值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Mapped value. |
+| `float` | 映射后的值。 |
 
-**Example**
+**示例**
 
 ```lua
 local mapped = math.remap_val(0.5, 0, 1, 0, 100); -- 50
@@ -239,27 +925,27 @@ local mapped = math.remap_val(0.5, 0, 1, 0, 100); -- 50
 
 ## remap_val_clamped
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Maps the value from one range to another range. Additionally, clamps the value based on the source range.
+将值从一个范围映射到另一个范围。另外，基于源范围限制值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `float` | Value. |
-| `a` | `float` | Lowest source value. |
-| `b` | `float` | Highest source value. |
-| `c` | `float` | Lowest destination value. |
-| `d` | `float` | Highest destination value. |
+| `val` | `float` | 值。 |
+| `a` | `float` | 源范围最小值。 |
+| `b` | `float` | 源范围最大值。 |
+| `c` | `float` | 目标范围最小值。 |
+| `d` | `float` | 目标范围最大值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Mapped value. |
+| `float` | 映射后的值。 |
 
-**Example**
+**示例**
 
 ```lua
 local mapped = math.remap_val_clamped(5, 0, 1, 0, 100); -- 100
@@ -267,11 +953,11 @@ local mapped = math.remap_val_clamped(5, 0, 1, 0, 100); -- 100
 
 ## vec2
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-An alias to [`draw.vec2()`](/api/draw/common-types/vec2#call "This type is a 2D vector used within the rendering system.").
+[`draw.vec2()`](/api/draw/common-types/vec2#call "此类型是渲染系统中使用的 2D 向量。") 的别名。
 
-**Example**
+**示例**
 
 ```lua
 local vec = math.vec2(5, 5);
@@ -279,11 +965,11 @@ local vec = math.vec2(5, 5);
 
 ## vec3
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-An alias to [`vector()`](/api/common-types/vector#call "Constructs a vector.").
+[`vector()`](/api/common-types/vector#call "构造一个向量。") 的别名。
 
-**Example**
+**示例**
 
 ```lua
 local vec = math.vec3(5, 12, 5);

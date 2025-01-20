@@ -1,24 +1,24 @@
 ## bits
 
-This type represents a bitset value.
+此类型表示一个位集值。
 
-> Maximal bit number for this type is **63**. Setting or getting any bits outside of that range will cause a **crash**.
+> 此类型的最大位数是 **63**。设置或获取该范围之外的任何位都会导致**崩溃**。
 
 ## reset
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Resets the value.
+重置值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 bits:reset();
@@ -26,21 +26,21 @@ bits:reset();
 
 ## get_raw
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the raw value.
+返回原始值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Raw value. |
+| `int` | 原始值。 |
 
-**Example**
+**示例**
 
 ```lua
 local raw = bits:get_raw();
@@ -48,21 +48,21 @@ local raw = bits:get_raw();
 
 ## set_raw
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Sets the raw value.
+设置原始值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `int` | Raw value. |
+| `val` | `int` | 原始值。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 bits:set_raw(long_long_value);
@@ -70,21 +70,21 @@ bits:set_raw(long_long_value);
 
 ## none
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns true if no bits are set.
+如果没有设置任何位，则返回 true。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if no bits are set. |
+| `bool` | 如果没有设置任何位，则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if bits:none() then
@@ -94,43 +94,43 @@ end
 
 ## set
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Enables a bit.
+启用一个位。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `bit` | `int` | Bit number. |
+| `bit` | `int` | 位编号。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
-bits:set(5); -- set bit #5 (same as bit.bor(val, bit.lshift(1, 5)))
+bits:set(5); -- 设置第5位（等同于 bit.bor(val, bit.lshift(1, 5))）
 ```
 
 ## unset
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Disables a bit.
+禁用一个位。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `bit` | `int` | Bit number. |
+| `bit` | `int` | 位编号。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 bits:unset(5);
@@ -138,23 +138,23 @@ bits:unset(5);
 
 ## get
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns bit state.
+返回位状态。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `bit` | `int` | Bit number. |
+| `bit` | `int` | 位编号。 |
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 名称 | 描述 |
 | ---- | ----------- |
-| `bool` | Bit status. |
+| `bool` | 位状态。 |
 
-**Example**
+**示例**
 
 ```lua
 if bits:get(5) then
@@ -164,21 +164,21 @@ end
 
 ## toggle
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Toggles bit state.
+切换位状态。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `bit` | `int` | Bit number. |
+| `bit` | `int` | 位编号。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 bits:toggle(5);

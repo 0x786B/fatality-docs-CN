@@ -1,21 +1,21 @@
 ## user_t
 
-This type represents basic user information.
+此类型表示基本用户信息。
 
 ## avatar
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][此字段是只读字段，您不能更改其值。这不适用于子字段（如果有）。]r]
 
-Type: [`texture?`](/api/draw/managed/texture "This type represents a texture object.")
+类型：[`texture?`](/api/draw/managed/texture "此类型表示一个纹理对象。")
 
-User's avatar. May be `nil`.
+用户头像。可能为 `nil`。
 
 ## username
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][此字段是只读字段，您不能更改其值。这不适用于子字段（如果有）。]r]
 
-Type: `string`
+类型：`string`
 
-User's username.
+用户名。

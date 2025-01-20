@@ -1,68 +1,62 @@
-## adapter
+## 适配器
 
-This type represents a rendering adapter used within the rendering system.
+此类型表示渲染系统中使用的渲染适配器。
 
-## get_back_buffer
+## 获取后缓冲区
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+返回后缓冲区纹理。如果后缓冲区纹理未更新，可能返回空白或过时的纹理。
 
-Returns a back buffer texture. May return a blank or outdated texture, if the back buffer texture was not updated.
+**参数**
 
-**Arguments**
+无。
 
-None.
+**返回**
 
-**Returns**
-
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Back buffer texture pointer. |
+| [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 后缓冲区纹理指针。 |
 
-**Example**
+**示例**
 
 ```lua
 local bb = adapter:get_back_buffer();
 ```
 
-## get_back_buffer_downsampled
+## 获取降采样后缓冲区
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+返回后缓冲区纹理的4倍降采样版本。
 
-Returns a 4x down sampled version of the back buffer texture.
+**参数**
 
-**Arguments**
+无。
 
-None.
+**返回**
 
-**Returns**
-
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Downsampled back buffer texture pointer. |
+| [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 降采样后缓冲区纹理指针。 |
 
-**Example**
+**示例**
 
 ```lua
 local ds = adapter:get_back_buffer_downsampled();
 ```
 
-## get_shared_texture
+## 获取共享纹理
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+返回共享纹理。此纹理通常复制降采样后的后缓冲区纹理，尽管它在图层渲染开始前自动更新一次。
 
-Returns a shared texture. This texture usually replicates the down sampled back buffer texture, although it is updated automatically ONCE before the rendering on the layer starts.
+**参数**
 
-**Arguments**
+无。
 
-None.
+**返回**
 
-**Returns**
-
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Shared texture pointer. |
+| [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 共享纹理指针。 |
 
-**Example**
+**示例**
 
 ```lua
 local shared = adapter:get_shared_texture();

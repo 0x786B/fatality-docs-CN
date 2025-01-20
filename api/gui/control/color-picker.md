@@ -1,29 +1,29 @@
 ## color_picker
 
-This type represents a color picker control.
+此类型表示一个颜色选择器控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中同样可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the color picker.
+构造颜色选择器。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | [`control_id`](/api/gui/common-types/control-id "This type represents a control ID.") | Control ID. |
-| `allow_alpha` | `bool` | Whether to enable alpha channel. Defaults to `true`. |
+| `id` | [`control_id`](/api/gui/common-types/control-id "此类型表示一个控件ID。") | 控件ID。 |
+| `allow_alpha` | `bool` | 是否启用透明通道。默认为 `true`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color_picker` | Color picker object. |
+| `color_picker` | 颜色选择器对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local picker = gui.color_picker(id);
@@ -31,21 +31,21 @@ local picker = gui.color_picker(id);
 
 ## get_value
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Returns color picker' value.
+返回颜色选择器的值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`value_param<color>`](/api/gui/control/value-param "This type represents a value data used by some control types.") | Value data. |
+| [`value_param<color>`](/api/gui/control/value-param "此类型表示某些控件类型使用的值数据。") | 值数据。 |
 
-**Example**
+**示例**
 
 ```lua
 local val = picker:get_value():get();

@@ -1,28 +1,28 @@
 ## checkbox
 
-This type represents a checkbox control.
+此类型表示一个复选框控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中同样可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the checkbox.
+构造复选框。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | [`control_id`](/api/gui/common-types/control-id "This type represents a control ID.") | ID. |
+| `id` | [`control_id`](/api/gui/common-types/control-id "此类型表示一个控件ID。") | ID。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `checkbox` | Checkbox instance. |
+| `checkbox` | 复选框实例。 |
 
-**Example**
+**示例**
 
 ```lua
 local cb = gui.checkbox(gui.control_id('my_id'));
@@ -30,21 +30,21 @@ local cb = gui.checkbox(gui.control_id('my_id'));
 
 ## get_value
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Returns checkbox' value.
+返回复选框的值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`value_param<bool>`](/api/gui/control/value-param "This type represents a value data used by some control types.") | Value data. |
+| [`value_param<bool>`](/api/gui/control/value-param "此类型表示某些控件类型使用的值数据。") | 值数据。 |
 
-**Example**
+**示例**
 
 ```lua
 local val = cb:get_value():get();
@@ -52,23 +52,23 @@ local val = cb:get_value():get();
 
 ## set_value
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Sets checkbox' value.
+设置复选框的值。
 
-> It is advised to use this method instead of [`value_param`](/api/gui/control/value-param "This type represents a value data used by some control types.")'s [`set`](/api/gui/control/value-param?id=set "Sets the value.") method.
+> 建议使用此方法而不是 [`value_param`](/api/gui/control/value-param "此类型表示某些控件类型使用的值数据。") 的 [`set`](/api/gui/control/value-param?id=set "设置值。") 方法。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `bool` | New value. |
+| `val` | `bool` | 新值。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 cb:set_value(true);

@@ -1,39 +1,39 @@
 ## observer_mode_t
 
-This enum represents the observer modes available in the game.
+此枚举表示游戏中可用的观察者模式。
 
 ## none
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents no observer mode (not spectating anyone).
+表示无观察者模式（不在观察任何人）。
 
 ## fixed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a fixed camera position.
+表示固定摄像机位置。
 
 ## in_eye
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents observing from the perspective of the player being spectated.
+表示从被观察玩家的视角观察。
 
 ## chase
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a chase camera that follows the player being spectated.
+表示跟随被观察玩家的追踪摄像机。
 
 ## roaming
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a free-roaming camera.
+表示自由漫游摄像机。
 
 ## directed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an automatically directed camera, typically controlled by the game or server.
+表示自动导向的摄像机，通常由游戏或服务器控制。

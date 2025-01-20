@@ -1,26 +1,26 @@
 ## chandle
 
-This type represents an entity handle.
+此类型表示一个实体句柄。
 
-> You can also compare this type using a `==` operator.
+> 你也可以使用 `==` 运算符来比较此类型。
 
 ## get
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用]rw]
 
-Returns the entity, or nil if nothing found.
+返回实体，如果未找到则返回 nil。
 
-**Arguments**
+**参数**
 
-None.
+无
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<type>` | Entity instance. |
+| `<type>` | 实体实例。 |
 
-**Example**
+**示例**
 
 ```lua
 local ent = handle:get();
@@ -28,21 +28,21 @@ local ent = handle:get();
 
 ## valid
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用]rw]
 
-Returns `true` if the handle is valid.
+如果句柄有效则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if valid. |
+| `bool` | 如果有效则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if handle:valid() then
@@ -52,21 +52,21 @@ end
 
 ## is_clientside
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用]rw]
 
-Returns `true` if the handle links to a client-side entity.
+如果句柄链接到客户端实体则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if client-sided. |
+| `bool` | 如果是客户端实体则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if handle:is_clientside() then

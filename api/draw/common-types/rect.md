@@ -1,61 +1,61 @@
 ## rect
 
-This type is a rectangle used within rendering system.
+此类型是渲染系统中使用的矩形。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Creates a new rectangle.
+创建一个新的矩形。
 
-**Arguments**
+**参数**
 
-*1. Default rectangle (0, 0 position; 0, 0 size).*
+*1. 默认矩形（位置为 0,0；大小为 0,0）*
 
-None.
+无。
 
-*2. Single value.*
+*2. 单个值*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Mins XY, maxs XY value. |
+| `value` | `float` | 最小 XY 和最大 XY 值。 |
 
-*3. Single vector.*
+*3. 单个向量*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Mins vector, maxs vector. |
+| `value` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 最小向量和最大向量。 |
 
-*4. Double value.*
+*4. 双值*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `x` | `float` | Mins/maxs X coordinate. |
-| `y` | `float` | Mins/maxs Y coordinate. |
+| `x` | `float` | 最小/最大 X 坐标。 |
+| `y` | `float` | 最小/最大 Y 坐标。 |
 
-*5. Double vector.*
+*5. 双向量*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mins` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Mins vector. |
-| `maxs` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Maxs vector. |
+| `mins` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 最小向量。 |
+| `maxs` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 最大向量。 |
 
-*6. Four values.*
+*6. 四个值*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `x0` | `float` | Mins X coordinate. |
-| `y0` | `float` | Mins Y coordinate. |
-| `x1` | `float` | Maxs X coordinate. |
-| `y1` | `float` | Maxs Y coordinate. |
+| `x0` | `float` | 最小 X 坐标。 |
+| `y0` | `float` | 最小 Y 坐标。 |
+| `x1` | `float` | 最大 X 坐标。 |
+| `y1` | `float` | 最大 Y 坐标。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | New rectangle. |
+| `rect` | 新矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local my_rect = draw.rect(50, 50, 150, 150);
@@ -63,53 +63,53 @@ local my_rect = draw.rect(50, 50, 150, 150);
 
 ## mins
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点 (.) 访问的常规字段。]rw]
 
-Type: [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
+类型：[`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。")
 
-Mins (top-left) vector.
+最小（左上角）向量。
 
 ## maxs
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点 (.) 访问的常规字段。]rw]
 
-Type: [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
+类型：[`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。")
 
-Maxs (bottom-right) vector.
+最大（右下角）向量。
 
 ## width
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Either returns rectangle's width, or sets a new width.
+返回矩形的宽度或设置新的宽度。
 
-**Arguments**
+**参数**
 
-*1. Get width.*
+*1. 获取宽度*
 
-None.
+无。
 
-*2. Set width.*
+*2. 设置宽度*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New width. |
+| `value` | `float` | 新宽度。 |
 
-**Returns**
+**返回值**
 
-*1. Get width.*
+*1. 获取宽度*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Width. |
+| `float` | 宽度。 |
 
-*2. Set width.*
+*2. 设置宽度*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | New rectangle with changed width. |
+| `rect` | 具有更改后宽度的新矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local half_width = rect:width(rect:width() * 0.5);
@@ -117,37 +117,37 @@ local half_width = rect:width(rect:width() * 0.5);
 
 ## height
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Either returns rectangle's height, or sets a new height.
+返回矩形的高度或设置新的高度。
 
-**Arguments**
+**参数**
 
-*1. Get height.*
+*1. 获取高度*
 
-None.
+无。
 
-*2. Set height.*
+*2. 设置高度*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New height. |
+| `value` | `float` | 新高度。 |
 
-**Returns**
+**返回值**
 
-*1. Get height.*
+*1. 获取高度*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Height. |
+| `float` | 高度。 |
 
-*2. Set height.*
+*2. 设置高度*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | New rectangle with changed height. |
+| `rect` | 具有更改后高度的新矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local half_height = rect:height(rect:height() * 0.5);
@@ -155,37 +155,37 @@ local half_height = rect:height(rect:height() * 0.5);
 
 ## size
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Either returns rectangle's size, or sets a new size.
+返回矩形的大小或设置新的大小。
 
-**Arguments**
+**参数**
 
-*1. Get size.*
+*1. 获取大小*
 
-None.
+无。
 
-*2. Set size.*
+*2. 设置大小*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | New size. |
+| `value` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 新大小。 |
 
-**Returns**
+**返回值**
 
-*1. Get size.*
+*1. 获取大小*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Size. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 大小。 |
 
-*2. Set size.*
+*2. 设置大小*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | New rectangle with changed size. |
+| `rect` | 具有更改后大小的新矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local half_size = rect:size(rect:size() * draw.vec2(0.5, 0.5));
@@ -193,45 +193,45 @@ local half_size = rect:size(rect:size() * draw.vec2(0.5, 0.5));
 
 ## explode
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Explodes the rectangle by given vector (increase size from center into all directions by coordinates in the vector).
+通过给定向量扩展矩形（从中心向所有方向按向量坐标增加大小）。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Explode size. |
+| `value` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 扩展大小。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Exploded rectangle. |
+| `rect` | 扩展后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local exp = rect:explode(draw.vec2(6, 6)); -- will subtract -3,-3 from mins and add 3,3 to maxs
+local exp = rect:explode(draw.vec2(6, 6)); -- 将从最小值减去 -3,-3，并向最大值加上 3,3
 ```
 
 ## half_width
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns a rectangle with half of the width of this rectangle.
+返回一个宽度为此矩形一半的矩形。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Rectangle with halved width. |
+| `rect` | 宽度减半的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local half = rect:half_width();
@@ -239,298 +239,298 @@ local half = rect:half_width();
 
 ## translate
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Translates (moves) this rectangle by vector coordinates.
+通过向量坐标平移（移动）此矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Translation amount. |
+| `value` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 平移量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Translated rectangle. |
+| `rect` | 平移后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local rect = draw.rect(50, 50, 150, 150);
-local translated = rect:translate(draw.vec2(5, 5)); -- mins/maxs will be 55,55 and 155,155
+local translated = rect:translate(draw.vec2(5, 5)); -- 最小值/最大值将变为 55,55 和 155,155
 ```
 
 ## margin_left
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Move rectangle from the left by given amount.
+从左侧按给定量移动矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Margin amount. |
+| `value` | `float` | 边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Moved rectangle. |
+| `rect` | 移动后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:margin_left(5); -- moves to the right by 5px
+local new = rect:margin_left(5); -- 向右移动 5 像素
 ```
 
 ## margin_right
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Move rectangle from the right by given amount.
+从右侧按给定量移动矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Margin amount. |
+| `value` | `float` | 边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Moved rectangle. |
+| `rect` | 移动后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:margin_right(5); -- moves to the left by 5px
+local new = rect:margin_right(5); -- 向左移动 5 像素
 ```
 
 ## margin_top
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Move rectangle from the top by given amount.
+从顶部按给定量移动矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Margin amount. |
+| `value` | `float` | 边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Moved rectangle. |
+| `rect` | 移动后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:margin_top(5); -- moves to the bottom by 5px
+local new = rect:margin_top(5); -- 向下移动 5 像素
 ```
 
 ## margin_bottom
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Move rectangle from the bottom by given amount.
+从底部按给定量移动矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Margin amount. |
+| `value` | `float` | 边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Moved rectangle. |
+| `rect` | 移动后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:margin_bottom(5); -- moves to the top by 5px
+local new = rect:margin_bottom(5); -- 向上移动 5 像素
 ```
 
 ## padding_left
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Adds the value to the left side of the rectangle.
+向矩形的左侧添加值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Padding amount. |
+| `value` | `float` | 内边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:padding_left(5); -- adds 5 to mins x
+local new = rect:padding_left(5); -- 向最小值的 x 坐标添加 5
 ```
 
 ## padding_right
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Adds the value to the right side of the rectangle.
+向矩形的右侧添加值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Padding amount. |
+| `value` | `float` | 内边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:padding_right(5); -- adds 5 to maxs x
+local new = rect:padding_right(5); -- 向最大值的 x 坐标添加 5
 ```
 
 ## padding_top
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Adds the value to the top side of the rectangle.
+向矩形的顶部添加值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Padding amount. |
+| `value` | `float` | 内边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:padding_top(5); -- adds 5 to mins y
+local new = rect:padding_top(5); -- 向最小值的 y 坐标添加 5
 ```
 
 ## padding_bottom
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Adds the value to the bottom side of the rectangle.
+向矩形的底部添加值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Padding amount. |
+| `value` | `float` | 内边距量。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local new = rect:padding_bottom(5); -- adds 5 to maxs y
+local new = rect:padding_bottom(5); -- 向最大值的 y 坐标添加 5
 ```
 
 ## shrink
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Shrinks (implodes) the rectangle by given amount.
+按给定量缩小（内收）矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Shrink value. |
+| `value` | `float` | 缩小值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local shrinked = rect:shrink(5); -- adds 5,5 to mins and subtracts 5,5 from maxs
+local shrinked = rect:shrink(5); -- 向最小值添加 5,5，从最大值减去 5,5
 ```
 
 ## expand
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Expands (explodes) the rectangle by given amount.
+按给定量扩展（外扩）矩形。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Expand value. |
+| `value` | `float` | 扩展值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Resized rectangle. |
+| `rect` | 调整大小后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
-local expanded = rect:expand(5); -- subtracts 5,5 from mins and adds 5,5 to maxs
+local expanded = rect:expand(5); -- 从最小值减去 5,5，向最大值添加 5,5
 ```
 
 ## contains
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns `true` if this rectangle contains either vector or another rectangle.
+如果此矩形包含向量或另一个矩形，则返回 `true`。
 
-> Rectangle overload will return `true` **ONLY** if entire other rectangle is within the bounds of this one.
+> 矩形重载**仅**在另一个矩形完全在此矩形的边界内时返回 `true`。
 
-**Arguments**
+**参数**
 
-*1. Vector variant.*
+*1. 向量变体*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Vector to check against. |
+| `other` | [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 要检查的向量。 |
 
-*2. Rectangle variant.*
+*2. 矩形变体*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `rect` | Rectangle to check against. |
+| `other` | `rect` | 要检查的矩形。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if other object is in bounds of this rectangle. |
+| `bool` | 如果其他对象在此矩形的边界内则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if rect:contains(cursor_pos) then
@@ -540,23 +540,23 @@ end
 
 ## overlaps
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns `true` if the other rectangle overlaps with this rectangle.
+如果另一个矩形与此矩形重叠，则返回 `true`。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `rect` | Rectangle to check against. |
+| `other` | `rect` | 要检查的矩形。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if other rectangle overlaps with this rectangle. |
+| `bool` | 如果另一个矩形与此矩形重叠则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if rect:overlaps(another_rect) then
@@ -566,23 +566,23 @@ end
 
 ## intersect
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Intersects this rectangle with another rectangle.
+将此矩形与另一个矩形相交。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `other` | `rect` | Rectangle to intersect with. |
+| `other` | `rect` | 要相交的矩形。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Intersected rectangle. |
+| `rect` | 相交后的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local intersected = rect:intersect(another_rect);
@@ -590,21 +590,21 @@ local intersected = rect:intersect(another_rect);
 
 ## tl
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns top-left vector.
+返回左上角向量。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top-left vector. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 左上角向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local tl = rect:tl();
@@ -612,21 +612,21 @@ local tl = rect:tl();
 
 ## tr
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns top-right vector.
+返回右上角向量。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Top-right vector. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 右上角向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local tr = rect:tr();
@@ -634,21 +634,21 @@ local tr = rect:tr();
 
 ## br
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns bottom-right vector.
+返回右下角向量。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom-right vector. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 右下角向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local br = rect:br();
@@ -656,21 +656,21 @@ local br = rect:br();
 
 ## bl
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns bottom-left vector.
+返回左下角向量。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Bottom-left vector. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 左下角向量。 |
 
-**Example**
+**示例**
 
 ```lua
 local bl = rect:bl();
@@ -678,21 +678,21 @@ local bl = rect:bl();
 
 ## center
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns center point of this rectangle.
+返回此矩形的中心点。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Center point. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 中心点。 |
 
-**Example**
+**示例**
 
 ```lua
 local center = rect:center();
@@ -700,45 +700,45 @@ local center = rect:center();
 
 ## circle
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Treats this rectangle as an ellipsis and returns point on it. Note, that this "ellipsis" will be perfect with no modified curvature (basically if this rectangle is a box - you will get a point on a perfect circle).
+将此矩形视为椭圆并返回其上的点。注意，这个"椭圆"将是完美的，没有修改的曲率（基本上如果这个矩形是一个盒子 - 你将得到一个完美圆上的点）。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | `float` | Radians value. |
+| `r` | `float` | 弧度值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Point on the ellipsis. |
+| [`vec2`](/api/draw/common-types/vec2 "这是渲染系统中使用的2D向量。") | 椭圆上的点。 |
 
-**Example**
+**示例**
 
 ```lua
-local point = rect:circle(rad(250)); -- returns point on the 250th degree
+local point = rect:circle(rad(250)); -- 返回 250 度上的点
 ```
 
 ## floor
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns floored rectangle.
+返回向下取整的矩形。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Floored rectangle. |
+| `rect` | 向下取整的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local floored = rect:floor();
@@ -746,21 +746,21 @@ local floored = rect:floor();
 
 ## ceil
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns ceiled rectangle.
+返回向上取整的矩形。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Ceiled rectangle. |
+| `rect` | 向上取整的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local ceiled = rect:ceil();
@@ -768,21 +768,21 @@ local ceiled = rect:ceil();
 
 ## round
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns rounded rectangle.
+返回四舍五入的矩形。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `rect` | Rounded rectangle. |
+| `rect` | 四舍五入的矩形。 |
 
-**Example**
+**示例**
 
 ```lua
 local rounded = rect:round();
@@ -790,21 +790,21 @@ local rounded = rect:round();
 
 ## is_zero
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns `true` if both mins and maxs are equal to 0.
+如果最小值和最大值都等于 0，则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if this is a zero rectangle. |
+| `bool` | 如果这是一个零矩形则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if rect:is_zero() then

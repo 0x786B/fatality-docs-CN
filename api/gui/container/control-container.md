@@ -1,7 +1,7 @@
 ## control_container
 
-This type represents an abstract control with a container.
+此类型表示一个带有容器的抽象控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中同样可用。
 
-> This type inherits [`container`](/api/gui/container "This type represents an abstract container.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`container`](/api/gui/container "此类型表示一个抽象容器。") 类型。其所有基础方法和字段在此类型中同样可用。

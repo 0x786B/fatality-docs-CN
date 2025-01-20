@@ -1,60 +1,60 @@
-## Adding UI
+## 添加用户界面
 
-Now that you know the basics, let’s extend our script by allowing the user to toggle the text. We can do this by adding a **control** to the menu.
+现在您已经了解了基础知识，让我们通过允许用户切换文本来扩展我们的脚本。我们可以通过在菜单中添加一个**控件**来实现这一点。
 
-## Creating a control
+## 创建控件
 
-Let’s start by creating a simple checkbox:
+让我们首先创建一个简单的复选框：
 
 ```lua
 local cb = gui.checkbox(gui.control_id('my_checkbox'));
 ```
 
-Each control has a **unique ID**, which the UI framework uses to distinguish controls within containers. It’s very important that your control’s ID doesn’t conflict with others, as that could result in a broken state or worse.
+每个控件都有一个**唯一ID**，UI 框架使用这个 ID 来区分容器中的控件。确保您的控件 ID 不会与其他控件冲突非常重要，否则可能会导致状态损坏或更糟。
 
-To create the ID, call [`gui.control_id`](/api/gui/common-types/control-id#call "Constructs the ID structure.") and pass the desired ID.
+要创建 ID，调用 [`gui.control_id`](/api/gui/common-types/control-id#call "构造 ID 结构。") 并传入所需的 ID。
 
-Then, create the checkbox by calling [`gui.checkbox`](/api/gui/control/checkbox?id=__call "Constructs the checkbox.") and passing the ID structure you've created.
+然后，通过调用 [`gui.checkbox`](/api/gui/control/checkbox?id=__call "构造复选框。") 并传入您创建的 ID 结构来创建复选框。
 
-## Constructing the row
+## 构建行
 
-By default, controls are typically placed in **rows** - layouts that stack elements in a specific manner. We provide a simple helper function - [`gui.make_control`](/api/gui?id=make_control "Wraps a control into a layout consisting of a label and that specific control. You should add this new control to groupboxes if you want your control to be displayed nicely. Additionally, you can add any extra controls to the returned one - those will get stacked to the left side of...").
+默认情况下，控件通常放置在**行**中 - 以特定方式堆叠元素的布局。我们提供了一个简单的辅助函数 - [`gui.make_control`](/api/gui?id=make_control "将控件包装到由标签和特定控件组成的布局中。如果您希望控件显示得漂亮，应将此新控件添加到分组框中。此外，您可以向返回的控件添加任何额外的控件 - 这些控件将堆叠在初始控件的左侧...")。
 
 ```lua
 local row = gui.make_control('My checkbox', cb);
 ```
 
-## Adding the row to a group
+## 将行添加到分组
 
-With the control and row ready, let’s add them to a group.
+准备好控件和行后，让我们将它们添加到一个分组中。
 
-> To view group and control IDs, you can enable **Debug mode** in the SCRIPTS tab.
+> 要查看分组和控件 ID，您可以在 SCRIPTS 选项卡中启用**调试模式**。
 
-In this example, we'll use the `lua>elements a` group. First, locate that group in the global context:
+在这个示例中，我们将使用 `lua>elements a` 分组。首先在全局上下文中找到该分组：
 
 ```lua
 local group = gui.ctx:find('lua>elements a');
 ```
 
-Then call its [`add`](/api/gui/container?id=add "Adds a control to the container.") method to include your row:
+然后调用其 [`add`](/api/gui/container?id=add "将控件添加到容器中。") 方法以包含您的行：
 
 ```lua
 group:add(row);
 ```
 
-That's it!
+就是这样！
 
-## Using the value
+## 使用值
 
-Next, let’s modify our previous script so the text only appears if the checkbox is checked. Wrap your drawing code in an `if` statement before rendering the text:
+接下来，让我们修改之前的脚本，使文本仅在复选框被选中时显示。在渲染文本之前，将绘图代码包装在 `if` 语句中：
 
 ```lua
 if cb:get_value():get() then
 ```
 
-and close it after.
+并在之后关闭它。
 
-The final script should look something like this:
+最终的脚本应该看起来像这样：
 
 ```lua
 local cb = gui.checkbox(gui.control_id('my_checkbox'));
@@ -67,7 +67,7 @@ local function on_present_queue()
         local d = draw.surface;
         d.font = draw.fonts['gui_main'];
         d:add_text(draw.vec2(50, 50),
-            'Hello drawing! My first script speaking.',
+            'hello world',
             draw.color.white()
         );
     end

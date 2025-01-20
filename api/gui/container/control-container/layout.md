@@ -1,5 +1,5 @@
 ## layout
 
-This type represents a layout control.
+此类型表示一个布局控件。
 
-> This type inherits [`control_container`](/api/gui/container/control-container "This type represents an abstract control with a container.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control_container`](/api/gui/container/control-container "此类型表示一个带有容器的抽象控件。") 类型。其所有基础方法和字段在此类型中同样可用。

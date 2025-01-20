@@ -1,40 +1,40 @@
 ## ptr
 
-This type is a literal pointer.
+此类型是一个字面量指针。
 
-To preserve interoperability with C++, several functions return `void*` as the type, which then get converted to `light_userdata`. Since you can’t directly cast FFI types to `light_userdata`, we’ve introduced a specialized type helping with this conversion.
+为了保持与 C++ 的互操作性，一些函数返回 `void*` 作为类型，这些类型随后会被转换为 `light_userdata`。由于你不能直接将 FFI 类型转换为 `light_userdata`，我们引入了一个专门的类型来帮助进行这种转换。
 
-Before you convert your pointer to one that is supported by the API, you **need** to cast it to `uintptr_t`. This can be done in the following manner:
+在将你的指针转换为 API 支持的指针之前，你**需要**将其转换为 `uintptr_t`。这可以通过以下方式完成：
 
 ```lua
 local ptr_num = ffi.cast('uintptr_t', ptr_cdata);
 ```
 
-Then, you can use the cast value in this type's constructor.
+然后，你可以在此类型的构造函数中使用转换后的值。
 
 ## __call
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Converts a number to pointer.
+将数字转换为指针。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `num` | `int` | Pointer, as number. |
+| `num` | `int` | 作为数字的指针。 |
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 名称 | 描述 |
 | ---- | ----------- |
-| `ptr` | Pointer, as `light_userdata`. |
+| `ptr` | 作为 `light_userdata` 的指针。 |
 
-**Example**
+**示例**
 
 ```lua
--- cast to number first
+-- 首先转换为数字
 local ptr_num = ffi.cast('uintptr_t', ptr_cdata);
 
--- then cast to light_userdata
+-- 然后转换为 light_userdata
 local ptr_ld = ptr(ptr_num);
 ```

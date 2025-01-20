@@ -1,24 +1,24 @@
 ## container
 
-This type represents an abstract container.
+此类型表示一个抽象容器。
 
 ## add
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Adds a control to the container.
+向容器添加一个控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `ctrl` | [`control`](/api/gui/control "This type represents an abstract GUI control.") | Control to add. |
+| `ctrl` | [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") | 要添加的控件。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 container:add(my_control);
@@ -26,21 +26,21 @@ container:add(my_control);
 
 ## remove
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Removes a control from the container.
+从容器中移除一个控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `ctrl` | [`control`](/api/gui/control "This type represents an abstract GUI control.") | Control to remove. |
+| `ctrl` | [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") | 要移除的控件。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 container:remove(my_control);
@@ -48,23 +48,23 @@ container:remove(my_control);
 
 ## find
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Finds a control by ID.
+通过ID查找控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | `string` | Control ID. |
+| `id` | `string` | 控件ID。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<control>?` | Casted control. Returns `nil` if the control was not found, or casting failed. |
+| `<control>?` | 转换后的控件。如果未找到控件或转换失败，则返回 `nil`。 |
 
-**Example**
+**示例**
 
 ```lua
 local some_cb = container:find('some_cb');

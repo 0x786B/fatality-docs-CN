@@ -1,65 +1,65 @@
-## Getting Started
+## 快速开始
 
-Welcome to the basics of scripting with our API.
+欢迎使用我们的API基础脚本。
 
-Fatality’s API is designed to mirror the software’s internal structure, giving you substantial control over its subsystems. Some features that could cause instability or damage are restricted.
+Fatality的API设计旨在模仿软件的内部结构，为您提供对其子系统的大量控制。一些可能导致不稳定或损坏的功能受到限制。
 
-> **Important Note:** Workshop scripts are currently unprotected and can potentially be extracted. Protection measures will be introduced soon.
+> **重要提示：** 工作室脚本目前未受保护，可能会被潜在提取。保护措施将很快引入。
 
-## Basic Concepts
-Our scripting engine uses LuaJIT 2.1 (with minor customizations). It’s fully compatible with Lua 5.1 and includes some Lua 5.2 enhancements.
+## 基本概念
+我们的脚本引擎使用LuaJIT 2.1（带有少量自定义）。它与Lua 5.1完全兼容，并包含一些Lua 5.2的增强功能。
 
-The standard libraries `baselib`, `bit`, `ffi`, `math`, `string` and `table` are available. Note that the `ffi` library is **only** available if the **Allow insecure** option is enabled. Refer to [the official Lua documentation](https://www.lua.org/manual/5.1/) for more details.
+标准库`baselib`、`bit`、`ffi`、`math`、`string`和`table`可用。请注意，`ffi`库**仅**在启用**允许不安全操作**选项时可用。有关更多详细信息，请参阅[官方Lua文档](https://www.lua.org/manual/5.1/)。
 
-If we ever modify any standard functions, we will document those changes to keep you informed.
+如果我们修改了任何标准函数，我们将记录这些更改以保持您的信息同步。
 
-## Documentation Overview
-Throughout the API reference, you’ll encounter various labels used to describe a certain method or a field.
+## 文档概述
+在整个API参考中，您会遇到用于描述某个方法或字段的各种标签。
 
-### Labels
+### 标签
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Function][This is a regular function that must be called using a dot (.).]rw]
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
-[![Constructor][This is a constructor definition for this type.]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
-[![Insecure Only][This function exists only when "Allow insecure" is enabled.]i]
+[![Field][这是一个必须使用点（.）访问的常规字段。]rw]
+[![Function][这是一个必须使用点（.）调用的常规函数。]rw]
+[![Method][这是一个方法，也称为函数，但建议使用冒号（:）语法调用（`obj:fn()`）。]rw]
+[![Constructor][这是此类型的构造函数定义。您不需要调用任何特定字段，而是必须调用**类型本身**（例如：`vector`具有`__call`，这意味着您应该这样调用：`vector()`）。]rw]
+[![Read Only][这是一个只读字段，您无法更改其值。此限制通常不适用于任何子元素。]r]
+[![Insecure Only][此函数仅在启用“允许不安全操作”时存在。]i]
 
-All the possible labels are listed above.
+上述列出了所有可能的标签。
 
-* **Field**: this label indicates that the item is a standard **field**. It's type will be explained just below the name.
+* **Field**：此标签表示该项是一个标准**字段**。其类型将在名称下方解释。
 
-* **Function**: this label indicates that the item is a **function**, which you call using a dot syntax (`obj.fn()`).
+* **Function**：此标签表示该项是一个**函数**，您使用点语法调用（`obj.fn()`）。
 
-* **Method**: this label indicates that the item is a **method**, which is also a function, but it's advised to call it with the colon syntax (`obj:fn()`).
+* **Method**：此标签表示该项是一个**方法**，也是一个函数，但建议使用冒号语法调用（`obj:fn()`）。
 
-* **Constructor**: this label indicates that the item is a **constructor** definition. You don't have to call any field in particular, but instead you must invoke the **type itself** (example: `vector` has `__call`, meaning you should invoke it like this: `vector()`).
+* **Constructor**：此标签表示该项是一个**构造函数**定义。您不需要调用任何特定字段，而是必须调用**类型本身**（例如：`vector`具有`__call`，这意味着您应该这样调用：`vector()`）。
 
-* **Read Only**: this label indicates that the item is **read only**, and it's value cannot be changed. Typically, this restriction does not extend to any child elements.
+* **Read Only**：此标签表示该项是**只读**的，其值无法更改。通常，此限制不适用于任何子元素。
 
-* **Insecure Only**: this label indicates that the item is **insecure only**, and won't be accessible when 'Allow insecure' is turned off in the Lua settings.
+* **Insecure Only**：此标签表示该项是**仅不安全**的，当Lua设置中的“允许不安全操作”关闭时将无法访问。
 
-### Argument and return lists
-Arguments and return values are listed in the exact order you must supply or capture them. For instance, if a parameter is shown first, it is to be passed as the first argument to the function. The same goes for return values: the first listed value will be placed in the first variable you declare, and so on.
+### 参数和返回值列表
+参数和返回值按您必须提供的顺序列出。例如，如果参数显示在第一位，则应将其作为函数的第一个参数传递。对于返回值也是如此：第一个列出的值将放在您声明的第一个变量中，依此类推。
 
-### Types
-Some type descriptions have special symbols in place:
+### 类型
+某些类型描述中包含特殊符号：
 
-* `type?` means that the type might be `nil`.
+* `type?` 表示该类型可能是`nil`。
 
-* `type<other>` means that inner methods or fields will use `other` type.
+* `type<other>` 表示内部方法或字段将使用`other`类型。
 
-* `<other>` means that the type will be either `other`, or any of its child types.
+* `<other>` 表示该类型将是`other`，或其任何子类型。
 
-## Rules
+## 规则
 
-To keep your scripts safe and easy to use, we have quite a lot of safety measures in place. But, due to how specific stuff works, we are unable to fully make it as safe as possible. Therefore, here are some notes you should know before writing scripts:
+为了使脚本安全且易于使用，我们采取了许多安全措施。但由于某些特定内容的工作方式，我们无法将其完全安全化。因此，在编写脚本之前，请了解以下几点：
 
-### You Control the Lua State
-You may replace or override API functions, but you’re responsible for maintaining stable behavior. If you encounter any bugs in the default API (**excluding FFI**), please report them so we can address the issue.
+### 您控制Lua状态
+您可以替换或覆盖API函数，但您负责维护稳定的行为。如果您遇到默认API中的任何错误（**排除FFI**），请报告这些问题，以便我们可以解决这些问题。
 
-### Prioritize Safety
-Using FFI grants you extensive freedom. Keep in mind that scripts which could harm users in any way are disallowed and will be removed. Whenever possible, **rely on the provided API** or request additional functionality if you need something not currently offered. Custom “script loaders” are strictly disallowed.
+### 优先考虑安全性
+使用FFI为您提供极大的自由度。请记住，任何可能对用户造成伤害的脚本都是被禁止的，并将被移除。尽可能**依赖提供的API**或请求其他功能，如果您需要目前未提供的功能。自定义“脚本加载器”严格禁止。
 
-### Keep the Software Usable
-Avoid hiding unrelated UI elements, obstructing user input, or interfering with the overall user experience. Scripts that disrupt functionality or harass users risk removal from the Workshop.
+### 保持软件可用性
+避免隐藏不相关的UI元素、阻碍用户输入或干扰整体用户体验。任何破坏功能或骚扰用户的脚本都有可能从工作坊中移除。

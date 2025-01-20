@@ -1,885 +1,885 @@
 ## ccsweapon_base_vdata
 
-This type represents a weapon's static data.
+此类型表示武器的静态数据。
 
 ## built_right_handed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon is designed for right-handed use.
+表示武器是否为右手设计。
 
 ## allow_flipping
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon can be flipped for left-handed use.
+表示武器是否可以翻转为左手使用。
 
 ## linked_cooldowns
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon's cooldowns are linked with other weapons.
+表示武器的冷却时间是否与其他武器关联。
 
 ## flags
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-Represents various flags associated with the weapon.
+表示与武器相关的各种标志。
 
 ## primary_ammo_type
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The type of ammo used in the primary clip.
+主弹夹使用的弹药类型。
 
 ## secondary_ammo_type
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The type of ammo used in the secondary clip.
+副弹夹使用的弹药类型。
 
 ## max_clip1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The maximum number of rounds the primary clip can hold.
+主弹夹可容纳的最大子弹数。
 
 ## max_clip2
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The maximum number of rounds the secondary clip can hold.
+副弹夹可容纳的最大子弹数。
 
 ## default_clip1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The default number of rounds in the primary clip.
+主弹夹的默认子弹数。
 
 ## default_clip2
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The default number of rounds in the secondary clip.
+副弹夹的默认子弹数。
 
 ## reserve_ammo_as_clips
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether reserve ammo is stored as additional clips.
+表示备用弹药是否以额外弹夹的形式存储。
 
 ## weight
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-Represents the weight of the weapon.
+表示武器的重量。
 
 ## auto_switch_to
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the game will automatically switch to this weapon when picked up.
+表示拾取时游戏是否会自动切换到此武器。
 
 ## auto_switch_from
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the game will automatically switch away from this weapon.
+表示游戏是否会自动从此武器切换到其他武器。
 
 ## rumble_effect
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-Represents the rumble effect associated with this weapon.
+表示与此武器相关的震动效果。
 
 ## slot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The inventory slot this weapon occupies.
+此武器占用的库存槽位。
 
 ## position
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The position of the weapon in the inventory slot.
+武器在库存槽位中的位置。
 
 ## weapon_type
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`csweapon_type`](/api/entities/csweapon-type "This enum represents the weapon type in the game.")
+类型: [`csweapon_type`](/api/entities/csweapon-type "此枚举表示游戏中的武器类型。")
 
-The type of the weapon.
+武器的类型。
 
 ## weapon_category
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`csweapon_category`](/api/entities/csweapon-category "This enum represents the category classification for weapons in the game.")
+类型: [`csweapon_category`](/api/entities/csweapon-category "此枚举表示游戏中武器的分类。")
 
-The category of the weapon.
+武器的分类。
 
 ## gear_slot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-Represents the gear slot associated with the weapon.
+表示与武器相关的装备槽位。
 
 ## gear_slot_position
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The position of the weapon in the gear slot.
+武器在装备槽位中的位置。
 
 ## default_loadout_slot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The default loadout slot for the weapon.
+武器的默认装备槽位。
 
 ## s_wrong_team_msg
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `string`
+类型: `string`
 
-The message displayed when the weapon is used by the wrong team.
+当错误的队伍使用武器时显示的消息。
 
 ## price
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The purchase price of the weapon.
+武器的购买价格。
 
 ## kill_award
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The cash reward given to the player for a kill with this weapon.
+使用此武器击杀后给予玩家的现金奖励。
 
 ## primary_reserve_ammo_max
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The maximum amount of reserve ammo for the primary clip.
+主弹夹的最大备用弹药量。
 
 ## secondary_reserve_ammo_max
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The maximum amount of reserve ammo for the secondary clip.
+副弹夹的最大备用弹药量。
 
 ## melee_weapon
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon is classified as a melee weapon.
+表示武器是否被归类为近战武器。
 
 ## has_burst_mode
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon has a burst fire mode.
+表示武器是否具有连发模式。
 
 ## is_revolver
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon is classified as a revolver.
+表示武器是否被归类为左轮手枪。
 
 ## cannot_shoot_underwater
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon cannot be fired underwater.
+表示武器是否不能在水下射击。
 
 ## name
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `string`
+类型: `string`
 
-The internal name of the weapon.
+武器的内部名称。
 
 ## anim_extension
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `string`
+类型: `string`
 
-The animation extension used by the weapon.
+武器使用的动画扩展名。
 
 ## e_silencer_type
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-Represents the type of silencer compatible with the weapon.
+表示与武器兼容的消音器类型。
 
 ## crosshair_min_distance
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The minimum crosshair spread distance for this weapon.
+此武器的最小准星扩散距离。
 
 ## crosshair_delta_distance
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The change in crosshair spread distance when firing.
+射击时准星扩散距离的变化。
 
 ## is_full_auto
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon is fully automatic.
+表示武器是否为全自动。
 
 ## num_bullets
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The number of bullets fired per shot.
+每次射击发射的子弹数量。
 
 ## cycle_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The time between successive shots.
+连续射击之间的时间间隔。
 
 ## max_speed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The maximum movement speed of the player while holding this weapon.
+持有此武器时玩家的最大移动速度。
 
 ## spread
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The base spread of the weapon when fired.
+武器射击时的基础扩散。
 
 ## inaccuracy_crouch
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while crouching.
+武器在蹲下时的不准确性。
 
 ## inaccuracy_stand
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while standing.
+武器在站立时的不准确性。
 
 ## inaccuracy_jump
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while jumping.
+武器在跳跃时的不准确性。
 
 ## inaccuracy_land
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon upon landing from a jump.
+武器在从跳跃落地时的不准确性。
 
 ## inaccuracy_ladder
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while climbing a ladder.
+武器在攀爬梯子时的不准确性。
 
 ## inaccuracy_fire
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while firing.
+武器在射击时的不准确性。
 
 ## inaccuracy_move
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The inaccuracy of the weapon while moving.
+武器在移动时的不准确性。
 
 ## recoil_angle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The angle of recoil for the weapon when fired.
+武器射击时的后座角度。
 
 ## recoil_angle_variance
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The variance in the angle of recoil.
+后座角度变化的方差。
 
 ## recoil_magnitude
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The magnitude of recoil for the weapon.
+武器射击时的后座幅度。
 
 ## recoil_magnitude_variance
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<float>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The variance in the magnitude of recoil.
+后座幅度变化的方差。
 
 ## tracer_frequency
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`cfiring_mode<int>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "Firing mode information.")
+类型: [`cfiring_mode<int>`](/api/entities/ccsweapon-base-vdata/cfiring-mode "射击模式信息。")
 
-The frequency of tracers visible when firing the weapon.
+射击武器时可见的弹壳频率。
 
 ## inaccuracy_jump_initial
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The initial inaccuracy of the weapon upon jumping.
+武器在跳跃时的初始不准确性。
 
 ## inaccuracy_jump_apex
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The inaccuracy of the weapon at the apex of a jump.
+武器在跳跃顶点的不准确性。
 
 ## inaccuracy_reload
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The inaccuracy of the weapon after reloading.
+武器在重新加载后的不准确性。
 
 ## recoil_seed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The seed value used for determining recoil patterns.
+用于确定后座模式的模式种子值。
 
 ## spread_seed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The seed value used for determining weapon spread.
+用于确定武器扩散的模式种子值。
 
 ## time_to_idle_after_fire
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The time it takes for the weapon to transition to idle after firing.
+武器在射击后过渡到空闲的时间。
 
 ## idle_interval
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The time interval between idle animations for the weapon.
+武器空闲动画之间的间隔时间。
 
 ## attack_movespeed_factor
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The factor by which the player's movement speed is reduced while attacking with this weapon.
+使用此武器攻击时玩家移动速度减少的比例。
 
 ## heat_per_shot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The heat generated by the weapon per shot.
+武器每射击产生的热量。
 
 ## inaccuracy_pitch_shift
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The pitch shift caused by inaccuracy when firing.
+射击不准确性引起的音高变化。
 
 ## inaccuracy_alt_sound_threshold
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The threshold for inaccuracy at which an alternative sound is played.
+不准确性达到何种程度时播放替代声音的阈值。
 
 ## bot_audible_range
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The range at which bots can hear this weapon being fired.
+机器人可以听到此武器射击的范围。
 
 ## use_radio_subtitle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `string`
+类型: `string`
 
-Indicates whether this weapon uses radio subtitles for its actions.
+表示此武器是否使用无线电字幕来执行其操作。
 
 ## unzooms_after_shot
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the weapon unzooms automatically after firing.
+表示武器是否会在射击后自动缩放。
 
 ## hide_view_model_when_zoomed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `bool`
+类型: `bool`
 
-Indicates whether the view model is hidden when the weapon is zoomed in.
+表示当武器缩放时是否隐藏视图模型。
 
 ## zoom_levels
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The number of zoom levels available for this weapon.
+此武器可用的缩放级别数量。
 
 ## zoom_fov1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The field of view (FOV) for the first zoom level.
+第一个缩放级别的视野（FOV）。
 
 ## zoom_fov2
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The field of view (FOV) for the second zoom level.
+第二个缩放级别的视野（FOV）。
 
 ## zoom_time0
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The time it takes to transition to the initial zoom state.
+过渡到初始缩放状态的时间。
 
 ## zoom_time1
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The time it takes to transition to the first zoom level.
+过渡到第一个缩放级别的时间。
 
 ## zoom_time2
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The time it takes to transition to the second zoom level.
+过渡到第二个缩放级别的时间。
 
 ## iron_sight_pull_up_speed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The speed at which the weapon's iron sights are pulled up.
+武器铁瞄拉起速度。
 
 ## iron_sight_put_down_speed
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The speed at which the weapon's iron sights are put down.
+武器铁瞄放下速度。
 
 ## iron_sight_fov
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The field of view (FOV) when aiming down the weapon's iron sights.
+武器铁瞄在瞄准武器铁瞄时的视野（FOV）。
 
 ## iron_sight_pivot_forward
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The forward pivot point for the weapon's iron sights.
+武器铁瞄的前枢轴点。
 
 ## iron_sight_looseness
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The looseness of the weapon's iron sights when aiming.
+武器铁瞄在瞄准时的松动性。
 
 ## ang_pivot_angle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).")
+类型: [`vector`](/api/common-types/vector "此类型是常见的3D向量（x, y, z）。")
 
-The pivot angle for the weapon's iron sights.
+武器铁瞄的枢轴角度。
 
 ## vec_iron_sight_eye_pos
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).")
+类型: [`vector`](/api/common-types/vector "此类型是常见的3D向量（x, y, z）。")
 
-The eye position when aiming down the weapon's iron sights.
+武器铁瞄在瞄准时的眼睛位置。
 
 ## damage
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The base damage dealt by the weapon.
+武器的基础伤害。
 
 ## headshot_multiplier
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The multiplier applied to damage for headshots.
+应用于头部射击的伤害倍增器。
 
 ## armor_ratio
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The ratio determining how much damage penetrates armor.
+确定伤害穿透装甲的比例。
 
 ## penetration
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The penetration power of the weapon for materials.
+武器对材料的穿透能力。
 
 ## range
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The effective range of the weapon.
+武器的有效射程。
 
 ## range_modifier
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The modifier applied to damage based on range.
+应用于基于范围的伤害修饰符。
 
 ## flinch_velocity_modifier_large
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The velocity modifier for large flinch effects.
+大挫败效果的速度修饰符。
 
 ## flinch_velocity_modifier_small
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The velocity modifier for small flinch effects.
+小挫败效果的速度修饰符。
 
 ## recovery_time_crouch
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The recovery time for accuracy when crouching.
+在蹲下时恢复准确性的时间。
 
 ## recovery_time_stand
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The recovery time for accuracy when standing.
+站立时恢复准确性的时间。
 
 ## recovery_time_crouch_final
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The final recovery time for accuracy when crouching.
+在蹲下时最终恢复准确性的时间。
 
 ## recovery_time_stand_final
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The final recovery time for accuracy when standing.
+站立时最终恢复准确性的时间。
 
 ## recovery_transition_start_bullet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The starting bullet count for recovery transition.
+恢复过渡开始的子弹数量。
 
 ## recovery_transition_end_bullet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `int`
+类型: `int`
 
-The ending bullet count for recovery transition.
+恢复过渡结束的子弹数量。
 
 ## throw_velocity
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `float`
+类型: `float`
 
-The velocity of thrown items (e.g., grenades).
+抛出物品（例如，手榴弹）的速度。
 
 ## v_smoke_color
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).")
+类型: [`vector`](/api/common-types/vector "此类型是常见的3D向量（x, y, z）。")
 
-The color of smoke effects for this weapon.
+此武器的烟雾效果颜色。
 
 ## anim_class
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）]r]
 
-Type: `string`
+类型: `string`
 
-The animation class associated with this weapon.
+与该武器关联的动画类。

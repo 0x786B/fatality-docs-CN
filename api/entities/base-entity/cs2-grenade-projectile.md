@@ -1,26 +1,26 @@
 ## cs2_grenade_projectile
 
-This type represents a grenade projectile.
+此类型表示一个手榴弹投射物。
 
-> This type inherits [`base_entity`](/api/entities/base-entity "This type represents a base game entity.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`base_entity`](/api/entities/base-entity "此类型表示一个基础游戏实体。") 类型。其所有基础方法和字段在此类型中同样可用。
 
 ## get_abs_origin
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the absolute origin (the one that is used for rendering).
+返回绝对原点位置（用于渲染的位置）。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Origin. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 原点位置。 |
 
-**Example**
+**示例**
 
 ```lua
 local org = wep:get_abs_origin();
@@ -28,22 +28,22 @@ local org = wep:get_abs_origin();
 
 ## get_grenade_type
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns the grenade type.
+返回手榴弹类型。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Grenade type. |
+| `int` | 手榴弹类型。 |
 
-**Example**
+**示例**
 
 ```lua
 local type = gren:get_grenade_type();
-```
+``` 

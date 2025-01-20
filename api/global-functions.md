@@ -1,45 +1,45 @@
-## Global Functions
+## 全局函数
 
-Below is a list of all global functions. By “global”, we mean these functions do not require a preceding namespace - so you can call them directly, unlike other functions.
+以下是所有全局函数的列表。所谓"全局"，我们指的是这些函数不需要前置命名空间 - 所以您可以直接调用它们，不像其他函数。
 
 ## print
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Prints text to game's console.
+在游戏控制台中打印文本。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `...` | ... | Values to print in the console. |
+| `...` | ... | 要在控制台中打印的值。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
-print('Hello world!', 123); -- prints out "Hello world! 123" to the console
+print('Hello world!', 123); -- 在控制台中打印 "Hello world! 123"
 ```
 
 ## error
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点(.)调用的函数]rw]
 
-Prints an error text to game's console, and shuts down the script. Try to avoid using this function - use it only if an error happens which you can't recover from.
+在游戏控制台中打印错误文本，并关闭脚本。尽量避免使用此函数 - 仅在发生无法恢复的错误时使用。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `text` | string | Read [`print`](api/global-functions?id=print "Prints text to game's console.") for documentation. |
+| `text` | string | 阅读 [`print`](api/global-functions?id=print "在游戏控制台中打印文本。") 的文档。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
-error('Can\'t recover from this one! Error: ' .. tostring(123));
+error('无法从这个错误中恢复！错误：' .. tostring(123));
 ```

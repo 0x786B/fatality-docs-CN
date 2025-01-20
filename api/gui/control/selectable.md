@@ -1,30 +1,30 @@
 ## selectable
 
-This type represents a selectable control.
+此类型表示一个可选择控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the selectable.
+构造可选择控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | [`control_id`](/api/gui/common-types/control-id "This type represents a control ID.") | Control ID. |
-| `str` | `string` | Text string. |
+| `id` | [`control_id`](/api/gui/common-types/control-id "此类型表示一个控件ID。") | 控件ID。 |
+| `str` | `string` | 文本字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `selectable` | Selectable object. |
+| `selectable` | 可选择对象。 |
 
-**Example**
+**示例**
 
 ```lua
-local sel = gui.selectable(id, 'Hello!');
+local sel = gui.selectable(id, '你好！');
 ```

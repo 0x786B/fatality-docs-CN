@@ -1,124 +1,124 @@
 ## events
 
-Usage: `events.{event_name}`
+用法：`events.{event_name}`
 
-There are a number of events that Fatality provides to use in the API - from various hooks, to in-game events. Each event entry is an object of [`event_t`](/api/events/event-t "Event usertype. An instance of this type can be found in events."). This table documents events to be used by your scripts.
+Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内事件。每个事件条目都是 [`event_t`](/api/events/event-t "事件用户类型。此类型的实例可以在 events 中找到。") 类型的对象。本表记录了您的脚本可以使用的事件。
 
-> You are not required to remove events when your script unloads. It is done automatically by the API engine.
+> 当您的脚本卸载时，不需要手动移除事件。API 引擎会自动完成这个操作。
 
 ## present_queue
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked each time the game queues a frame for rendering. This is the only permitted location for drawing on screen.
+在游戏每次将帧排队进行渲染时调用。这是唯一允许在屏幕上绘制的位置。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
 ## frame_stage_notify
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the game progresses onto another frame stage. This event is called before the game handles a new frame stage.
+在游戏每次进入新的帧阶段时调用。此事件在游戏处理新帧阶段之前调用。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `stage` | [`client_frame_stage`](/api/common-enums/client-frame-stage "Contains keys for various frame rendering stages.") | Current frame stage. |
+| `stage` | [`client_frame_stage`](/api/common-enums/client-frame-stage "包含各种帧渲染阶段的键。") | 当前帧阶段。 |
 
 ## render_start_pre
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time game starts the scene rendering process. This event is called before the game's function runs.
+在游戏每次开始场景渲染过程时调用。此事件在游戏函数运行之前调用。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
 ## render_start_post
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time game starts scene rendering process. This event is called after the game's function runs.
+在游戏每次开始场景渲染过程时调用。此事件在游戏函数运行之后调用。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `setup` | [`cview_setup`](/api/common-types/cview-setup "Describes view setup parameters.") | View setup information. |
+| `setup` | [`cview_setup`](/api/common-types/cview-setup "描述视图设置参数。") | 视图设置信息。 |
 
 ## setup_view_pre
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the game sets up the view. This event is called **before** the game's function runs.
+在游戏每次设置视图时调用。此事件在游戏函数运行**之前**调用。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
 ## setup_view_post
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the game sets up the view information. This event is called **after** the game's function runs.
+在游戏每次设置视图信息时调用。此事件在游戏函数运行**之后**调用。
 
-> You can retrieve the view information from `game.view_render` service.
+> 您可以从 `game.view_render` 服务中获取视图信息。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
 ## override_view
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the game internally overrides view information. You are free to change whatever you like in the provided view setup.
+在游戏每次内部覆盖视图信息时调用。您可以自由更改提供的视图设置中的任何内容。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `setup` | [`cview_setup`](/api/common-types/cview-setup "Describes view setup parameters.") | View setup information. |
+| `setup` | [`cview_setup`](/api/common-types/cview-setup "描述视图设置参数。") | 视图设置信息。 |
 
 ## event
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time a game event fires.
+在每次游戏事件触发时调用。
 
-> We do not listen to every single event that exists in the game. If you need something that we don't listen to, please use [`mods.events`](/api/events/event-t "This module lets you manage custom in-game event listener.")
+> 我们并不监听游戏中存在的每个事件。如果您需要我们没有监听的事件，请使用 [`mods.events`](/api/events/event-t "此模块允许您管理自定义游戏内事件监听器。")
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `event` | [`game_event_t`](/api/common-types/game-event-t "Describes a game event.") | Game event. |
+| `event` | [`game_event_t`](/api/common-types/game-event-t "描述游戏事件。") | 游戏事件。 |
 
 ## handle_input
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the game processes mouse/controller input. This is a good place to alter mouse movement, if needed.
+在游戏每次处理鼠标/控制器输入时调用。如果需要修改鼠标移动，这是一个好地方。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `type` | [`input_type_t`](/api/common-enums/input-type-t "Contains keys for value input options.") | Type of the input. |
-| `value` | [`ref_holder_t<float>`](/api/common-types/ref-holder-t "This type acts as a proxy for reference variables that are used internally. Since Lua is a value-only language, it does not support references. Instead, an instance of this type is used to preserve interoperability with C++.") | Input value. |
+| `type` | [`input_type_t`](/api/common-enums/input-type-t "包含值输入选项的键。") | 输入类型。 |
+| `value` | [`ref_holder_t<float>`](/api/common-types/ref-holder-t "此类型作为内部使用的引用变量的代理。由于 Lua 是一个仅值语言，它不支持引用。相反，使用此类型的实例来保持与 C++ 的互操作性。") | 输入值。 |
 
 ## input
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个必须使用点(.)访问的常规字段。]rw]
 
-Invoked every time the GUI processes input.
+在 GUI 每次处理输入时调用。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `msg` | `int` | System message. [Documentation](https://learn.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues#system-defined-messages) |
-| `w` | `int` | WPARAM. |
-| `l` | `int` | LPARAM. |
+| `msg` | `int` | 系统消息。[文档](https://learn.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues#system-defined-messages) |
+| `w` | `int` | WPARAM。 |
+| `l` | `int` | LPARAM。 |

@@ -1,29 +1,29 @@
 ## notification
 
-This type represents a notification item.
+此类型表示一个通知项。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the notification.
+构造通知。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `hdr` | `string` | Header (title). |
-| `txt` | `string` | Text (body). |
-| `ico` | [`texture?`](/api/draw/managed/texture "This type represents a texture object.") | Icon. Defaults to `nil`. |
+| `hdr` | `string` | 标题。 |
+| `txt` | `string` | 正文。 |
+| `ico` | [`texture?`](/api/draw/managed/texture "此类型表示一个纹理对象。") | 图标。默认为 `nil`。 |
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `notification` | Notification object. |
+| `notification` | 通知对象。 |
 
-**Example**
+**示例**
 
 ```lua
-local notif = gui.notification('Hello', 'Lua works!');
+local notif = gui.notification('你好', 'Lua 运行正常！');
 ```

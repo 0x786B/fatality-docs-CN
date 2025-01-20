@@ -1,24 +1,24 @@
 ## notification_system
 
-This type represents a notification system.
+此类型表示一个通知系统。
 
 ## add
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Adds a notification to the list.
+向列表添加一个通知。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `notif` | [`notification`](/api/gui/notification-system/notification "This type represents a notification item.") | Notification object. |
+| `notif` | [`notification`](/api/gui/notification-system/notification "此类型表示一个通知项。") | 通知对象。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 notif:add(my_notification);

@@ -1,5 +1,5 @@
-## API Reference
+## API 参考
 
-In this section, the entire API documentation (as-is) is listed.
+在本节中，列出了完整的 API 文档（原样）。
 
-> Use the left menu (or hamburger menu, if you are on mobile) to navigate between enums.
+> 使用左侧菜单（或在移动设备上使用汉堡菜单）在枚举之间导航。

@@ -1,58 +1,54 @@
-## accessor
+## 访问器
 
-This type represents a safe way to access maps.
+此类型表示一种安全访问映射的方式。
 
-> Note that `<type>` indicates the specific type this instance holds. `accessor<texture>` for example means that `get` will return an instance of `texture`, and `set` will only accept the type `texture` as it's `obj` parameter.
+> 请注意，`<type>` 表示此实例持有的特定类型。例如，`accessor<texture>` 表示 `get` 将返回一个 `texture` 实例，而 `set` 只接受 `texture` 类型作为其 `obj` 参数。
 
 ## __index
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+返回一个通过键访问的对象。
 
-Returns an object by key.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Object key. |
+| `key` | `string` | 对象键。 |
 
-**Returns**
+**返回**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<type>` | Object. |
+| `<type>` | 对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local main_font = draw.fonts['gui_main'];
 
--- this also works
+-- 这也可以
 local main_font_2 = draw.fonts.gui_main;
 ```
 
 ## __newindex
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+通过键设置一个对象。
 
-Sets an object by key.
+**参数**
 
-**Arguments**
-
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Object key. |
-| `obj` | `<type>` | Object. |
+| `key` | `string` | 对象键。 |
+| `obj` | `<type>` | 对象。 |
 
-**Returns**
+**返回**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 draw.fonts['my_font'] = my_font;
 
--- this also works
+-- 这也可以
 draw.fonts.my_font = my_font;
 ```

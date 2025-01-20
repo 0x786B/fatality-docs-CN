@@ -1,26 +1,26 @@
 ## context
 
-This type represents the GUI context.
+此类型表示GUI上下文。
 
 ## find
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号(:)调用的方法。]rw]
 
-Finds a control by ID.
+通过ID查找控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | `string` | Control ID. |
+| `id` | `string` | 控件ID。 |
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `<control>?` | Casted control. Returns `nil` if the control was not found, or casting failed. |
+| `<control>?` | 转换后的控件。如果未找到控件或转换失败，则返回 `nil`。 |
 
-**Example**
+**示例**
 
 ```lua
 local some_cb = ctx:find('some_cb');
@@ -28,8 +28,8 @@ local some_cb = ctx:find('some_cb');
 
 ## user
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`user_t`](/api/gui/context/user-t "This type represents basic user information.")
+类型: [`user_t`](/api/gui/context/user-t "此类型表示基本用户信息。")
 
-User's basic information.
+用户的基本信息。

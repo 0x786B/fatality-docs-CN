@@ -1,33 +1,33 @@
 ## mouse_button
 
-This enum represents mouse buttons.
+此枚举表示鼠标按钮。
 
 ## left
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Left mouse button.
+鼠标左键。
 
 ## right
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Right mouse button.
+鼠标右键。
 
 ## middle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-Middle (scroll wheel) mouse button
+鼠标中键（滚轮按钮）。
 
 ## back
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-"Back" mouse button (side button 1).
+鼠标"后退"键（侧键1）。
 
 ## forward
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个普通字段，必须使用点(.)来访问。]rw]
 
-"Forward" mouse button (side button 2).
+鼠标"前进"键（侧键2）。

@@ -1,43 +1,43 @@
 ## color
 
-This type is a color used within the rendering system.
+此类型是渲染系统中使用的颜色。
 
-> Do not mistake this type with [`color`](/api/common-types/color "This type is a color used within the game.") that is used in game! While these types are interchangeable internally, they are **NOT** in the API.
+> 不要将此类型与游戏中使用的 [`color`](/api/common-types/color "这是游戏中使用的颜色类型。") 混淆！虽然这些类型在内部是可互换的，但在 API 中它们**不是**可互换的。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Creates a new color instance.
+创建一个新的颜色实例。
 
-**Arguments**
+**参数**
 
-*1. Default color (translucent black).*
+*1. 默认颜色（透明黑色）*
 
-None.
+无。
 
-*2. Integer colors.*
+*2. 整数颜色*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `r` | `int` | Red color (`0` to `255`). |
-| `g` | `int` | Green color (`0` to `255`). |
-| `b` | `int` | Blue color (`0` to `255`). |
-| `a` | `int` | Opacity (`0` to `255`). Defaults to `255`. |
+| `r` | `int` | 红色（`0` 到 `255`）。 |
+| `g` | `int` | 绿色（`0` 到 `255`）。 |
+| `b` | `int` | 蓝色（`0` 到 `255`）。 |
+| `a` | `int` | 不透明度（`0` 到 `255`）。默认为 `255`。 |
 
-*3. Hex string.*
+*3. 十六进制字符串*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `hex` | `string` | Hex string. Formats are: `#rrggbbaa`, `#rrggbb`, `#rgba` and `#rgb`. |
+| `hex` | `string` | 十六进制字符串。格式为：`#rrggbbaa`、`#rrggbb`、`#rgba` 和 `#rgb`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local white = draw.color(255, 255, 255);
@@ -45,21 +45,21 @@ local white = draw.color(255, 255, 255);
 
 ## white
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a white, opaque color.
+返回一个不透明的白色。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local white = draw.color.white();
@@ -67,21 +67,21 @@ local white = draw.color.white();
 
 ## white_transparent
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a white, transparent color.
+返回一个透明的白色。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local white_t = draw.color.white_transparent();
@@ -89,21 +89,21 @@ local white_t = draw.color.white_transparent();
 
 ## black
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a black, opaque color.
+返回一个不透明的黑色。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local black = draw.color.black();
@@ -111,21 +111,21 @@ local black = draw.color.black();
 
 ## black_transparent
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a black, transparent color.
+返回一个透明的黑色。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local black_t = draw.color.black_transparent();
@@ -133,24 +133,24 @@ local black_t = draw.color.black_transparent();
 
 ## percent
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a red-to-green color, depending on the provided percent.
+根据提供的百分比返回一个从红色到绿色的颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `p` | `float` | Percentile (`0` to `1`). |
-| `a` | `float` | Opacity. Defaults to `1`. |
+| `p` | `float` | 百分比（`0` 到 `1`）。 |
+| `a` | `float` | 不透明度。默认为 `1`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local yellow = draw.color.percent(0.5);
@@ -158,24 +158,24 @@ local yellow = draw.color.percent(0.5);
 
 ## gray
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Returns a black-to-white color, depending on the provided percent.
+根据提供的百分比返回一个从黑色到白色的颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `p` | `float` | Percentile (`0` to `1`). |
-| `a` | `float` | Opacity. Defaults to `1`. |
+| `p` | `float` | 百分比（`0` 到 `1`）。 |
+| `a` | `float` | 不透明度。默认为 `1`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local gray = draw.color.gray(0.5);
@@ -183,49 +183,49 @@ local gray = draw.color.gray(0.5);
 
 ## interpolate
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![函数][这是一个必须使用点 (.) 调用的函数。]rw]
 
-Interpolates two colors.
+在两个颜色之间进行插值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `a` | `color` | Starting color. |
-| `b` | `color` | Ending color. |
-| `t` | `float` | Interpolation percentile. |
+| `a` | `color` | 起始颜色。 |
+| `b` | `color` | 结束颜色。 |
+| `t` | `float` | 插值百分比。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Color object. |
+| `color` | 颜色对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local a = draw.color.white();
 local b = draw.color.black();
-local i = draw.color.interpolate(a, b, 0.5); -- gray
+local i = draw.color.interpolate(a, b, 0.5); -- 灰色
 ```
 
 ## rgba
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns integer representation of this color (RGBA format)
+返回此颜色的整数表示（RGBA 格式）
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | RGBA color. |
+| `int` | RGBA 颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local num = col:rgba();
@@ -233,21 +233,21 @@ local num = col:rgba();
 
 ## argb
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns integer representation of this color (ARGB format)
+返回此颜色的整数表示（ARGB 格式）
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | ARGB color. |
+| `int` | ARGB 颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local num = col:argb();
@@ -255,21 +255,21 @@ local num = col:argb();
 
 ## bgra
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns integer representation of this color (BGRA format)
+返回此颜色的整数表示（BGRA 格式）
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | BGRA color. |
+| `int` | BGRA 颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local num = col:bgra();
@@ -277,21 +277,21 @@ local num = col:bgra();
 
 ## abgr
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns integer representation of this color (ABGR format)
+返回此颜色的整数表示（ABGR 格式）
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | ABGR color. |
+| `int` | ABGR 颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local num = col:abgr();
@@ -299,23 +299,23 @@ local num = col:abgr();
 
 ## darken
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns darker variant of this color.
+返回此颜色的较暗变体。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Modulation amount (`0` to `1`). |
+| `value` | `float` | 调制量（`0` 到 `1`）。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Darker color. |
+| `color` | 较暗的颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local darker = col:darken(0.5);
@@ -323,31 +323,31 @@ local darker = col:darken(0.5);
 
 ## mod_a
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Modulate opacity of the color. This will take existing opacity, and multiply it by whatever value you provide. It is useful if you want to modulate same color in steps, instead of setting the accurate opacity number.
+调制颜色的不透明度。这将取现有的不透明度，并乘以您提供的值。如果您想逐步调制相同的颜色，而不是设置准确的不透明度数值，这很有用。
 
-**Arguments**
+**参数**
 
-*1. Float variant.*
+*1. 浮点数变体*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | Opacity modulation (0 to 1). |
+| `value` | `float` | 不透明度调制（0 到 1）。 |
 
-*2. Integer variant.*
+*2. 整数变体*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `int` | Opacity modulation (0 to 255). |
+| `value` | `int` | 不透明度调制（0 到 255）。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | Modulated color. |
+| `color` | 调制后的颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local half_opacity = col:mod_a(0.5);
@@ -355,23 +355,23 @@ local half_opacity = col:mod_a(0.5);
 
 ## r
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Override red and return new color.
+覆盖红色并返回新颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New value. |
+| `value` | `float` | 新值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | New color. |
+| `color` | 新颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local full_red = col:r(1);
@@ -379,23 +379,23 @@ local full_red = col:r(1);
 
 ## g
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Override green and return new color.
+覆盖绿色并返回新颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New value. |
+| `value` | `float` | 新值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | New color. |
+| `color` | 新颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local full_green = col:g(1);
@@ -403,23 +403,23 @@ local full_green = col:g(1);
 
 ## b
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Override blue and return new color.
+覆盖蓝色并返回新颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New value. |
+| `value` | `float` | 新值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | New color. |
+| `color` | 新颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local full_blue = col:b(1);
@@ -427,23 +427,23 @@ local full_blue = col:b(1);
 
 ## a
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Override opacity and return new color.
+覆盖不透明度并返回新颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `value` | `float` | New value. |
+| `value` | `float` | 新值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | New color. |
+| `color` | 新颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local full_opacity = col:a(1);
@@ -451,21 +451,21 @@ local full_opacity = col:a(1);
 
 ## get_r
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns red color value.
+返回红色值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Color value. |
+| `int` | 颜色值。 |
 
-**Example**
+**示例**
 
 ```lua
 local r = col:get_r();
@@ -473,21 +473,21 @@ local r = col:get_r();
 
 ## get_g
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns green color value.
+返回绿色值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Color value. |
+| `int` | 颜色值。 |
 
-**Example**
+**示例**
 
 ```lua
 local g = col:get_g();
@@ -495,21 +495,21 @@ local g = col:get_g();
 
 ## get_b
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns blue color value.
+返回蓝色值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Color value. |
+| `int` | 颜色值。 |
 
-**Example**
+**示例**
 
 ```lua
 local b = col:get_b();
@@ -517,21 +517,21 @@ local b = col:get_b();
 
 ## get_a
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns opacity color value.
+返回不透明度值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Color value. |
+| `int` | 颜色值。 |
 
-**Example**
+**示例**
 
 ```lua
 local a = col:get_a();
@@ -539,21 +539,21 @@ local a = col:get_a();
 
 ## h
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Return hue value of the color.
+返回颜色的色相值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Hue (`0` to `359`). |
+| `int` | 色相（`0` 到 `359`）。 |
 
-**Example**
+**示例**
 
 ```lua
 local hue = col:h();
@@ -561,21 +561,21 @@ local hue = col:h();
 
 ## s
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns saturation value of the color.
+返回颜色的饱和度值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Saturation (`0` to `1`). |
+| `float` | 饱和度（`0` 到 `1`）。 |
 
-**Example**
+**示例**
 
 ```lua
 local saturation = col:s();
@@ -583,21 +583,21 @@ local saturation = col:s();
 
 ## v
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Returns brightness value of the color.
+返回颜色的亮度值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Brightness (`0` to `1`). |
+| `float` | 亮度（`0` 到 `1`）。 |
 
-**Example**
+**示例**
 
 ```lua
 local brightness = col:v();
@@ -605,26 +605,26 @@ local brightness = col:v();
 
 ## hsv
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个必须使用冒号 (:) 调用的方法。]rw]
 
-Construct new color from provided HSB values.
+从提供的 HSB 值构造新颜色。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `hue` | `int` | Hue (`0` to `359`). |
-| `saturation` | `float` | Saturation (`0` to `1`). |
-| `brightness` | `float` | Brightness (`0` to `1`). |
-| `alpha` | `float` | Override opacity of the source color. **Must** be either left out, or provided `0` to `1` value. |
+| `hue` | `int` | 色相（`0` 到 `359`）。 |
+| `saturation` | `float` | 饱和度（`0` 到 `1`）。 |
+| `brightness` | `float` | 亮度（`0` 到 `1`）。 |
+| `alpha` | `float` | 覆盖源颜色的不透明度。**必须**要么省略，要么提供 `0` 到 `1` 的值。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `color` | New color. |
+| `color` | 新颜色。 |
 
-**Example**
+**示例**
 
 ```lua
 local new_col = col:hsv(250, 0.5, 0.1);

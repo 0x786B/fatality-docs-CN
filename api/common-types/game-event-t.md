@@ -1,24 +1,24 @@
 ## game_event_t
 
-Describes a game event.
+描述游戏事件。
 
 ## get_name
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the event name.
+返回事件名称。
 
-**Arguments**
+**参数**
 
-None
+无
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Event name. |
+| `string` | 事件名称。 |
 
-**Example**
+**示例**
 
 ```lua
 if event:get_name() == 'player_hurt' then
@@ -28,23 +28,23 @@ end
 
 ## get_bool
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the boolean value by key.
+通过键返回布尔值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | Entry value. Returns `false` if such key was not found. |
+| `bool` | 条目值。如果未找到该键，则返回 `false`。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_bool('some_key');
@@ -52,23 +52,23 @@ event:get_bool('some_key');
 
 ## get_int
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the integer value by key.
+通过键返回整数值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Entry value. Returns `0` if such key was not found. |
+| `int` | 条目值。如果未找到该键，则返回 `0`。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_int('some_key');
@@ -76,23 +76,23 @@ event:get_int('some_key');
 
 ## get_float
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the float value by key.
+通过键返回浮点值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Entry value. Returns `0.0` if such key was not found. |
+| `float` | 条目值。如果未找到该键，则返回 `0.0`。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_float('some_key');
@@ -100,23 +100,23 @@ event:get_float('some_key');
 
 ## get_string
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the string value by key.
+通过键返回字符串值。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Entry value. Returns `''` if such key was not found. |
+| `string` | 条目值。如果未找到该键，则返回 `''`。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_string('some_key');
@@ -124,23 +124,23 @@ event:get_string('some_key');
 
 ## get_controller
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the controller by key.
+通过键返回控制器。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`cs2_player_controller`](/api/entities/base-entity/cs2-player-controller "This type represents a CCSPlayerController class.") | Controller. |
+| [`cs2_player_controller`](/api/entities/base-entity/cs2-player-controller "此类型表示 CCSPlayerController 类。") | 控制器。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_controller('userid');
@@ -148,23 +148,23 @@ event:get_controller('userid');
 
 ## get_pawn_from_id
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][这是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the pawn by key.
+通过键返回棋子。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `key` | `string` | Entry key. |
+| `key` | `string` | 条目键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`cs2_player_pawn`](/api/entities/base-entity/cs2-player-pawn "This type represents a C_CSPlayerPawn class.") | Pawn. |
+| [`cs2_player_pawn`](/api/entities/base-entity/cs2-player-pawn "此类型表示 C_CSPlayerPawn 类。") | 棋子。 |
 
-**Example**
+**示例**
 
 ```lua
 event:get_pawn_from_id('userid');

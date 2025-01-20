@@ -1,26 +1,26 @@
 ## control_id
 
-This type represents a control ID.
+此类型表示一个控件ID。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the ID structure.
+构造ID结构。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | `string` | ID. |
+| `id` | `string` | ID。 |
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 名称 | 描述 |
 | ---- | ----------- |
-| `control_id` | ID structure. |
+| `control_id` | ID结构。 |
 
-**Example**
+**示例**
 
 ```lua
 local id = gui.control_id('my_id');
@@ -28,18 +28,18 @@ local id = gui.control_id('my_id');
 
 ## id
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][此字段是只读字段，您不能更改其值。这不适用于子字段（如果有）。]r]
 
-Type: `int`
+类型：`int`
 
-Hashed representation of the ID.
+ID的哈希表示。
 
 ## id_string
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![字段][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![只读][此字段是只读字段，您不能更改其值。这不适用于子字段（如果有）。]r]
 
-Type: `string`
+类型：`string`
 
-Normal representation of the ID.
+ID的普通表示。

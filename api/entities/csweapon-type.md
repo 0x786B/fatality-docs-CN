@@ -1,117 +1,117 @@
 ## csweapon_type
 
-This enum represents the weapon type in the game.
+此枚举表示游戏中的武器类型。
 
 ## knife
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a knife-type weapon.
+表示匕首类武器。
 
 ## pistol
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a pistol-type weapon.
+表示手枪类武器。
 
 ## submachinegun
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a submachine gun-type weapon.
+表示冲锋枪类武器。
 
 ## rifle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a rifle-type weapon.
+表示步枪类武器。
 
 ## shotgun
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a shotgun-type weapon.
+表示霰弹枪类武器。
 
 ## sniper_rifle
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a sniper rifle-type weapon.
+表示狙击步枪类武器。
 
 ## machinegun
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a machine gun-type weapon.
+表示机枪类武器。
 
 ## c4
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a C4 explosive.
+表示C4爆炸物。
 
 ## taser
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a taser weapon.
+表示电击枪武器。
 
 ## grenade
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a grenade-type weapon.
+表示手雷类武器。
 
 ## stackableitem
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a stackable item-type weapon.
+表示可堆叠物品类武器。
 
 ## fists
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents fists as a weapon type.
+表示拳头作为武器类型。
 
 ## breachcharge
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a breach charge-type weapon.
+表示爆破炸药类武器。
 
 ## bumpmine
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a bump mine-type weapon.
+表示跳雷类武器。
 
 ## tablet
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a tablet-type weapon.
+表示平板类武器。
 
 ## melee
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a melee-type weapon.
+表示近战类武器。
 
 ## shield
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a shield-type weapon.
+表示盾牌类武器。
 
 ## zone_repulsor
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents a zone repulsor-type weapon.
+表示区域排斥器类武器。
 
 ## unknown
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问]rw]
 
-Represents an unknown weapon type.
+表示未知武器类型。

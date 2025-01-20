@@ -1,43 +1,43 @@
 ## cview_setup
 
-Describes view setup parameters.
+描述视图设置参数。
 
 ## fov
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Type: `float`
+类型: `float`
 
-Current FOV (Field of View).
+当前 FOV（视场角）。
 
 ## fov_viewmodel
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Type: `float`
+类型: `float`
 
-Current viewmodel's FOV.
+当前视图模型的 FOV。
 
 ## origin
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Type: `vector`
+类型: `vector`
 
-Current view origin.
+当前视图原点。
 
 ## view
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Type: `vector`
+类型: `vector`
 
-Current view angles.
+当前视图角度。
 
 ## aspect_ratio
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![字段][这是一个常规字段，必须使用点 (.) 访问。]rw]
 
-Type: `float`
+类型: `float`
 
-Current aspect ratio (width / height) of the view.
+当前视图的宽高比（宽度/高度）。

@@ -1,54 +1,54 @@
 ## slider
 
-This type represents a slider control.
+此类型表示一个滑块控件。
 
-> This type inherits [`control`](/api/gui/control "This type represents an abstract GUI control.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`control`](/api/gui/control "此类型表示一个抽象的GUI控件。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![构造函数][这是此类型的构造函数定义。]rw]
 
-Constructs the slider.
+构造滑块控件。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `id` | [`control_id`](/api/gui/common-types/control-id "This type represents a control ID.") | Control ID. |
-| `low` | `float` | Minimum value. |
-| `high` | `float` | Maximum value. |
-| `fmt` | `table[...]` | Format. Defaults to `{'%.0f'}`. |
-| `step` | `float` | Step value. Defaults to `1.0`. |
+| `id` | [`control_id`](/api/gui/common-types/control-id "此类型表示一个控件ID。") | 控件ID。 |
+| `low` | `float` | 最小值。 |
+| `high` | `float` | 最大值。 |
+| `fmt` | `table[...]` | 格式。默认为 `{'%.0f'}`。 |
+| `step` | `float` | 步进值。默认为 `1.0`。 |
 
-**Format Table**
+**格式表**
 
-> Format table can either be a single string with the desired format, or multiple elements with different minimum actuators. You **have** to pass multiple values in the descendant order, starting from the highest value to the lowest value. `min` and `add` values are both optional, but it makes no sense to leave either of them out.
+> 格式表可以是单个字符串表示所需格式，或者是具有不同最小执行器的多个元素。您**必须**按降序传递多个值，从最高值到最低值。`min` 和 `add` 值都是可选的，但省略其中任何一个都没有意义。
 
-> Formatting uses standard `printf` syntax. [Documentation](https://cplusplus.com/reference/cstdio/printf/)
+> 格式化使用标准的 `printf` 语法。[文档](https://cplusplus.com/reference/cstdio/printf/)
 
-> Passing invalid format will lead to an undefined behavior.
+> 传递无效格式将导致未定义的行为。
 
-*1. Single Formatting.*
+*1. 单一格式。*
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Format string. |
+| `string` | 格式字符串。 |
 
-*2. Multi Formatting.*
+*2. 多重格式。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `min` | `float?` | Minimal value. |
-| `add` | `float?` | Add step. |
-| `fmt` | `string` | Format string. |
+| `min` | `float?` | 最小值。 |
+| `add` | `float?` | 增加步进。 |
+| `fmt` | `string` | 格式字符串。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Slider object. |
+| `string` | 滑块对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local slider = gui.slider(id, 0, 100, {'%.0f%%'});
@@ -56,21 +56,21 @@ local slider = gui.slider(id, 0, 100, {'%.0f%%'});
 
 ## get_value
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号(:)调用。]rw]
 
-Returns slider' value.
+返回滑块的值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`value_param<float>`](/api/gui/control/value-param "This type represents a value data used by some control types.") | Value data. |
+| [`value_param<float>`](/api/gui/control/value-param "此类型表示某些控件类型使用的值数据。") | 值数据。 |
 
-**Example**
+**示例**
 
 ```lua
 local val = slider:get_value():get();
