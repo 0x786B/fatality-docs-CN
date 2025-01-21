@@ -4,3 +4,5 @@
 > * [client.dll](https://github.com/a2x/cs2-dumper/blob/main/output/client_dll.cs) - Complete client.dll schema.
 > * [engine2.dll](https://github.com/a2x/cs2-dumper/blob/main/output/engine2_dll.cs) - Complete engine2.dll schema.
 > * [server.dll](https://github.com/a2x/cs2-dumper/blob/main/output/server_dll.cs) - Complete server.dll schema.
+> * [Osiris](https://github.com/danielkrupinski/Osiris/tree/master) - Osiris源码
+> * [CounterStrikeSharp](https://docs.cssharp.dev/index.html) - 服务器插件开发
