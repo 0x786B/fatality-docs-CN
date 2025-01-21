@@ -3,7 +3,7 @@
 这里展示了如何封装一个用于获取玩家列表的函数和使用方法。
 
 ```lua
-local function entities.get_players(enemy)
+function entities.get_players(enemy)
     local players = {}
     entities.players:for_each(function(entry)
         if entry.handle:valid() then
