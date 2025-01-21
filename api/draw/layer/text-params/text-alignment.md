@@ -1,35 +1,35 @@
 ## text_alignment
 
-This enum determines how to align the text when drawing it.
+此枚举决定了绘制文本时如何对齐。
 
-> `left` and `top`, as well as `right` and `bottom` are interchangeable. It means that if you use `left` for vertical alignment, it will produce exactly the same result as using `top`, and vice versa. `top`/`bottom` are here only for the sake of convenience and readability.
+> `left` 和 `top`，以及 `right` 和 `bottom` 是可以互换的。这意味着如果你在垂直对齐中使用 `left`，它会产生与使用 `top` 完全相同的结果，反之亦然。`top`/`bottom` 的存在仅仅是为了方便和可读性。
 
 ## left
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-Align left. It will mean that the text position's X coordinate is located at the **left** side of the text area.
+左对齐。这意味着文本位置的X坐标位于文本区域的**左**侧。
 
 ## center
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-Align center. It will mean that the text position's X (or Y) coordinate is located at the **center** of the text area.
+居中对齐。这意味着文本位置的X（或Y）坐标位于文本区域的**中心**。
 
 ## right
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-Align right. It will mean that the text position's X coordinate is located at the **right** side of the text area.
+右对齐。这意味着文本位置的X坐标位于文本区域的**右**侧。
 
 ## top
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-Align top. It will mean that the text position's Y coordinate is located at the **top** side of the text area.
+顶部对齐。这意味着文本位置的Y坐标位于文本区域的**顶部**。
 
 ## bottom
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-Align bottom. It will mean that the text position's Y coordinate is located at the **bottom** side of the text area.
+底部对齐。这意味着文本位置的Y坐标位于文本区域的**底部**。

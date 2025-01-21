@@ -1,15 +1,9 @@
-## 代码示例
-
-此文档包含了一些实用的代码示例，可以帮助你更好地理解和使用 API。
-
-## 实体操作
-
 ### 获取玩家列表
 
-获取游戏中的玩家列表，可以选择是否只获取敌人。
+这里展示了如何封装一个用于获取玩家列表的函数和使用方法。
 
 ```lua
-function entities.get_players(enemy)
+local function entities.get_players(enemy)
     local players = {}
     entities.players:for_each(function(entry)
         if entry.handle:valid() then
@@ -37,7 +31,7 @@ end
 
 | 类型 | 描述 |
 | ---- | ----------- |
-| `table` | 包含玩家实体的数组。 |
+| `table[cs2_player_pawn]` | 包含玩家实体的数组[`cs2_player_pawn`](/api/entities/base-entity/cs2-player-pawn "类型: cs2_player_pawn")|
 
 **用法示例**
 

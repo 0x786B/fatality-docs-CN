@@ -1,33 +1,33 @@
 ## font_gdi
 
-This type represents a font object. Internally, this type uses **GDI** library to rasterize font glyphs.
+此类型代表一个字体对象。在内部，此类型使用 **GDI** 库来光栅化字体字形。
 
-> This type inherits [`font_base`](/api/draw/managed/font-base "This type represents the base class for font types. You cannot create an instance of this type. Instead, use the children types.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`font_base`](/api/draw/managed/font-base "此类型代表字体类型的基类。你不能创建此类型的实例。请使用其子类型。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![Constructor][这是此类型的构造函数定义。]rw]
 
-Constructs a font object.
+构造一个字体对象。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `name` | `string` | System font name (example: 'Arial'). |
-| `size` | `float` | Font height, in pixels. |
-| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.") | Font flags. Use `bit` library to construct them. Defaults to `0`. |
-| `mi` | `int` | Starting codepoint. Defaults to `0`. |
-| `ma` | `int` | Ending codepoint. Defaults to `255` (entire ASCII code page). |
-| `weight` | `int` | Font weight. Defaults to `400` (regular). |
+| `name` | `string` | 系统字体名称（例如：'Arial'）。 |
+| `size` | `float` | 字体高度，以像素为单位。 |
+| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。") | 字体标志。使用 `bit` 库来构造它们。默认为 `0`。 |
+| `mi` | `int` | 起始代码点。默认为 `0`。 |
+| `ma` | `int` | 结束代码点。默认为 `255`（整个ASCII代码页）。 |
+| `weight` | `int` | 字体粗细。默认为 `400`（常规）。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `font_gdi` | Font object. |
+| `font_gdi` | 字体对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local sys_font = draw.font_gdi('Calibri', 14);

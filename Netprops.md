@@ -1,0 +1,287 @@
+> 本节列出了一部分的Netprops，并不代表所有都可以调用
+
+### C_CSPlayerPawn
+
+`C_CSPlayerPawn` 类包含了与玩家角色相关的各种属性和服务指针。这些字段用于管理玩家在游戏中的状态和行为。
+
+- **m_pBulletServices** (`nint`): 指向 `CCSPlayer_BulletServices` 的指针，用于管理玩家的子弹服务。
+- **m_pHostageServices** (`nint`): 指向 `CCSPlayer_HostageServices` 的指针，用于管理玩家的人质服务。
+- **m_pBuyServices** (`nint`): 指向 `CCSPlayer_BuyServices` 的指针，用于管理玩家的购买服务。
+- **m_pGlowServices** (`nint`): 指向 `CCSPlayer_GlowServices` 的指针，用于管理玩家的发光服务。
+- **m_pActionTrackingServices** (`nint`): 指向 `CCSPlayer_ActionTrackingServices` 的指针，用于跟踪玩家的动作。
+- **m_pDamageReactServices** (`nint`): 指向 `CCSPlayer_DamageReactServices` 的指针，用于管理玩家的伤害反应。
+- **m_flHealthShotBoostExpirationTime** (`GameTime_t`): 健康提升效果的过期时间。
+- **m_flLastFiredWeaponTime** (`GameTime_t`): 上次开火的时间。
+- **m_bHasFemaleVoice** (`bool`): 指示玩家是否具有女性声音。
+- **m_flLandingTimeSeconds** (`float32`): 着陆时间（秒）。
+- **m_flOldFallVelocity** (`float32`): 旧的下落速度。
+- **m_szLastPlaceName** (`char[18]`): 上一个位置的名称。
+- **m_bPrevDefuser** (`bool`): 指示玩家之前是否有拆弹器。
+- **m_bPrevHelmet** (`bool`): 指示玩家之前是否有头盔。
+- **m_nPrevArmorVal** (`int32`): 之前的护甲值。
+- **m_nPrevGrenadeAmmoCount** (`int32`): 之前的手榴弹弹药数量。
+- **m_unPreviousWeaponHash** (`uint32`): 之前武器的哈希值。
+- **m_unWeaponHash** (`uint32`): 当前武器的哈希值。
+- **m_bInBuyZone** (`bool`): 指示玩家是否在购买区。
+- **m_bPreviouslyInBuyZone** (`bool`): 指示玩家之前是否在购买区。
+- **m_aimPunchAngle** (`QAngle`): 瞄准冲击角度。
+- **m_aimPunchAngleVel** (`QAngle`): 瞄准冲击角速度。
+- **m_aimPunchTickBase** (`int32`): 瞄准冲击的基础刻度。
+- **m_aimPunchTickFraction** (`float32`): 瞄准冲击的刻度分数。
+- **m_aimPunchCache** (`CUtlVector<QAngle>`): 瞄准冲击的缓存。
+- **m_bInLanding** (`bool`): 指示玩家是否在着陆。
+- **m_flLandingStartTime** (`float32`): 着陆开始时间。
+- **m_bInHostageRescueZone** (`bool`): 指示玩家是否在人质救援区。
+- **m_bInBombZone** (`bool`): 指示玩家是否在炸弹区。
+- **m_bIsBuyMenuOpen** (`bool`): 指示购买菜单是否打开。
+- **m_flTimeOfLastInjury** (`GameTime_t`): 上次受伤的时间。
+- **m_flNextSprayDecalTime** (`GameTime_t`): 下次喷漆贴花的时间。
+- **m_iRetakesOffering** (`int32`): 重赛提供的物品。
+- **m_iRetakesOfferingCard** (`int32`): 重赛提供的卡片。
+- **m_bRetakesHasDefuseKit** (`bool`): 指示重赛中是否有拆弹器。
+- **m_bRetakesMVPLastRound** (`bool`): 指示重赛中上回合是否为 MVP。
+- **m_iRetakesMVPBoostItem** (`int32`): 重赛中 MVP 提升的物品。
+- **m_RetakesMVPBoostExtraUtility**: 重赛中 MVP 提升的额外工具。
+- **m_bNeedToReApplyGloves** (`bool`): 指示是否需要重新应用手套。
+- **m_EconGloves** (`C_EconItemView`): 经济手套的视图。
+- **m_nEconGlovesChanged** (`uint8`): 经济手套的更改状态。
+- **m_bMustSyncRagdollState** (`bool`): 指示是否必须同步布娃娃状态。
+- **m_nRagdollDamageBone** (`int32`): 布娃娃受伤的骨骼。
+- **m_vRagdollDamageForce** (`Vector`): 布娃娃受伤的力。
+- **m_vRagdollDamagePosition** (`Vector`): 布娃娃受伤的位置。
+- **m_szRagdollDamageWeaponName** (`char[64]`): 布娃娃受伤的武器名称。
+- **m_bRagdollDamageHeadshot** (`bool`): 指示布娃娃受伤是否为爆头。
+- **m_vRagdollServerOrigin** (`Vector`): 布娃娃的服务器原点。
+- **m_bLastHeadBoneTransformIsValid** (`bool`): 指示最后的头骨变换是否有效。
+- **m_lastLandTime** (`GameTime_t`): 最后着陆的时间。
+- **m_bOnGroundLastTick** (`bool`): 指示上一个刻度是否在地面上。
+- **m_qDeathEyeAngles** (`QAngle`): 死亡时的眼睛角度。
+- **m_bSkipOneHeadConstraintUpdate** (`bool`): 指示是否跳过一次头部约束更新。
+- **m_bLeftHanded** (`bool`): 指示玩家是否为左撇子。
+- **m_fSwitchedHandednessTime** (`GameTime_t`): 切换惯用手的时间。
+- **m_flViewmodelOffsetX** (`float32`): 视图模型的 X 偏移。
+- **m_flViewmodelOffsetY** (`float32`): 视图模型的 Y 偏移。
+- **m_flViewmodelOffsetZ** (`float32`): 视图模型的 Z 偏移。
+- **m_flViewmodelFOV** (`float32`): 视图模型的视野。
+- **m_vecPlayerPatchEconIndices** (`uint32[5]`): 玩家补丁经济索引。
+- **m_GunGameImmunityColor** (`Color`): 枪战免疫颜色。
+- **m_vecBulletHitModels** (`CUtlVector<C_BulletHitModel*>`): 子弹命中模型。
+- **m_bIsWalking** (`bool`): 指示玩家是否在行走。
+- **m_thirdPersonHeading** (`QAngle`): 第三人称视角的朝向。
+- **m_flSlopeDropOffset** (`float32`): 斜坡下降偏移。
+- **m_flSlopeDropHeight** (`float32`): 斜坡下降高度。
+- **m_vHeadConstraintOffset** (`Vector`): 头部约束偏移。
+- **m_entitySpottedState** (`EntitySpottedState_t`): 实体被发现的状态。
+- **m_bIsScoped** (`bool`): 指示玩家是否在瞄准。
+- **m_bResumeZoom** (`bool`): 指示是否恢复缩放。
+- **m_bIsDefusing** (`bool`): 指示玩家是否在拆弹。
+- **m_bIsGrabbingHostage** (`bool`): 指示玩家是否在抓人质。
+- **m_iBlockingUseActionInProgress** (`CSPlayerBlockingUseAction_t`): 阻止使用动作的进度。
+- **m_flEmitSoundTime** (`GameTime_t`): 发出声音的时间。
+- **m_bInNoDefuseArea** (`bool`): 指示玩家是否在无法拆弹区域。
+- **m_nWhichBombZone** (`int32`): 炸弹区编号。
+- **m_iShotsFired** (`int32`): 开火次数。
+- **m_flFlinchStack** (`float32`): 退缩堆栈。
+- **m_flVelocityModifier** (`float32`): 速度修正。
+- **m_flHitHeading** (`float32`): 命中方向。
+- **m_nHitBodyPart** (`int32`): 命中身体部位。
+- **m_bWaitForNoAttack** (`bool`): 指示是否等待无攻击。
+- **m_ignoreLadderJumpTime** (`float32`): 忽略梯子跳跃时间。
+- **m_bKilledByHeadshot** (`bool`): 指示是否被爆头击杀。
+- **m_ArmorValue** (`int32`): 护甲值。
+- **m_unCurrentEquipmentValue** (`uint16`): 当前装备值。
+- **m_unRoundStartEquipmentValue** (`uint16`): 回合开始时的装备值。
+- **m_unFreezetimeEndEquipmentValue** (`uint16`): 冻结时间结束时的装备值。
+- **m_nLastKillerIndex** (`CEntityIndex`): 最后击杀者的索引。
+- **m_bOldIsScoped** (`bool`): 指示旧的瞄准状态。
+- **m_bHasDeathInfo** (`bool`): 指示是否有死亡信息。
+- **m_flDeathInfoTime** (`float32`): 死亡信息时间。
+- **m_vecDeathInfoOrigin** (`Vector`): 死亡信息的原点。
+- **m_grenadeParameterStashTime** (`GameTime_t`): 手榴弹参数存储时间。
+- **m_bGrenadeParametersStashed** (`bool`): 指示手榴弹参数是否已存储。
+- **m_angStashedShootAngles** (`QAngle`): 存储的射击角度。
+- **m_vecStashedGrenadeThrowPosition** (`Vector`): 存储的手榴弹投掷位置。
+- **m_vecStashedVelocity** (`Vector`): 存储的速度。
+- **m_angShootAngleHistory** (`QAngle[2]`): 射击角度历史。
+- **m_vecThrowPositionHistory** (`Vector[2]`): 投掷位置历史。
+- **m_vecVelocityHistory** (`Vector[2]`): 速度历史。
+- **m_PredictedDamageTags** (`C_UtlVectorEmbeddedNetworkVar<PredictedDamageTag_t>`): 预测的伤害标签。
+- **m_nPrevHighestReceivedDamageTagTick** (`GameTick_t`): 之前收到的最高伤害标签刻度。
+- **m_nHighestAppliedDamageTagTick** (`int32`): 应用的最高伤害标签刻度。
+
+
+### CCSPlayerController
+
+`CCSPlayerController` 类包含了与玩家控制器相关的各种属性和服务指针。这些字段用于管理玩家在游戏中的控制和状态。
+
+- **m_pInGameMoneyServices** (`nint`): 指向 `CCSPlayerController_InGameMoneyServices` 的指针，用于管理玩家的游戏内货币服务。
+- **m_pInventoryServices** (`nint`): 指向 `CCSPlayerController_InventoryServices` 的指针，用于管理玩家的库存服务。
+- **m_pActionTrackingServices** (`nint`): 指向 `CCSPlayerController_ActionTrackingServices` 的指针，用于跟踪玩家的动作。
+- **m_pDamageServices** (`nint`): 指向 `CCSPlayerController_DamageServices` 的指针，用于管理玩家的伤害服务。
+- **m_iPing** (`uint32`): 玩家当前的网络延迟（毫秒）。
+- **m_bHasCommunicationAbuseMute** (`bool`): 指示玩家是否因滥用通信而被静音。
+- **m_szCrosshairCodes** (`CUtlSymbolLarge`): 玩家自定义准星代码。
+- **m_iPendingTeamNum** (`uint8`): 待加入的队伍编号。
+- **m_flForceTeamTime** (`GameTime_t`): 强制加入队伍的时间。
+- **m_iCompTeammateColor** (`int32`): 竞技模式中队友的颜色。
+- **m_bEverPlayedOnTeam** (`bool`): 指示玩家是否曾在队伍中游戏。
+- **m_flPreviousForceJoinTeamTime** (`GameTime_t`): 之前强制加入队伍的时间。
+- **m_szClan** (`CUtlSymbolLarge`): 玩家所属的战队。
+- **m_sSanitizedPlayerName** (`CUtlString`): 清理后的玩家名称。
+- **m_iCoachingTeam** (`int32`): 玩家当前指导的队伍。
+- **m_nPlayerDominated** (`uint64`): 被玩家支配的玩家列表。
+- **m_nPlayerDominatingMe** (`uint64`): 支配玩家的列表。
+- **m_iCompetitiveRanking** (`int32`): 玩家在竞技模式中的排名。
+- **m_iCompetitiveWins** (`int32`): 玩家在竞技模式中的胜利次数。
+- **m_iCompetitiveRankType** (`int8`): 竞技排名类型。
+- **m_iCompetitiveRankingPredicted_Win** (`int32`): 预测的胜利排名。
+- **m_iCompetitiveRankingPredicted_Loss** (`int32`): 预测的失败排名。
+- **m_iCompetitiveRankingPredicted_Tie** (`int32`): 预测的平局排名。
+- **m_nEndMatchNextMapVote** (`int32`): 比赛结束时的下一个地图投票。
+- **m_unActiveQuestId** (`uint16`): 当前活跃任务的 ID。
+- **m_nQuestProgressReason** (`QuestProgress::Reason`): 任务进度的原因。
+- **m_unPlayerTvControlFlags** (`uint32`): 玩家电视控制标志。
+- **m_iDraftIndex** (`int32`): 草稿索引。
+- **m_msQueuedModeDisconnectionTimestamp** (`uint32`): 排队模式断开连接的时间戳。
+- **m_uiAbandonRecordedReason** (`uint32`): 放弃记录的原因。
+- **m_bCannotBeKicked** (`bool`): 指示玩家是否不能被踢出。
+- **m_bEverFullyConnected** (`bool`): 指示玩家是否曾完全连接。
+- **m_bAbandonAllowsSurrender** (`bool`): 指示放弃是否允许投降。
+- **m_bAbandonOffersInstantSurrender** (`bool`): 指示放弃是否提供即时投降。
+- **m_bDisconnection1MinWarningPrinted** (`bool`): 指示是否打印了断开连接 1 分钟警告。
+- **m_bScoreReported** (`bool`): 指示分数是否已报告。
+- **m_nDisconnectionTick** (`int32`): 断开连接的刻度。
+- **m_bControllingBot** (`bool`): 指示玩家是否在控制机器人。
+- **m_bHasControlledBotThisRound** (`bool`): 指示玩家是否在本回合控制过机器人。
+- **m_bHasBeenControlledByPlayerThisRound** (`bool`): 指示玩家是否在本回合被其他玩家控制过。
+- **m_nBotsControlledThisRound** (`int32`): 本回合控制的机器人数量。
+- **m_bCanControlObservedBot** (`bool`): 指示玩家是否可以控制观察到的机器人。
+- **m_hPlayerPawn** (`CHandle<C_CSPlayerPawn>`): 玩家角色的句柄。
+- **m_hObserverPawn** (`CHandle<C_CSObserverPawn>`): 观察者角色的句柄。
+- **m_bPawnIsAlive** (`bool`): 指示玩家角色是否存活。
+- **m_iPawnHealth** (`uint32`): 玩家角色的健康值。
+- **m_iPawnArmor** (`int32`): 玩家角色的护甲值。
+- **m_bPawnHasDefuser** (`bool`): 指示玩家角色是否有拆弹器。
+- **m_bPawnHasHelmet** (`bool`): 指示玩家角色是否有头盔。
+- **m_nPawnCharacterDefIndex** (`uint16`): 玩家角色的角色定义索引。
+- **m_iPawnLifetimeStart** (`int32`): 玩家角色的生命开始时间。
+- **m_iPawnLifetimeEnd** (`int32`): 玩家角色的生命结束时间。
+- **m_iPawnBotDifficulty** (`int32`): 玩家角色的机器人难度。
+- **m_hOriginalControllerOfCurrentPawn** (`CHandle<CCSPlayerController>`): 当前玩家角色的原始控制器句柄。
+- **m_iScore** (`int32`): 玩家得分。
+- **m_recentKillQueue** (`uint8[8]`): 最近击杀队列。
+- **m_nFirstKill** (`uint8`): 第一次击杀。
+- **m_nKillCount** (`uint8`): 击杀计数。
+- **m_bMvpNoMusic** (`bool`): 指示 MVP 是否没有音乐。
+- **m_eMvpReason** (`int32`): MVP 的原因。
+- **m_iMusicKitID** (`int32`): 音乐套件 ID。
+- **m_iMusicKitMVPs** (`int32`): 音乐套件 MVP 数量。
+- **m_iMVPs** (`int32`): MVP 数量。
+- **m_bIsPlayerNameDirty** (`bool`): 指示玩家名称是否已更改。
+- **m_bFireBulletsSeedSynchronized** (`bool`): 指示子弹种子是否已同步。
+
+
+### C_CSGameRules
+
+`C_CSGameRules` 类包含了与游戏规则相关的各种属性。这些字段用于管理游戏的状态和规则。
+
+- **m_bFreezePeriod** (`bool`): 指示当前是否处于冻结期。
+- **m_bWarmupPeriod** (`bool`): 指示当前是否处于热身期。
+- **m_fWarmupPeriodEnd** (`GameTime_t`): 热身期结束的时间。
+- **m_fWarmupPeriodStart** (`GameTime_t`): 热身期开始的时间。
+- **m_bServerPaused** (`bool`): 指示服务器是否暂停。
+- **m_bTerroristTimeOutActive** (`bool`): 指示恐怖分子是否处于暂停状态。
+- **m_bCTTimeOutActive** (`bool`): 指示反恐精英是否处于暂停状态。
+- **m_flTerroristTimeOutRemaining** (`float32`): 恐怖分子暂停剩余时间。
+- **m_flCTTimeOutRemaining** (`float32`): 反恐精英暂停剩余时间。
+- **m_nTerroristTimeOuts** (`int32`): 恐怖分子的暂停次数。
+- **m_nCTTimeOuts** (`int32`): 反恐精英的暂停次数。
+- **m_bTechnicalTimeOut** (`bool`): 指示是否为技术暂停。
+- **m_bMatchWaitingForResume** (`bool`): 指示比赛是否在等待恢复。
+- **m_iRoundTime** (`int32`): 回合时间。
+- **m_fMatchStartTime** (`float32`): 比赛开始时间。
+- **m_fRoundStartTime** (`GameTime_t`): 回合开始时间。
+- **m_flRestartRoundTime** (`GameTime_t`): 回合重启时间。
+- **m_bGameRestart** (`bool`): 指示游戏是否重启。
+- **m_flGameStartTime** (`float32`): 游戏开始时间。
+- **m_timeUntilNextPhaseStarts** (`float32`): 距离下一阶段开始的时间。
+- **m_gamePhase** (`int32`): 当前游戏阶段。
+- **m_totalRoundsPlayed** (`int32`): 已进行的总回合数。
+- **m_nRoundsPlayedThisPhase** (`int32`): 本阶段已进行的回合数。
+- **m_nOvertimePlaying** (`int32`): 当前加时赛的回合数。
+- **m_iHostagesRemaining** (`int32`): 剩余人质数量。
+- **m_bAnyHostageReached** (`bool`): 指示是否有任何人质被救出。
+- **m_bMapHasBombTarget** (`bool`): 指示地图是否有炸弹目标。
+- **m_bMapHasRescueZone** (`bool`): 指示地图是否有救援区。
+- **m_bMapHasBuyZone** (`bool`): 指示地图是否有购买区。
+- **m_bIsQueuedMatchmaking** (`bool`): 指示是否为排队匹配。
+- **m_nQueuedMatchmakingMode** (`int32`): 排队匹配模式。
+- **m_bIsValveDS** (`bool`): 指示是否为 Valve 服务器。
+- **m_bLogoMap** (`bool`): 指示是否为 Logo 地图。
+- **m_bPlayAllStepSoundsOnServer** (`bool`): 指示是否在服务器上播放所有脚步声。
+- **m_iSpectatorSlotCount** (`int32`): 观众席位数量。
+- **m_MatchDevice** (`int32`): 比赛设备。
+- **m_bHasMatchStarted** (`bool`): 指示比赛是否已开始。
+- **m_nNextMapInMapgroup** (`int32`): 地图组中的下一个地图。
+- **m_szTournamentEventName**: 锦标赛事件名称。
+- **m_szTournamentEventStage**: 锦标赛事件阶段。
+- **m_szMatchStatTxt**: 比赛统计文本。
+- **m_szTournamentPredictionsTxt**: 锦标赛预测文本。
+- **m_nTournamentPredictionsPct** (`int32`): 锦标赛预测百分比。
+- **m_flCMMItemDropRevealStartTime** (`GameTime_t`): CMM 物品掉落揭示开始时间。
+- **m_flCMMItemDropRevealEndTime** (`GameTime_t`): CMM 物品掉落揭示结束时间。
+- **m_bIsDroppingItems** (`bool`): 指示是否正在掉落物品。
+- **m_bIsQuestEligible** (`bool`): 指示是否有资格进行任务。
+- **m_bIsHltvActive** (`bool`): 指示 HLTV 是否活跃。
+- **m_arrProhibitedItemIndices** (`uint16[100]`): 禁止的物品索引。
+- **m_arrTournamentActiveCasterAccounts** (`uint32[4]`): 锦标赛活跃解说账户。
+- **m_numBestOfMaps** (`int32`): 最佳地图数量。
+- **m_nHalloweenMaskListSeed** (`int32`): 万圣节面具列表种子。
+- **m_bBombDropped** (`bool`): 指示炸弹是否已掉落。
+- **m_bBombPlanted** (`bool`): 指示炸弹是否已安装。
+- **m_iRoundWinStatus** (`int32`): 回合胜利状态。
+- **m_eRoundWinReason** (`int32`): 回合胜利原因。
+- **m_bTCantBuy** (`bool`): 指示恐怖分子是否不能购买。
+- **m_bCTCantBuy** (`bool`): 指示反恐精英是否不能购买。
+- **m_iMatchStats_RoundResults** (`int32[30]`): 比赛统计回合结果。
+- **m_iMatchStats_PlayersAlive_CT** (`int32[30]`): 比赛统计中存活的反恐精英玩家。
+- **m_iMatchStats_PlayersAlive_T** (`int32[30]`): 比赛统计中存活的恐怖分子玩家。
+- **m_TeamRespawnWaveTimes** (`float32[32]`): 队伍重生波次时间。
+- **m_flNextRespawnWave** (`GameTime_t[32]`): 下一次重生波次时间。
+- **m_nServerQuestID** (`int32`): 服务器任务 ID。
+- **m_vMinimapMins** (`Vector`): 小地图最小坐标。
+- **m_vMinimapMaxs** (`Vector`): 小地图最大坐标。
+- **m_MinimapVerticalSectionHeights** (`float32[8]`): 小地图垂直截面高度。
+- **m_bSpawnedTerrorHuntHeavy** (`bool`): 指示是否生成了恐怖狩猎重型单位。
+- **m_nEndMatchMapGroupVoteTypes** (`int32[10]`): 比赛结束地图组投票类型。
+- **m_nEndMatchMapGroupVoteOptions** (`int32[10]`): 比赛结束地图组投票选项。
+- **m_nEndMatchMapVoteWinner** (`int32`): 比赛结束地图投票获胜者。
+- **m_iNumConsecutiveCTLoses** (`int32`): 连续失败的反恐精英回合数。
+- **m_iNumConsecutiveTerroristLoses** (`int32`): 连续失败的恐怖分子回合数。
+- **m_bMarkClientStopRecordAtRoundEnd** (`bool`): 指示是否在回合结束时标记客户端停止记录。
+- **m_nMatchAbortedEarlyReason** (`int32`): 比赛提前中止的原因。
+- **m_bHasTriggeredRoundStartMusic** (`bool`): 指示是否触发了回合开始音乐。
+- **m_bSwitchingTeamsAtRoundReset** (`bool`): 指示是否在回合重置时切换队伍。
+- **m_pGameModeRules** (`CCSGameModeRules*`): 游戏模式规则指针。
+- **m_RetakeRules** (`C_RetakeGameRules`): 重赛规则。
+- **m_nMatchEndCount** (`uint8`): 比赛结束计数。
+- **m_nTTeamIntroVariant** (`int32`): 恐怖分子队伍介绍变体。
+- **m_nCTTeamIntroVariant** (`int32`): 反恐精英队伍介绍变体。
+- **m_bTeamIntroPeriod** (`bool`): 指示是否处于队伍介绍期。
+- **m_iRoundEndWinnerTeam** (`int32`): 回合结束获胜队伍。
+- **m_eRoundEndReason** (`int32`): 回合结束原因。
+- **m_bRoundEndShowTimerDefend** (`bool`): 指示回合结束时是否显示计时器防御。
+- **m_iRoundEndTimerTime** (`int32`): 回合结束计时器时间。
+- **m_sRoundEndFunFactToken** (`CUtlString`): 回合结束趣味事实标记。
+- **m_iRoundEndFunFactPlayerSlot** (`CPlayerSlot`): 回合结束趣味事实玩家槽位。
+- **m_iRoundEndFunFactData1** (`int32`): 回合结束趣味事实数据 1。
+- **m_iRoundEndFunFactData2** (`int32`): 回合结束趣味事实数据 2。
+- **m_iRoundEndFunFactData3** (`int32`): 回合结束趣味事实数据 3。
+- **m_sRoundEndMessage** (`CUtlString`): 回合结束消息。
+- **m_iRoundEndPlayerCount** (`int32`): 回合结束玩家计数。
+- **m_bRoundEndNoMusic** (`bool`): 指示回合结束时是否无音乐。
+- **m_iRoundEndLegacy** (`int32`): 回合结束遗留。
+- **m_nRoundEndCount** (`uint8`): 回合结束计数。
+- **m_iRoundStartRoundNumber** (`int32`): 回合开始的回合编号。
+- **m_nRoundStartCount** (`uint8`): 回合开始计数。
+- **m_flLastPerfSampleTime** (`float64`): 最后性能采样时间。

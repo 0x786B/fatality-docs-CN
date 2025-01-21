@@ -1,21 +1,21 @@
 ## outline_mode
 
-This enum is used to determine the outline mode for outlined shapes.
+此枚举用于确定轮廓形状的轮廓模式。
 
 ## inset
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Inset outlining. This means that the outline will be **inside** the shape (+1px from top-left, -1px from bottom-right).
+内嵌轮廓。这意味着轮廓将在形状**内部**（从左上角+1像素，从右下角-1像素）。
 
 ## outset
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Outset outlining. This means that the outline will be **outside** of the shape (-1px from top-left, +1px from bottom-right).
+外扩轮廓。这意味着轮廓将在形状**外部**（从左上角-1像素，从右下角+1像素）。
 
 ## center
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Center outlining. This means that the outline will **match** the shape size.
+居中轮廓。这意味着轮廓将**匹配**形状大小。

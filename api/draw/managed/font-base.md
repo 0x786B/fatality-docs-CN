@@ -1,124 +1,124 @@
 ## font_base
 
-This type represents the base class for font types. You cannot create an instance of this type. Instead, use the children types.
+此类型代表字体类型的基类。你不能创建此类型的实例。请使用其子类型。
 
-> This type inherits [`managed`](/api/draw/managed "This type represents a managed object. You cannot create an instance of this type directly.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`managed`](/api/draw/managed "此类型代表一个托管对象。你不能直接创建此类型的实例。") 类型。其所有基础方法和字段在此类型中也可用。
 
-> Definitions:
-> * **codepoint**: Unicode representation of the character.
-> * **kerning**: a distance between two characters.
-> * **glyph**: visual representation of a character.
+> 定义：
+> * **代码点**：字符的Unicode表示。
+> * **字距调整**：两个字符之间的距离。
+> * **字形**：字符的视觉表示。
 
 ## height
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `float`
+类型：`float`
 
-Font height, in pixels.
+字体高度，以像素为单位。
 
 ## ascent
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Font ascent value, in pixels.
+字体上升值，以像素为单位。
 
 ## descent
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Font descent value, in pixels.
+字体下降值，以像素为单位。
 
 ## line_gap
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Font line gap, in pixels.
+字体行间距，以像素为单位。
 
 ## kerning_gap
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Font kerning gap, in pixels.
+字体字距间隙，以像素为单位。
 
 ## outline_alpha
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Font outline opacity (`0` to `1`). Defaults to `0.45`.
+字体轮廓不透明度（`0` 到 `1`）。默认为 `0.45`。
 
 ## flags
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: [`font_flags`](/api/draw/managed/font-base/font-flags "This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.")
+类型：[`font_flags`](/api/draw/managed/font-base/font-flags "此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。")
 
-Font flags. Use `bit` library to read flags.
+字体标志。使用 `bit` 库来读取标志。
 
 ## y_offset
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Glyph Y offset, in pixels. Will alter the location of a glyph in the atlas. Changing this value after the font was created is meaningless.
+字形Y偏移，以像素为单位。将改变字形在图集中的位置。在字体创建后更改此值是没有意义的。
 
 ## x_offset
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Glyph X offset, in pixels. Will alter the location of a glyph in the atlas. Changing this value after the font was created is meaningless.
+字形X偏移，以像素为单位。将改变字形在图集中的位置。在字体创建后更改此值是没有意义的。
 
 ## fallback_font
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `font_base`
+类型：`font_base`
 
-Fallback font to use, in case a glyph is not found in this font. Is it useful when one font does not have codepoints for specific symbols, that are present in another font, but you still want to prefer this font's glyphs over other font.
+当在此字体中找不到字形时使用的后备字体。当一个字体不包含特定符号的代码点，而这些符号存在于另一个字体中时很有用，但你仍然希望优先使用此字体的字形。
 
 ## dropshadow_color
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`color`](/api/draw/common-types/color "This type is a color used within the rendering system.")
+类型：[`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。")
 
-Shadow color. Only R, G, B values are used.
+阴影颜色。仅使用R、G、B值。
 
 ## get_kerned_char_width
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns character width, included with kerning.
+返回包含字距调整的字符宽度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `left` | `int` | Previous character codepoint. |
-| `right` | `int` | Current character codepoint. |
+| `left` | `int` | 前一个字符的代码点。 |
+| `right` | `int` | 当前字符的代码点。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Distance, in pixels. |
+| `float` | 距离，以像素为单位。 |
 
-**Example**
+**示例**
 
 ```lua
 local w = font:get_kerned_char_width(prev_cp, cp);
@@ -126,23 +126,23 @@ local w = font:get_kerned_char_width(prev_cp, cp);
 
 ## get_kerning
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns kerning value for a single character. If kerning is disabled, will instead return kerning gap.
+返回单个字符的字距值。如果禁用了字距调整，将返回字距间隙。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `cp` | `int` | Codepoint. |
+| `cp` | `int` | 代码点。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Kerning value, in pixels. |
+| `float` | 字距值，以像素为单位。 |
 
-**Example**
+**示例**
 
 ```lua
 local k = font:get_kerning(cp);
@@ -150,25 +150,25 @@ local k = font:get_kerning(cp);
 
 ## get_text_size
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns text area size.
+返回文本区域大小。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `text` | `string` | Text. |
-| `skip_scaling` | `bool` | If set to `true`, will skip global DPI scaling. Defaults to `false`. |
-| `til_newline` | `bool` | Calculate size only until a line break is met. Defaults to `false`. |
+| `text` | `string` | 文本。 |
+| `skip_scaling` | `bool` | 如果设置为 `true`，将跳过全局DPI缩放。默认为 `false`。 |
+| `til_newline` | `bool` | 仅计算到遇到换行符为止的大小。默认为 `false`。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.") | Text area size. |
+| [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的2D向量。") | 文本区域大小。 |
 
-**Example**
+**示例**
 
 ```lua
 local sz = font:get_text_size('Hello!');
@@ -176,24 +176,24 @@ local sz = font:get_text_size('Hello!');
 
 ## wrap_text
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Wraps text to meet the desired width. Wrapping is done by breaking text by words and inserting line breaks in between. If one of the words is longer than the target width, will instead use that word's width.
+将文本换行以满足所需宽度。换行是通过按单词分割文本并在之间插入换行符来完成的。如果其中一个单词长度超过目标宽度，将使用该单词的宽度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `text` | `string` | Text to wrap. |
-| `width` | `float` | Target width. |
+| `text` | `string` | 要换行的文本。 |
+| `width` | `float` | 目标宽度。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Wrapped text. |
+| `string` | 换行后的文本。 |
 
-**Example**
+**示例**
 
 ```lua
 local shorter = font:wrap_text('This is some very long text!', 50);
@@ -201,23 +201,23 @@ local shorter = font:wrap_text('This is some very long text!', 50);
 
 ## get_glyph
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns glyph information for a character.
+返回字符的字形信息。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `codepoint` | `int` | Codepoint. |
+| `codepoint` | `int` | 代码点。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`glyph_t`](/api/draw/managed/font-base/glyph-t "This type represents a glyph object.") | Glyph information. |
+| [`glyph_t`](/api/draw/managed/font-base/glyph-t "此类型代表一个字形对象。") | 字形信息。 |
 
-**Example**
+**示例**
 
 ```lua
 local glyph = font:get_glyph(cp);
@@ -225,23 +225,23 @@ local glyph = font:get_glyph(cp);
 
 ## get_texture
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns a texture atlas that contains the provided glyph.
+返回包含提供的字形的纹理图集。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `gl` | [`glyph_t`](/api/draw/managed/font-base/glyph-t "This type represents a glyph object.") | Character glyph. |
+| `gl` | [`glyph_t`](/api/draw/managed/font-base/glyph-t "此类型代表一个字形对象。") | 字符字形。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Texture pointer, or `nil` if not found. |
+| `int` | 纹理指针，如果未找到则为 `nil`。 |
 
-**Example**
+**示例**
 
 ```lua
 local atlas = font:get_texture(glyph);

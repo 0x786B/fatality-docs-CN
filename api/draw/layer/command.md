@@ -1,158 +1,158 @@
 ## command
 
-This type is used to change render command parameters.
+此类型用于更改渲染命令参数。
 
-> Be cautious when changing stuff in an instance of this type. Passing invalid data to `texture` or `frag_shader`, or not restoring some changes after you're done drawing can lead to undefined behavior, and more likely, a crash. If you are not sure how to operate this type, take a look into examples.
+> 在更改此类型实例中的内容时要谨慎。向 `texture` 或 `frag_shader` 传递无效数据，或者在完成绘制后不恢复某些更改可能会导致未定义的行为，更可能导致崩溃。如果你不确定如何操作此类型，请查看示例。
 
 ## texture
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`ptr`](/api/common-types/ptr "This type is a literal pointer.")
+类型：[`ptr`](/api/common-types/ptr "此类型是一个字面指针。")
 
-Texture pointer. You can get one from an instance of `texture` type by accessing `obj` field. **Passing invalid data to this field WILL result in a crash**. For a safer way, please use [`set_texture`](/api/draw/layer/command?id=set_texture "Sets a texture in a safe manner.").
+纹理指针。你可以通过访问 `texture` 类型实例的 `obj` 字段来获取一个。**向此字段传递无效数据将导致崩溃**。如需更安全的方式，请使用 [`set_texture`](/api/draw/layer/command?id=set_texture "以安全的方式设置纹理。")。
 
 ## frag_shader
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`ptr`](/api/common-types/ptr "This type is a literal pointer.")
+类型：[`ptr`](/api/common-types/ptr "此类型是一个字面指针。")
 
-Fragment shader (aka Pixel Shader in DirectX terms) pointer. You can get one from an instance of `shader` type by accessing `obj` field. **Passing invalid data to this field WILL result in a crash**. For a safer way, please use `set_shader`.
+片段着色器（在DirectX术语中称为像素着色器）指针。你可以通过访问 `shader` 类型实例的 `obj` 字段来获取一个。**向此字段传递无效数据将导致崩溃**。如需更安全的方式，请使用 `set_shader`。
 
 ## clip_rect
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`rect?`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.")
+类型：[`rect?`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。")
 
-Clip rectangle used for scissor testing. If this is set to `nil`, will not clip anything.
+用于剪切测试的剪切矩形。如果设置为 `nil`，则不会剪切任何内容。
 
-> It is advised to instead use layer's `override_clip_rect` method. While you can pass custom rect to this field, you **will** lose information about previous clip rects set before. Using that method will make sure to intersect the previous rect with the one you pass and produce a probably more expected result.
+> 建议改用图层的 `override_clip_rect` 方法。虽然你可以向此字段传递自定义矩形，但你**会**丢失之前设置的剪切矩形信息。使用该方法将确保将之前的矩形与你传递的矩形相交，并产生可能更符合预期的结果。
 
 ## uv_rect
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`rect?`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.")
+类型：[`rect?`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。")
 
-UV rect used for texture mapping. If this field is set to `nil`, will use `0, 0, 1, 1` rectangle to map the texture. You can learn more about texture mapping in the tutorial section.
+用于纹理映射的UV矩形。如果此字段设置为 `nil`，将使用 `0, 0, 1, 1` 矩形来映射纹理。你可以在教程部分了解更多关于纹理映射的信息。
 
 ## alpha
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Global opacity override. Defaults to `1`, but if you set anything else - will modulate opacity of every next shape you will render.
+全局不透明度覆盖。默认为 `1`，但如果你设置其他值 - 将调节你接下来渲染的每个形状的不透明度。
 
 ## rotation
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Shape rotation. Not all shapes support this field. The value is set in **degrees**, not radians.
+形状旋转。并非所有形状都支持此字段。该值以**度**为单位设置，而不是弧度。
 
 ## anti_alias
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-If set to `true`, will apply tesselation to shapes.
+如果设置为 `true`，将对形状应用曲面细分。
 
-> As of now, not every shape supports tesselation, but it is advised to have it enabled at all times anyway. It will produce much better result anyway.
+> 目前，并非每个形状都支持曲面细分，但无论如何建议始终启用它。它无论如何都会产生更好的结果。
 
 ## ignore_scaling
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-If set to `true`, will ignore global DPI scale. This is set to `true` by default, but you are free to change it to `false` if you are trying to render some custom UI elements.
+如果设置为 `true`，将忽略全局DPI缩放。默认设置为 `true`，但如果你尝试渲染一些自定义UI元素，可以将其更改为 `false`。
 
 ## chained_call
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-Only useful when using shaders. If set to `true`, will **not** update back buffer texture. This can be used if you need the very same texture data, as when applying several shaders to the back buffer.
+仅在使用着色器时有用。如果设置为 `true`，将**不**更新后缓冲纹理。如果你需要完全相同的纹理数据，例如在对后缓冲应用多个着色器时，可以使用此选项。
 
-> Please note that capturing back buffer is a rather **slow** operation. It is better to not capture it too often. Back buffer is automatically captured to the only layer you can use anyway, and it is better to use that one instead, to make sure rendering happens as fast as it is possible.
+> 请注意，捕获后缓冲是一个相当**慢**的操作。最好不要太频繁地捕获它。后缓冲会自动捕获到你唯一可以使用的图层中，最好使用那个图层，以确保渲染尽可能快速。
 
 ## only_downsampled
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-If set to `true`, will capture back buffer (as long as `chained_call` is set to `false`). The name of this field is quite misleading due to the fact that in the CS:GO version of Fatality, it was used to configure if the rendering system should also downsample the captured backbuffer into another texture. In DirectX11, this operation is **much** faster, so it is done regardless.
+如果设置为 `true`，将捕获后缓冲（只要 `chained_call` 设置为 `false`）。此字段的名称有点误导，因为在Fatality的CS:GO版本中，它用于配置渲染系统是否还应该将捕获的后缓冲降采样到另一个纹理中。在DirectX11中，这个操作**快得多**，所以无论如何都会执行。
 
 ## capture_back_buffer
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-An alias to `only_downsampled`.
+`only_downsampled` 的别名。
 
 ## is_tile
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-If set to `true`, will use a separate texture sampler that supports tiling. By default, all textures are **stretched**, but if you enable this option - their tiling and stretch will be fully configurable by the `uv_rect` field.
+如果设置为 `true`，将使用支持平铺的单独纹理采样器。默认情况下，所有纹理都是**拉伸**的，但如果你启用此选项 - 它们的平铺和拉伸将完全可以通过 `uv_rect` 字段配置。
 
 ## mode
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: [`render_mode`](/api/draw/layer/command/render-mode "This enum is used to toggle rendering modes.")
+类型：[`render_mode`](/api/draw/layer/command/render-mode "此枚举用于切换渲染模式。")
 
-Rendering mode. You can read more about it in the type's documentation.
+渲染模式。你可以在该类型的文档中了解更多信息。
 
 ## set_texture
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Sets a texture in a safe manner.
+以安全的方式设置纹理。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tex` | [`texture`](/api/draw/managed/texture "This type represents a texture object.") | Texture object. |
+| `tex` | [`texture`](/api/draw/managed/texture "此类型代表一个纹理对象。") | 纹理对象。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 cmd:set_texture(my_tex);
 ```
 
-## set_shader﻿
+## set_shader
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Sets a fragment shader in a safe manner.
+以安全的方式设置片段着色器。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `sh` | [`shader`] | Shader object. |
+| `sh` | [`shader`] | 着色器对象。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 cmd:set_shader(my_shader);

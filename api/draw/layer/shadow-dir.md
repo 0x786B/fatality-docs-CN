@@ -1,27 +1,27 @@
 ## shadow_dir
 
-This enum is used to determine shadow direction for `add_shadow_line` method.
+此枚举用于确定 `add_shadow_line` 方法的阴影方向。
 
 ## up
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-The darkest side of the shadow will be at the bottom.
+阴影的最暗部分将在底部。
 
 ## down
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-The darkest side of the shadow will be at the top.
+阴影的最暗部分将在顶部。
 
 ## left
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-The darkest side of the shadow will be on the left side.
+阴影的最暗部分将在左侧。
 
 ## right
 
-[![Enum][This field is an enum value and must be accessed using a dot (.)]rw]
+[![Enum][此字段是一个枚举值，必须使用点(.)来访问。]rw]
 
-The darkest side of the shadow will be on the right side.
+阴影的最暗部分将在右侧。

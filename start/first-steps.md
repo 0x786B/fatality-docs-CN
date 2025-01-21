@@ -1,9 +1,13 @@
-## 第一步
+## 首先
 
-现在您已经了解了基本知识，是时候开始编写脚本了。
+[Lua教程](https://www.runoob.com/lua/lua-tutorial.html)
+[10分钟快速入门](https://learnxinyminutes.com/lua/)
 
-## 启动文本编辑器
-随意使用您喜欢的文本编辑器：[Visual Studio Code](https://code.visualstudio.com/)、[Notepad++](https://notepad-plus-plus.org/downloads/)，甚至是简单的记事本。
+如果现在您已经了解了基本知识，是时候开始编写脚本了。
+
+## 选择编辑器
+
+如果你是新手我推荐：[Visual Studio Code](https://code.visualstudio.com/)，如果不是，你可以使用你喜欢的文本编辑器。
 
 本地脚本位于此处：`<CS2_目录>/game/csgo/fatality/scripts`。您可能会注意到还有一个 `lib` 目录，但我们稍后再讨论。
 
@@ -11,9 +15,11 @@
 
 > `.ljbc` 格式不能从本地源加载。
 
-## 编写您的第一个脚本
+## 编写第一个脚本
 
 一个典型的"Hello world!"示例可能有点平淡，所以让我们尝试一些稍微高级一点的东西。
+
+> 目前fatality不支持中文，所以请使用英文
 
 ```lua
 local function on_present_queue()
@@ -53,6 +59,5 @@ events.present_queue:add(on_present_queue);
 
 `events.present_queue:add(on_present_queue)` 将我们的回调函数注册到渲染队列事件中。这意味着每次渲染帧时都会调用 `on_present_queue` 函数。
 
-## 下一步
 
 现在您已经编写了第一个脚本，请查看[添加用户界面](/start/adding-ui)部分，了解如何为您的脚本添加交互性控件。

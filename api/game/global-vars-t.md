@@ -1,93 +1,93 @@
 ## global_vars_t
 
-Usage: `game.global_vars.{field}`
+用法：`game.global_vars.{field}`
 
-An instance of this type provides a way to read several global variables that are used by the game. Changing any of the values is not and will never be supported.
+此类型的实例提供了一种读取游戏使用的几个全局变量的方法。不支持且永远不会支持更改任何值。
 
 ## real_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Time passed since the game start, in seconds.
+游戏启动以来经过的时间，以秒为单位。
 
 ## frame_count
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Amount of frames rendered since the game start.
+自游戏启动以来渲染的帧数。
 
 ## abs_frame_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Absolute (averaged) frame time. It is calculated over a set of previous frame times, and should not be used for anything that requires accurate frame time like animation.
+绝对（平均）帧时间。它是通过一组先前的帧时间计算得出的，不应用于任何需要精确帧时间的场合，如动画。
 
 ## max_clients
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Maximum amount of clients on the current server.
+当前服务器上的最大客户端数量。
 
 ## ticks_this_frame
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Amount of ticks passed during the currently rendered frame. Any value above 1 might indicate a stall during rendering.
+当前渲染帧期间经过的tick数。任何大于1的值可能表示渲染期间出现了停顿。
 
 ## frame_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Time, in which a previous frame was rendered. May be used for animation or by any other means that require accurate frame time.
+渲染上一帧所用的时间。可用于动画或任何其他需要精确帧时间的场合。
 
 ## cur_time
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Time passed since the **server**'s game start. This does not indicate the accurate time on the server, although in several events it might be synced by the software.
+自**服务器**游戏启动以来经过的时间。这并不表示服务器上的准确时间，尽管在某些事件中它可能会被软件同步。
 
 ## tick_fraction
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `float`
+类型：`float`
 
-Current tick's fractional value.
+当前tick的小数值。
 
 ## tick_count
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `int`
+类型：`int`
 
-Ticks passed since the **server**'s game start.
+自**服务器**游戏启动以来经过的tick数。
 
 ## map_path
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `string`
+类型：`string`
 
-Relative path to current loaded map's file.
+当前加载地图文件的相对路径。
 
 ## map_name
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `string`
+类型：`string`
 
-Name of the currently loaded map.
+当前加载地图的名称。

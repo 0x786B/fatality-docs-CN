@@ -1,57 +1,57 @@
 ## font
 
-This type represents a font object. Internally, this type uses **FreeType** library to rasterize font glyphs.
+此类型代表一个字体对象。在内部，此类型使用 **FreeType** 库来光栅化字体字形。
 
-> This type inherits [`font_base`](/api/draw/managed/font-base "This type represents the base class for font types. You cannot create an instance of this type. Instead, use the children types.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`font_base`](/api/draw/managed/font-base "此类型代表字体类型的基类。你不能创建此类型的实例。请使用其子类型。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![Constructor][这是此类型的构造函数定义。]rw]
 
-Constructs a font object.
+构造一个字体对象。
 
-> Passing an invalid pointer, a or memory region that is smaller than the size will result in a **crash**.
+> 传递无效指针，或小于大小的内存区域将导致**崩溃**。
 
-**Arguments**
+**参数**
 
-*1. From file.*
+*1. 从文件加载。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `path` | `string` | Path to a ttf/otf file. |
-| `size` | `float` | Font height, in pixels. |
-| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.") | Font flags. Use `bit` library to construct them. Defaults to `0`. |
-| `mi` | `int` | Starting codepoint. Defaults to `0`. |
-| `ma` | `int` | Ending codepoint. Defaults to `255` (entire ASCII code page). |
+| `path` | `string` | ttf/otf文件的路径。 |
+| `size` | `float` | 字体高度，以像素为单位。 |
+| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。") | 字体标志。使用 `bit` 库来构造它们。默认为 `0`。 |
+| `mi` | `int` | 起始代码点。默认为 `0`。 |
+| `ma` | `int` | 结束代码点。默认为 `255`（整个ASCII代码页）。 |
 
-*2. From memory.*
+*2. 从内存加载。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mem` | [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Pointer to a font **file** in memory. |
-| `sz` | `int` | Font **file** size, in bytes. |
-| `size` | `float` | Font height, in pixels. |
-| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.") | Font flags. Use `bit` library to construct them. Defaults to `0`. |
-| `mi` | `int` | Starting codepoint. Defaults to `0`. |
-| `ma` | `int` | Ending codepoint. Defaults to `255` (entire ASCII code page). |
+| `mem` | [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 指向内存中字体**文件**的指针。 |
+| `sz` | `int` | 字体**文件**大小，以字节为单位。 |
+| `size` | `float` | 字体高度，以像素为单位。 |
+| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。") | 字体标志。使用 `bit` 库来构造它们。默认为 `0`。 |
+| `mi` | `int` | 起始代码点。默认为 `0`。 |
+| `ma` | `int` | 结束代码点。默认为 `255`（整个ASCII代码页）。 |
 
-*3. From memory, with codepoint pairs.*
+*3. 从内存加载，带代码点对。*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mem` | [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Pointer to a font **file** in memory. |
-| `sz` | `int` | Font **file** size, in bytes. |
-| `size` | `float` | Font height, in pixels. |
-| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.") | Font flags. Use `bit` library to construct them. Defaults to `0`. |
-| `pairs` | `table[{int, int}...]` | Min/max pairs. This is a standard array, consisting of {int, int} pairs. |
+| `mem` | [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 指向内存中字体**文件**的指针。 |
+| `sz` | `int` | 字体**文件**大小，以字节为单位。 |
+| `size` | `float` | 字体高度，以像素为单位。 |
+| `fl` | [`font_flags`](/api/draw/managed/font-base/font-flags "此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。") | 字体标志。使用 `bit` 库来构造它们。默认为 `0`。 |
+| `pairs` | `table[{int, int}...]` | 最小/最大对。这是一个标准数组，由 {int, int} 对组成。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `font` | Font object. |
+| `font` | 字体对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local cool_font = draw.font('myfont.ttf', 16);

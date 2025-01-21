@@ -1,39 +1,39 @@
 ## glyph_t
 
-This type represents a glyph object.
+此类型代表一个字形对象。
 
 ## codepoint
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `int`
+类型：`int`
 
-Character codepoint.
+字符代码点。
 
 ## size
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
+类型：[`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的2D向量。")
 
-Glyph dimensions.
+字形尺寸。
 
 ## offset
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: [`vec2`](/api/draw/common-types/vec2 "This type is a 2D vector used within the rendering system.")
+类型：[`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的2D向量。")
 
-Glyph offset.
+字形偏移。
 
 ## uv
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: [`rect`](/api/draw/common-types/rect "This type is a rectangle used within rendering system.")
+类型：[`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。")
 
-UV rect on the texture atlas.
+纹理图集上的UV矩形。

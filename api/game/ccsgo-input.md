@@ -1,35 +1,35 @@
 ## ccsgo_input
 
-Usage: `game.input.{field_or_method}`
+用法：`game.input.{field_or_method}`
 
-This type represents the game's command input system.
+此类型代表游戏的命令输入系统。
 
 ## in_third_person
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
-[![Read Only][This field is a read only field, and you cannot change its value. This does not apply to child fields, if any.]r]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
+[![Read Only][此字段是只读字段，你不能更改其值。这不适用于子字段（如果有的话）。]r]
 
-Type: `bool`
+类型：`bool`
 
-`true` if currently in the third person.
+如果当前处于第三人称视角则为 `true`。
 
 ## get_view_angles
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns current camera view angles.
+返回当前相机视角。
 
-**Arguments**
+**参数**
 
-None
+无
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | View angles. |
+| [`vector`](/api/common-types/vector "这是一个常见的3D向量类型 (x, y, z)。") | 视角。 |
 
-**Example**
+**示例**
 
 ```lua
 local ang = game.input:get_view_angles();
@@ -37,21 +37,21 @@ local ang = game.input:get_view_angles();
 
 ## set_view_angles
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Sets new camera view angles.
+设置新的相机视角。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `ang` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | View angles. |
+| `ang` | [`vector`](/api/common-types/vector "这是一个常见的3D向量类型 (x, y, z)。") | 视角。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 game.input:set_view_angles(math.vec3(0, 0, 0));

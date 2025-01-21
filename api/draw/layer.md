@@ -1,251 +1,4 @@
-## 图层
-
-图层是一种用于存储渲染命令以及顶点和索引数据的类型。这是推送形状和控制渲染状态的唯一方式。
-
-## g
-
-类型：[`command`](/api/draw/layer/command "此类型用于更改渲染命令参数。")
-
-要推送到队列的下一个渲染命令。这是您要更改的对象，例如，设置纹理或更改渲染模式。
-
-## 字体
-
-类型：[`font_base`](/api/draw/managed/font-base "此类型表示字体类型的基类。您不能创建此类型的实例。相反，请使用子类型。")
-
-用于 `add_text` 的字体。如果未设置任何内容，则不会渲染文本。
-
-## tex_sz
-
-类型：[`vec2?`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。")
-
-纹理尺寸。仅当您尝试使用纹理渲染圆形形状时才需要此值，以便渲染系统正确地将您的 UV 坐标映射到您正在渲染的任何形状。
-
-## skip_dpi
-
-类型：`bool`
-
-如果设置为 `true`，将跳过全局 DPI 缩放。默认为 `true`。
-
-## add_triangle_filled
-
-添加一个具有单一颜色的填充三角形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | A 点。 |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | B 点。 |
-| `c` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | C 点。 |
-| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_triangle_filled(
-    draw.vec2(50, 50), draw.vec2(25, 75),
-    draw.vec2(75, 75), draw.color(255, 255, 255));
-```
-
-## add_quad_filled
-
-添加一个具有单一颜色的填充四边形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
-| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_quad_filled(
-    draw.vec2(50, 50), draw.vec2(100, 60),
-    draw.vec2(100, 100), draw.vec2(30, 70),
-    draw.color(255, 255, 255));
-```
-
-## add_rect_filled
-
-添加一个具有单一颜色的填充矩形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
-| `col` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_rect_filled(draw.rect(50, 50, 150, 150), draw.color(255, 255, 255));
-```
-
-## add_circle_filled
-
-添加一个具有单一颜色的填充圆形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `center` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 中心点。 |
-| `radius` | `float` | 圆形半径。 |
-| `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 形状颜色。 |
-| `segments` | `int` | 圆形分段。如果设置为 `0`，将尝试自动分段推导。默认为 `0`。 |
-| `fill` | `float` | 填充量（顺时针，`0` 到 `1`）。默认为 `1`。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_circle_filled(draw.vec2(50, 50), 10, draw.color(255, 255, 255));
-```
-
-## add_triangle_filled_multicolor
-
-添加一个填充的多色三角形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | A 点。 |
-| `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | B 点。 |
-| `c` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | C 点。 |
-| `cols` | `table[color, color, color]` | 每个点的颜色。颜色顺序与参数列表相同。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_triangle_filled_multicolor(
-     draw.vec2(50, 50), draw.vec2(25, 75),
-     draw.vec2(75, 75), {
-        draw.color(255, 0, 0),
-        draw.color(0, 255, 0),
-        draw.color(0, 0, 255)
-     });
-```
-
-## add_rect_filled_multicolor
-
-添加一个填充的多色矩形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
-| `cols` | `table[color, color, color, color]` | 矩形每个角的颜色，顺时针顺序从左上开始。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_rect_filled_multicolor(
-    draw.rect(50, 50, 150, 150), {
-        draw.color(255, 0, 0),
-        draw.color(0, 255, 0),
-        draw.color(0, 0, 255),
-        draw.color(255, 255, 0)
-    });
-```
-
-## add_circle_filled_multicolor
-
-添加一个填充的多色圆形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `center` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 中心点。 |
-| `radius` | `float` | 圆形半径。 |
-| `cols` | `table[color, color]` | 渐变颜色，从内到外。 |
-| `segments` | `int` | 近似圆形的分段数。默认为 `36`。 |
-| `fill` | `float` | 圆形的填充部分，其中 1.0 是完整圆。默认为 `1.0`。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_circle_filled_multicolor(
-    draw.vec2(100, 100), 50, {
-        draw.color(255, 0, 0),
-        draw.color(0, 0, 255)
-    }, 36, 1.0);
-```
-
-## add_quad_filled_multicolor
-
-添加一个填充的多色四边形。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
-| `cols` | `table[color, color]` | 渐变颜色，从下到上应用。 |
-
-**返回**
-
-无。
-
-**示例**
-
-```lua
-layer:add_quad_filled_multicolor(
-    draw.vec2(50, 50), draw.vec2(150, 50),
-    draw.vec2(150, 150), draw.vec2(50, 150), {
-        draw.color(255, 0, 0),
-        draw.color(0, 0, 255)
-    });
-```
-
-## add_pill_multicolor
-
-添加一个多色药丸形状。
-
-**参数**
-
-| 名称 | 类型 | 描述 |
-| ---- | ---- | ----------- |
-| `mins` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 药丸的左上点。 |
-| `maxs` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 药丸的右下点。 |
+| `maxs` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 药丸的右下角点。 |
 | `radius_min` | `float` | 药丸圆角的最小半径。 |
 | `radius_max` | `float` | 药丸圆角的最大半径。 |
 | `cols` | `table[color, color]` | 渐变颜色，从下到上应用。 |
@@ -267,6 +20,8 @@ layer:add_pill_multicolor(
 ```
 
 ## add_shadow_line
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个阴影线。
 
@@ -290,6 +45,8 @@ layer:add_shadow_line(
 ```
 
 ## add_shadow_rect
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个带阴影的矩形。
 
@@ -315,6 +72,8 @@ layer:add_shadow_rect(
 
 ## add_glow
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加一个发光框。
 
 **参数**
@@ -337,6 +96,8 @@ layer:add_glow(draw.rect(50, 50, 150, 150), 15, draw.color(255, 0, 0));
 ```
 
 ## add_rect_filled_rounded
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个填充的圆角矩形。
 
@@ -366,6 +127,8 @@ layer:add_rect_filled_rounded(
 
 ## add_rect_filled_rounded_multicolor
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加一个填充的多色圆角矩形。
 
 **参数**
@@ -373,7 +136,7 @@ layer:add_rect_filled_rounded(
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | `r` | [`rect`](/api/draw/common-types/rect "此类型是渲染系统中使用的矩形。") | 矩形。 |
-| `c` | `table[color, color, color, color]` | 填充颜色。按顺时针顺序使用，从左上开始。 |
+| `c` | `table[color, color, color, color]` | 填充颜色。按顺时针顺序使用，从左上角开始。 |
 | `amount` | `float` | 圆角量。 |
 | `rnd` | [`rounding`](/api/draw/layer/rounding "此枚举用于确定圆角形状的圆角。") | 圆角模式。默认为 `all`。 |
 
@@ -397,6 +160,8 @@ layer:add_rect_filled_rounded_multicolor(
 ```
 
 ## add_triangle
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个描边三角形。
 
@@ -430,16 +195,18 @@ layer:add_triangle(
 
 ## add_quad
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加一个描边四边形。
 
 **参数**
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上点。 |
-| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上点。 |
-| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下点。 |
-| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下点。 |
+| `tl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左上角点。 |
+| `tr` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右上角点。 |
+| `br` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 右下角点。 |
+| `bl` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 左下角点。 |
 | `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 线条颜色。 |
 | `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
 | `mode` | [`outline_mode`](/api/draw/layer/outline-mode "此枚举用于确定描边形状的描边模式。") | 描边模式。默认为 `inset`。 |
@@ -463,6 +230,8 @@ layer:add_quad(
 ```
 
 ## add_rect
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个描边矩形。
 
@@ -491,6 +260,8 @@ layer:add_rect(
 ```
 
 ## add_circle
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个描边圆形。
 
@@ -526,6 +297,8 @@ layer:add_circle(
 
 ## add_line
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加一条线。
 
 **参数**
@@ -553,6 +326,8 @@ layer:add_line(
 
 ## add_line_multicolor
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加一条多色线。
 
 **参数**
@@ -562,7 +337,7 @@ layer:add_line(
 | `a` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 起点。 |
 | `b` | [`vec2`](/api/draw/common-types/vec2 "此类型是渲染系统中使用的二维向量。") | 终点。 |
 | `c` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 起始颜色。 |
-| `c2` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 终止颜色。 |
+| `c2` | [`color`](/api/draw/common-types/color "此类型是渲染系统中使用的颜色。") | 结束颜色。 |
 | `thickness` | `float` | 线条厚度。默认为 `1.0`。 |
 
 **返回**
@@ -582,6 +357,8 @@ layer:add_line_multicolor(
 ```
 
 ## add_rect_rounded
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 添加一个圆角填充矩形。
 
@@ -609,6 +386,8 @@ layer:add_rect_rounded(draw.rect(50, 50, 150, 150),
 
 ## add_text
 
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
+
 添加文本。
 
 > 如果未设置字体，此函数将不执行任何操作。
@@ -633,6 +412,8 @@ layer:add_text(draw.vec2(50, 50), 'Hello world!', draw.color(255, 255, 255));
 ```
 
 ## override_clip_rect
+
+[![方法][此字段是一个方法，必须使用冒号（:）调用。]rw]
 
 覆盖剪辑矩形并支持交集。
 

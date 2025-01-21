@@ -16,6 +16,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 
 无。
 
+**示例**
+
+```lua
+events.present_queue:add(function()
+  print('present_queue')
+end)
+```
+
 ## frame_stage_notify
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -28,6 +36,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | ---- | ---- | ----------- |
 | `stage` | [`client_frame_stage`](/api/common-enums/client-frame-stage "包含各种帧渲染阶段的键。") | 当前帧阶段。 |
 
+**示例**
+
+```lua
+events.frame_stage_notify:add(function(stage)
+  print('New frame stage:', stage)
+end)
+```
+
 ## render_start_pre
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -37,6 +53,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 **参数**
 
 无。
+
+**示例**
+
+```lua
+events.render_start_pre:add(function()
+  print('Rendering started')
+end)
+```
 
 ## render_start_post
 
@@ -50,6 +74,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | ---- | ---- | ----------- |
 | `setup` | [`cview_setup`](/api/common-types/cview-setup "描述视图设置参数。") | 视图设置信息。 |
 
+**示例**
+
+```lua
+events.render_start_post:add(function(setup)
+  print('Rendering completed with setup:', setup)
+end)
+```
+
 ## setup_view_pre
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -59,6 +91,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 **参数**
 
 无。
+
+**示例**
+
+```lua
+events.setup_view_pre:add(function()
+  print('View setup started')
+end)
+```
 
 ## setup_view_post
 
@@ -72,6 +112,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 
 无。
 
+**示例**
+
+```lua
+events.setup_view_post:add(function()
+  print('View setup completed')
+end)
+```
+
 ## override_view
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -84,6 +132,15 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | ---- | ---- | ----------- |
 | `setup` | [`cview_setup`](/api/common-types/cview-setup "描述视图设置参数。") | 视图设置信息。 |
 
+**示例**
+
+```lua
+events.override_view:add(function(setup)
+  setup.fov = 90
+  print('View overridden with new FOV:', setup.fov)
+end)
+```
+
 ## event
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -95,6 +152,14 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | `event` | [`game_event_t`](/api/common-types/game-event-t "描述游戏事件。") | 游戏事件。 |
+
+**示例**
+
+```lua
+events.event:add(function(event)
+  print('Game event triggered:', event.name)
+end)
+```
 
 ## handle_input
 
@@ -109,6 +174,17 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | `type` | [`input_type_t`](/api/common-enums/input-type-t "包含值输入选项的键。") | 输入类型。 |
 | `value` | [`ref_holder_t<float>`](/api/common-types/ref-holder-t "此类型作为内部使用的引用变量的代理。由于 Lua 是一个仅值语言，它不支持引用。相反，使用此类型的实例来保持与 C++ 的互操作性。") | 输入值。 |
 
+**示例**
+
+```lua
+events.handle_input:add(function(type, value)
+  if type == 'mouse' then
+    value:set(value:get() * 0.5)
+    print('Mouse input modified')
+  end
+end)
+```
+
 ## input
 
 [![字段][这是一个必须使用点(.)访问的常规字段。]rw]
@@ -122,3 +198,11 @@ Fatality 在 API 中提供了许多事件供使用 - 从各种钩子到游戏内
 | `msg` | `int` | 系统消息。[文档](https://learn.microsoft.com/en-us/windows/win32/winmsg/about-messages-and-message-queues#system-defined-messages) |
 | `w` | `int` | WPARAM。 |
 | `l` | `int` | LPARAM。 |
+
+**示例**
+
+```lua
+events.input:add(function(msg, w, l)
+  print('Input received:', msg, w, l)
+end)
+```

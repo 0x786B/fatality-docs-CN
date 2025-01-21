@@ -1,28 +1,28 @@
 ## text_params
 
-This type is used to determine text alignment.
+此类型用于确定文本对齐方式。
 
-> Line alignment only makes sense if you have multiple lines in your text. By default, all next lines will start from the left side of the text. You can change this behavior by using one of the functions that take `line` as a parameter. For example, if you pass `right` to the line alignment, all next lines will start from the right side. Text alignment will remain as dictated by `v` and `h` parameters.
+> 行对齐仅在文本有多行时才有意义。默认情况下，所有后续行都将从文本的左侧开始。你可以通过使用接受 `line` 参数的函数之一来改变这个行为。例如，如果你将 `right` 传递给行对齐，所有后续行都将从右侧开始。文本对齐将保持由 `v` 和 `h` 参数指定的方式。
 
 ## with_v
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates `text_params` instance with vertical alignment.
+创建带有垂直对齐的 `text_params` 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Vertical alignment. |
+| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 垂直对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align_top = draw.text_params.with_v(draw.text_alignment.top);
@@ -30,23 +30,23 @@ local align_top = draw.text_params.with_v(draw.text_alignment.top);
 
 ## with_h
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with horizontal alignment.
+创建带有水平对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Horizontal alignment. |
+| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 水平对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align_right = draw.text_params.with_h(draw.text_alignment.right);
@@ -54,23 +54,23 @@ local align_right = draw.text_params.with_h(draw.text_alignment.right);
 
 ## with_line
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with line alignment.
+创建带有行对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Line alignment. |
+| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 行对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local lines_center = draw.text_params.with_line(draw.text_alignment.center);
@@ -78,24 +78,24 @@ local lines_center = draw.text_params.with_line(draw.text_alignment.center);
 
 ## with_vh
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with vertical and horizontal alignments.
+创建带有垂直和水平对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Vertical alignment. |
-| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Horizontal alignment. |
+| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 垂直对齐。 |
+| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 水平对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align_bottom_right = draw.text_params.with_vh(draw.text_alignment.bottom, draw.text_alignment.right);
@@ -103,24 +103,24 @@ local align_bottom_right = draw.text_params.with_vh(draw.text_alignment.bottom, 
 
 ## with_vline
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with vertical alignment and line alignment.
+创建带有垂直对齐和行对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Vertical alignment. |
-| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Line alignment. |
+| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 垂直对齐。 |
+| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 行对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align = draw.text_params.with_vline(draw.text_alignment.bottom, draw.text_alignment.center);
@@ -128,24 +128,24 @@ local align = draw.text_params.with_vline(draw.text_alignment.bottom, draw.text_
 
 ## with_hline
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with horizontal alignment and line alignment.
+创建带有水平对齐和行对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Horizontal alignment. |
-| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Line alignment. |
+| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 水平对齐。 |
+| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 行对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align = draw.text_params.with_hline(draw.text_alignment.center, draw.text_alignment.center);
@@ -153,25 +153,25 @@ local align = draw.text_params.with_hline(draw.text_alignment.center, draw.text_
 
 ## with_vhline
 
-[![Function][This field is a function and must be invoked using a dot (.)]rw]
+[![Function][此字段是一个函数，必须使用点(.)来调用。]rw]
 
-Creates text_params instance with vertical, horizontal and line alignments.
+创建带有垂直、水平和行对齐的 text_params 实例。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Vertical alignment. |
-| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Horizontal alignment. |
-| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "This enum determines how to align the text when drawing it.") | Line alignment. |
+| `v` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 垂直对齐。 |
+| `h` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 水平对齐。 |
+| `line` | [`text_alignment`](/api/draw/layer/text-params/text-alignment "此枚举决定了绘制文本时如何对齐。") | 行对齐。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `text_params` | Created text params. |
+| `text_params` | 创建的文本参数。 |
 
-**Example**
+**示例**
 
 ```lua
 local align = draw.text_params.with_vhline(draw.text_alignment.center, draw.text_alignment.center);

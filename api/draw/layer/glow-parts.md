@@ -1,105 +1,105 @@
 ## glow_parts
 
-This enum is used to determine which parts of the glow around the shape should get rendered.
+此枚举用于确定应该渲染形状周围发光效果的哪些部分。
 
 ## tl
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw top-left corner.
+绘制左上角。
 
 ## tr
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw top-right corner.
+绘制右上角。
 
 ## bl
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw bottom-left corner.
+绘制左下角。
 
 ## br
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw bottom-right corner.
+绘制右下角。
 
 ## t
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw top line.
+绘制顶部线条。
 
 ## l
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw left line.
+绘制左侧线条。
 
 ## r
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw right line.
+绘制右侧线条。
 
 ## b
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw bottom line.
+绘制底部线条。
 
 ## all_left
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw all the left side shapes. This includes both left corners and the line.
+绘制所有左侧形状。这包括左侧两个角和线条。
 
 ## all_right
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw all the right side shapes. This includes both right corners and the line.
+绘制所有右侧形状。这包括右侧两个角和线条。
 
 ## all_top
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw all the top side shapes. This includes both top corners and the line.
+绘制所有顶部形状。这包括顶部两个角和线条。
 
 ## all_bottom
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw all the bottom side shapes. This includes both bottom corners and the line.
+绘制所有底部形状。这包括底部两个角和线条。
 
 ## all
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw the entire glow around the shape.
+绘制形状周围的整个发光效果。
 
 ## no_bottom
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw glow **except** for the bottom line.
+绘制发光效果，**除了**底部线条。
 
 ## no_top
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw glow **except** for the top line.
+绘制发光效果，**除了**顶部线条。
 
 ## no_right
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw glow **except** for the right line.
+绘制发光效果，**除了**右侧线条。
 
 ## no_left
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Draw glow **except** for the left line.
+绘制发光效果，**除了**左侧线条。

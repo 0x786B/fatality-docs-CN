@@ -1,43 +1,43 @@
 ## animated_texture
 
-This type is an animated texture. This texture type only supports **animated GIF** types, and does not support **APNG**.
+此类型是一个动画纹理。此纹理类型仅支持 **动画GIF** 类型，不支持 **APNG**。
 
-> This type inherits [`texture`](/api/draw/managed/texture "This type represents a texture object.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`texture`](/api/draw/managed/texture "此类型代表一个纹理对象。") 类型。其所有基础方法和字段在此类型中也可用。
 
-> If you pass an unsupported type, it will instead work **exactly** like [`texture`](/api/draw/managed/texture "This type represents a texture object.") type, meaning controlling frames and looping will be meaningless.
+> 如果你传入一个不支持的类型，它将会完全像 [`texture`](/api/draw/managed/texture "此类型代表一个纹理对象。") 类型一样工作，这意味着控制帧和循环将没有意义。
 
-> Using this type for texture atlases is possible, although highly unrecommended. It will produce extra texture objects in memory, and overall will be much slower. Instead, it is advised to construct an actual texture atlas, use [`texture`](/api/draw/managed/texture "This type represents a texture object.") type, and use texture mapping.
+> 虽然可以将此类型用于纹理图集，但强烈不建议这样做。它会在内存中产生额外的纹理对象，并且整体上会慢得多。相反，建议构建一个实际的纹理图集，使用 [`texture`](/api/draw/managed/texture "此类型代表一个纹理对象。") 类型，并使用纹理映射。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![Constructor][这是此类型的构造函数定义。]rw]
 
-Constructs animated texture.
+构造动画纹理。
 
-> Passing an invalid pointer, a or memory region that is smaller than the size will result in a **crash**.
+> 传递无效指针，或小于大小的内存区域将导致**崩溃**。
 
-**Arguments**
+**参数**
 
-*1. From file.*
+*1. 从文件加载：*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `path` | `string` | Path to the texture file. |
+| `path` | `string` | 纹理文件的路径。 |
 
-*2. From memory.*
+*2. 从内存加载：*
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `data` | [`ptr`](/api/common-types/ptr "This type is a literal pointer.") | Pointer to texture **file** data in memory. |
-| `sz` | `int` | Size of the texture **file** data. |
+| `data` | [`ptr`](/api/common-types/ptr "此类型是一个字面指针。") | 指向内存中纹理**文件**数据的指针。 |
+| `sz` | `int` | 纹理**文件**数据的大小。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `animated_texture` | Animated texture instance. |
+| `animated_texture` | 动画纹理实例。 |
 
-**Example**
+**示例**
 
 ```lua
 local gif = draw.animated_texture('funny_gif.gif');
@@ -45,27 +45,27 @@ local gif = draw.animated_texture('funny_gif.gif');
 
 ## should_loop
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Type: `bool`
+类型：`bool`
 
-If set to `false`, will not loop the animation automatically. Defaults to `true`.
+如果设置为 `false`，将不会自动循环动画。默认为 `true`。
 
 ## reset_loop
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Reset loop to run from the first frame.
+重置循环，从第一帧开始运行。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 gif:reset_loop();
@@ -73,23 +73,23 @@ gif:reset_loop();
 
 ## set_frame
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Set a specific frame on the animation. If looping is enabled, will continue the cycle from the passed frame. Otherwise, will display a specific frame of the animation.
+设置动画的特定帧。如果启用了循环，将从传入的帧继续循环。否则，将显示动画的特定帧。
 
-> Frame count starts from `0`.
+> 帧计数从 `0` 开始。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `frame` | `int` | Frame number. Invalid frame numbers will be clamped. |
+| `frame` | `int` | 帧号。无效的帧号将被限制在有效范围内。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 gif:set_frame(5);
@@ -97,23 +97,23 @@ gif:set_frame(5);
 
 ## get_frame_count
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns amount of frames in the animation.
+返回动画中的帧数。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Frame count. |
+| `int` | 帧数。 |
 
-**Example**
+**示例**
 
 ```lua
 local frames = gif:get_frame_count();
-gif:set_frame(frames - 2); -- set to the last frame
+gif:set_frame(frames - 2); -- 设置到倒数第二帧
 ```

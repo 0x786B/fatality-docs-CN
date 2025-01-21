@@ -1,31 +1,31 @@
 ## svg_texture
 
-This type represents an SVG texture object.
+此类型代表一个SVG纹理对象。
 
-> This type inherits [`texture`](/api/draw/managed/texture "This type represents a texture object.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`texture`](/api/draw/managed/texture "此类型代表一个纹理对象。") 类型。其所有基础方法和字段在此类型中也可用。
 
-> Passing invalid SVG data to the constructor will cause a **crash**. We will fix this issue in future updates.
+> 向构造函数传递无效的SVG数据将导致**崩溃**。我们将在未来的更新中修复此问题。
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![Constructor][这是此类型的构造函数定义。]rw]
 
-Constructs an SVG texture.
+构造一个SVG纹理。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `sv` | `string` | SVG text. |
-| `h` | `float` | Target height. Defaults to `0`, and `0` means that there will be no automatic downscale. |
+| `sv` | `string` | SVG文本。 |
+| `h` | `float` | 目标高度。默认为 `0`，`0` 表示不会进行自动缩小。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `svg_texture` | SVG texture object. |
+| `svg_texture` | SVG纹理对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local lightning = draw.svg_texture([[
@@ -35,4 +35,3 @@ local lightning = draw.svg_texture([[
 <path d="M6.5 16L5 18H7L5.5 20" stroke="#ffffff" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 ]], 24);
-```

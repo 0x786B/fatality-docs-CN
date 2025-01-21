@@ -1,26 +1,26 @@
 ## cs2_player_pawn
 
-This type represents a `C_CSPlayerPawn` class.
+此类型代表 `C_CSPlayerPawn` 类。
 
-> This type inherits [`base_entity`](/api/entities/base-entity "This type represents a base game entity.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`base_entity`](/api/entities/base-entity "此类型代表基础游戏实体。") 类型。其所有基础方法和字段在此类型中也可用。
 
 ## should_draw
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns `true` if the game will draw this player on screen.
+如果游戏将在屏幕上绘制此玩家则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if will. |
+| `bool` | 如果会绘制则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if player:should_draw() then
@@ -30,21 +30,21 @@ end
 
 ## is_left_handed
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns `true` if left-hand mode is enabled.
+如果启用了左手模式则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if left-handed. |
+| `bool` | 如果是左手模式则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if player:is_left_handed() then
@@ -54,21 +54,21 @@ end
 
 ## get_abs_origin
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the absolute origin (the one that is used for rendering).
+返回绝对原点（用于渲染的原点）。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Origin. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 原点。 |
 
-**Example**
+**示例**
 
 ```lua
 local org = player:get_abs_origin();
@@ -76,21 +76,21 @@ local org = player:get_abs_origin();
 
 ## get_abs_angles
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the absolute angles (the one that is used for rendering).
+返回绝对角度（用于渲染的角度）。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Angles. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 角度。 |
 
-**Example**
+**示例**
 
 ```lua
 local ang = player:get_abs_angles();
@@ -98,21 +98,21 @@ local ang = player:get_abs_angles();
 
 ## set_abs_origin
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Sets the new absolute origin.
+设置新的绝对原点。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `vec` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | New origin. |
+| `vec` | [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 新原点。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 player:set_abs_origin(my_vec);
@@ -120,21 +120,21 @@ player:set_abs_origin(my_vec);
 
 ## set_abs_angles
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Sets new absolute angles.
+设置新的绝对角度。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `ang` | [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | New angles. |
+| `ang` | [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 新角度。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 player:set_abs_angles(my_ang);
@@ -142,21 +142,21 @@ player:set_abs_angles(my_ang);
 
 ## is_alive
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns `true` if the player is alive.
+如果玩家存活则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if alive. |
+| `bool` | 如果存活则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if player:is_alive() then
@@ -166,21 +166,21 @@ end
 
 ## is_enemy
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns `true` if this player is an enemy to the local player.
+如果此玩家是本地玩家的敌人则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if an enemy. |
+| `bool` | 如果是敌人则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if player:is_enemy() then
@@ -190,23 +190,23 @@ end
 
 ## is_enemy_to
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns whether this player is an enemy to another entity.
+返回此玩家是否是另一个实体的敌人。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `ent` | [`base_entity`](/api/entities/base-entity "This type represents a base game entity.") | Other entity. |
+| `ent` | [`base_entity`](/api/entities/base-entity "此类型代表基础游戏实体。") | 其他实体。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if an enemy. |
+| `bool` | 如果是敌人则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if player:is_enemy_to(other_player) then
@@ -216,21 +216,21 @@ end
 
 ## get_active_weapon
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the active weapon.
+返回当前持有的武器。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`cs2_weapon_base_gun`](/api/entities/base-entity/cs2-weapon-base-gun "This type represents a CCSWeaponBaseGun class.") | Weapon instance. |
+| [`cs2_weapon_base_gun`](/api/entities/base-entity/cs2-weapon-base-gun "此类型代表CCSWeaponBaseGun类。") | 武器实例。 |
 
-**Example**
+**示例**
 
 ```lua
 local wep = player:get_active_weapon();
@@ -238,21 +238,21 @@ local wep = player:get_active_weapon();
 
 ## get_name
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the sanitized player name.
+返回经过过滤的玩家名称。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Player's name. |
+| `string` | 玩家名称。 |
 
-**Example**
+**示例**
 
 ```lua
 local name = player:get_name();
@@ -260,21 +260,21 @@ local name = player:get_name();
 
 ## get_view_offset
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the player's view offset (eye location relative to the player's origin).
+返回玩家的视角偏移（相对于玩家原点的眼睛位置）。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | View offset. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 视角偏移。 |
 
-**Example**
+**示例**
 
 ```lua
 local vo = player:get_view_offset();
@@ -282,21 +282,21 @@ local vo = player:get_view_offset();
 
 ## get_eye_pos
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the player's eye position.
+返回玩家的眼睛位置。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`vector`](/api/common-types/vector "This type is a common 3D vector (x, y, z).") | Eye position. |
+| [`vector`](/api/common-types/vector "此类型是一个常见的3D向量 (x, y, z)。") | 眼睛位置。 |
 
-**Example**
+**示例**
 
 ```lua
 local eyes = player:get_eye_pos();

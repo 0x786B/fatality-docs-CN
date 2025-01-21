@@ -1,28 +1,28 @@
 ## cgame_ui_funcs
 
-Usage: `game.game_ui_funcs:{method}`
+用法：`game.game_ui_funcs:{method}`
 
-This type represents the game's UI functions.
+此类型代表游戏的UI函数。
 
 ## get_binding_for_button_code
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the binding name for a button code.
+返回按钮代码对应的绑定名称。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `code` | `int` | Button code. |
+| `code` | `int` | 按钮代码。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `string` | Binding. |
+| `string` | 绑定。 |
 
-**Example**
+**示例**
 
 ```lua
 local bind = game.game_ui_funcs:get_binding_for_button_code(code);

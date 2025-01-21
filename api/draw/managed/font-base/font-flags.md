@@ -1,45 +1,45 @@
 ## font_flags
 
-This enum determines which flags a font object should possess. Setting those flags is only possible during type construction.
+此枚举决定字体对象应具有的标志。这些标志只能在类型构造期间设置。
 
 ## shadow
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Adds a 1px shadow to font glyphs.
+为字体字形添加1像素的阴影。
 
 ## outline
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Adds a 1px outline to font glyphs.
+为字体字形添加1像素的轮廓。
 
 ## anti_alias
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Enable antialiasing on font glyphs. This flag only works on GDI fonts.
+在字体字形上启用抗锯齿。此标志仅适用于GDI字体。
 
 ## no_dpi
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Disable DPI scaling on this font. By default, font glyphs will be scaled in accordance to the global DPI scale.
+禁用此字体的DPI缩放。默认情况下，字体字形将根据全局DPI比例进行缩放。
 
 ## no_kern
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Disable glyph kerning on this font.
+禁用此字体的字形字距调整。
 
 ## mono
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Enables a strong hinting algorithm for rasterization. Only works on FreeType fonts.
+启用强提示算法进行光栅化。仅适用于FreeType字体。
 
 ## light
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Enables a light hinting algorithm for rasterization. Only works on FreeType fonts.
+启用轻提示算法进行光栅化。仅适用于FreeType字体。

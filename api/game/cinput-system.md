@@ -1,28 +1,28 @@
 ## cinput_system
 
-Usage: `game.input_system:{method}`
+用法：`game.input_system:{method}`
 
-This type represents the game's control input system.
+此类型代表游戏的控制输入系统。
 
 ## vk_to_button_code
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Converts a virtual key to button code.
+将虚拟键转换为按钮代码。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `vk` | `int` | Virtual key. |
+| `vk` | `int` | 虚拟键。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Button code. |
+| `int` | 按钮代码。 |
 
-**Example**
+**示例**
 
 ```lua
 local button = game.input_system:vk_to_button_code(0x41); -- 'A'

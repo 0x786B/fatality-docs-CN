@@ -1,39 +1,39 @@
 ## shader
 
-This type represents a shader. [`HLSL documentation`](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-reference)
+此类型代表一个着色器。[`HLSL文档`](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-reference)
 
-> This type inherits [`managed`](/api/draw/managed "This type represents a managed object. You cannot create an instance of this type directly.") type. All of its base methods and fields are also available in this type.
+> 此类型继承自 [`managed`](/api/draw/managed "此类型代表一个托管对象。你不能直接创建此类型的实例。") 类型。其所有基础方法和字段在此类型中也可用。
 
-> Only fragment shaders (aka Pixel Shaders) are supported.
+> 仅支持片段着色器（又称像素着色器）。
 
-> Rendering system uses Shader Version 4 (ps_4_0).
+> 渲染系统使用着色器版本4（ps_4_0）。
 
-## HLSL structures
-The constant buffer fields are the following:
+## HLSL结构
+常量缓冲区字段如下：
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `mvp` | `float4x4` | Projection matrix. |
-| `tex` | `float2` | Texture dimensions. |
-| `time` | `float` | Render time (**NOT** the frame time). |
-| `alpha` | `float` | Global opacity override. |
+| `mvp` | `float4x4` | 投影矩阵。 |
+| `tex` | `float2` | 纹理尺寸。 |
+| `time` | `float` | 渲染时间（**不是**帧时间）。 |
+| `alpha` | `float` | 全局不透明度覆盖。 |
 
-The input fields are the following:
+输入字段如下：
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `pos` | `float4` | Vertex position on screen (x,y,z over w). Register: `SV_POSITION`. |
-| `col` | `float4` | Vertex color tint (r, g, b, a). Register: `COLOR0`. |
-| `uv` | `float2` | UV coordinates (u, v). Register: `TEXCOORD0`. |
+| `pos` | `float4` | 屏幕上的顶点位置（x,y,z除以w）。寄存器：`SV_POSITION`。 |
+| `col` | `float4` | 顶点颜色色调（r, g, b, a）。寄存器：`COLOR0`。 |
+| `uv` | `float2` | UV坐标（u, v）。寄存器：`TEXCOORD0`。 |
 
-The bound objects are the following:
+绑定的对象如下：
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `sampler0` | `sampler` | Texture sampler. |
-| `texture0` | `Texture2D` | Texture object. |
+| `sampler0` | `sampler` | 纹理采样器。 |
+| `texture0` | `Texture2D` | 纹理对象。 |
 
-Template:
+模板：
 
 ```shader
 cbuffer cb : register(b0) {
@@ -55,28 +55,28 @@ Texture2D texture0;
 
 ## __call
 
-[![Constructor][This is a constructor definition for this type.]rw]
+[![Constructor][这是此类型的构造函数定义。]rw]
 
-Constructs a shader.
+构造一个着色器。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `src` | `string` | Shader source code. |
+| `src` | `string` | 着色器源代码。 |
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `shader` | Shader object. |
+| `shader` | 着色器对象。 |
 
-**Example**
+**示例**
 
 ```lua
 local blur = draw.shader([[
 
-// define constant buffer.
+// 定义常量缓冲区。
 cbuffer cb : register(b0) {
     float4x4 mvp;
     float2 tex;
@@ -84,24 +84,24 @@ cbuffer cb : register(b0) {
     float alpha;
 };
 
-// define input.
+// 定义输入。
 struct PS_INPUT {
     float4 pos : SV_POSITION;
     float4 col : COLOR0;
     float2 uv : TEXCOORD0;
 };
 
-// use texture sampler and texture.
+// 使用纹理采样器和纹理。
 sampler sampler0;
 Texture2D texture0;
 
 float4 main(PS_INPUT inp) : SV_Target {
-    float radius = 2.0; // blur radius
-    float2 inv_size = 1.0 / tex.xy; // inversed size of the texture
-    float weight = 0.0; // total weight
-    float4 color = 0.0; // total color
+    float radius = 2.0; // 模糊半径
+    float2 inv_size = 1.0 / tex.xy; // 纹理的反尺寸
+    float weight = 0.0; // 总权重
+    float4 color = 0.0; // 总颜色
 
-    // perform a gaussian blur
+    // 执行高斯模糊
     for (float x = -radius; x <= radius; x += 1.0)
     {
         for (float y = -radius; y <= radius; y += 1.0)
@@ -112,10 +112,9 @@ float4 main(PS_INPUT inp) : SV_Target {
         }
     }
 
-    // average the color
+    // 平均颜色
     color /= weight;
-    color.a *= inp.col.a; // apply alpha modulation
+    color.a *= inp.col.a; // 应用alpha调制
     return color;
 }
 ]]);
-```

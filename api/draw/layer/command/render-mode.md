@@ -1,15 +1,15 @@
 ## render_mode
 
-This enum is used to toggle rendering modes.
+此枚举用于切换渲染模式。
 
 ## normal
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Normal, opaque rendering. All polygons will get filled with color, and texture sampling will be fully supported. This is the default mode to render shapes in layer.
+正常的不透明渲染。所有多边形都会被颜色填充，并且完全支持纹理采样。这是图层中渲染形状的默认模式。
 
 ## wireframe
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Wireframe rendering. This means that the polygons will no longer be filled with color, nor texture sampling will ever work.
+线框渲染。这意味着多边形将不再被颜色填充，纹理采样也永远不会生效。

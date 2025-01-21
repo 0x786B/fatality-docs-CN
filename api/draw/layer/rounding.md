@@ -1,57 +1,57 @@
 ## rounding
 
-This enum is used to determine the rounding for rounded shapes.
+此枚举用于确定圆角形状的圆角。
 
 ## tl
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round top-left corner.
+圆角左上角。
 
 ## tr
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round top-right corner.
+圆角右上角。
 
 ## bl
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round bottom-left corner.
+圆角左下角。
 
 ## br
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round bottom-right corner.
+圆角右下角。
 
 ## t
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round both of the top corners. This produces the same result as using `bit.bor(draw.rounding.tl, draw.rounding.tr)`.
+圆角两个顶部角。这会产生与使用 `bit.bor(draw.rounding.tl, draw.rounding.tr)` 相同的结果。
 
 ## l
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round both of the left corners. This produces the same result as using `bit.bor(draw.rounding.tl, draw.rounding.bl)`.
+圆角两个左侧角。这会产生与使用 `bit.bor(draw.rounding.tl, draw.rounding.bl)` 相同的结果。
 
 ## r
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round both of the right corners. This produces the same result as using `bit.bor(draw.rounding.tr, draw.rounding.br)`.
+圆角两个右侧角。这会产生与使用 `bit.bor(draw.rounding.tr, draw.rounding.br)` 相同的结果。
 
 ## b
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round both of the bottom corners. This produces the same result as using `bit.bor(draw.rounding.bl, draw.rounding.br)`.
+圆角两个底部角。这会产生与使用 `bit.bor(draw.rounding.bl, draw.rounding.br)` 相同的结果。
 
 ## all
 
-[![Field][This field is a regular field that must be accessed using a dot (.).]rw]
+[![Field][此字段是一个普通字段，必须使用点(.)来访问。]rw]
 
-Round all corners. This produces the same result as using `bit.bor(draw.rounding.tl, draw.rounding.tr, draw.rounding.bl, draw.rounding.br)`.
+圆角所有角。这会产生与使用 `bit.bor(draw.rounding.tl, draw.rounding.tr, draw.rounding.bl, draw.rounding.br)` 相同的结果。

@@ -1,26 +1,26 @@
 ## cengine_client
 
-Usage: `game.engine.{method}`
+用法：`game.engine.{method}`
 
-An instance of this type provides a way to interface with Source 2's Engine-to-Client service.
+此类型的实例提供了一个与Source 2引擎到客户端服务的接口。
 
 ## get_last_timestamp
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns last timestamp, in seconds.
+返回最后一次时间戳，以秒为单位。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `float` | Timestamp, in seconds. |
+| `float` | 时间戳，以秒为单位。 |
 
-**Example**
+**示例**
 
 ```lua
 local last_time = game.engine:get_last_timestamp();
@@ -28,21 +28,21 @@ local last_time = game.engine:get_last_timestamp();
 
 ## get_last_server_tick
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns last server tick number.
+返回最后一次服务器tick数。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Server tick number. |
+| `int` | 服务器tick数。 |
 
-**Example**
+**示例**
 
 ```lua
 local server_tick = game.engine:get_last_server_tick();
@@ -50,69 +50,69 @@ local server_tick = game.engine:get_last_server_tick();
 
 ## in_game
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns whether the client is currently in game.
+返回客户端当前是否在游戏中。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | In-game status. |
+| `bool` | 游戏状态。 |
 
-**Example**
+**示例**
 
 ```lua
 if game.engine:in_game() then
-    print("I'm in game!");
+    print("我在游戏中！");
 end
 ```
 
 ## is_connected
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns whether the client is currently connected to a game server.
+返回客户端当前是否已连接到游戏服务器。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if connected. |
+| `bool` | 如果已连接则返回 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if game.engine:is_connected() then
-    print("I'm connected!");
+    print("已连接！");
 end
 ```
 
 ## get_netchan
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns the Network Channel used for network communication.
+返回用于网络通信的网络通道。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| [`cnet_chan`](/api/game/cengine-client/cnet-chan "Provides a way to interface with a Network Channel's class") | Network channel, or `nil` if does not exist. |
+| [`cnet_chan`](/api/game/cengine-client/cnet-chan "提供了一个与网络通道类进行交互的接口") | 网络通道，如果不存在则返回 `nil`。 |
 
-**Example**
+**示例**
 
 ```lua
 local chan = game.engine:get_netchan();
@@ -120,45 +120,45 @@ local chan = game.engine:get_netchan();
 
 ## client_cmd
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Executes a client-sided console command.
+执行客户端控制台命令。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `cmd` | `string` | Command to execute. |
-| `bool` | `unrestricted` | Whether should the execution preserve any restrictions. Defaults to `false`. |
+| `cmd` | `string` | 要执行的命令。 |
+| `bool` | `unrestricted` | 执行是否应保留任何限制。默认为 `false`。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
-game.engine:client_cmd('say Hello!');
+game.engine:client_cmd('say 你好！');
 ```
 
 ## get_screen_size
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![Method][此字段是一个方法，必须使用冒号(:)来调用。]rw]
 
-Returns client window screen size.
+返回客户端窗口屏幕大小。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Type | Description |
+| 类型 | 描述 |
 | ---- | ----------- |
-| `int` | Width. |
-| `int` | Height. |
+| `int` | 宽度。 |
+| `int` | 高度。 |
 
-**Example**
+**示例**
 
 ```lua
 local w, h = game.engine:get_screen_size();
