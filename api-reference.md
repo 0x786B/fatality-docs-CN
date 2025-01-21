@@ -1,1 +1,1 @@
-> 本节列出了完整的fatality API供参考。
+> 本节列出了完整的fatality API和部分使用示例。
