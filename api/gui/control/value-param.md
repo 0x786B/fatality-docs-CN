@@ -1,26 +1,26 @@
 ## value_param
 
-This type represents a value data used by some control types.
+此类型表示某些控件类型使用的值数据。
 
-> Note, that this part: `<type>` is used to designate what exact type the instance of this type is holding. For example, when it says `value_param<bool>`, it means that `get` will return a `bool` value, and `set` will accept only the type `bool` as it's `val` parameter.
+> 注意，这部分：`<type>` 用于指定此类型实例持有的确切类型。例如，当它显示为 `value_param<bool>` 时，表示 `get` 将返回一个 `bool` 值，并且 `set` 只接受 `bool` 类型作为其 `val` 参数。
 
 ## get
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns the value.
+返回值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 名称 | 描述 |
 | ---- | ----------- |
-| `<type>` | Value. |
+| `<type>` | 值。 |
 
-**Example**
+**示例**
 
 ```lua
 ctrl:get_value():get();
@@ -28,23 +28,23 @@ ctrl:get_value():get();
 
 ## set
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Sets the value.
+设置值。
 
-> It is advised to use `set_value` method of the control, if any.
+> 建议使用控件的 `set_value` 方法（如果有）。
 
-**Arguments**
+**参数**
 
-| Name | Type | Description |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| `val` | `<type>` | Value. |
+| `val` | `<type>` | 值。 |
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 ctrl:get_value():set(123);
@@ -52,21 +52,21 @@ ctrl:get_value():set(123);
 
 ## get_hotkey_state
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Returns `true` if there's any active hotkeys.
+如果有任何活动的热键，则返回 `true`。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-| Name | Description |
+| 名称 | 描述 |
 | ---- | ----------- |
-| `bool` | `true` if any hotkey is active. |
+| `bool` | 如果有任何热键处于活动状态，则为 `true`。 |
 
-**Example**
+**示例**
 
 ```lua
 if ctrl:get_value():get_hotkey_state() then
@@ -76,19 +76,19 @@ end
 
 ## disable_hotkeys
 
-[![Method][This field is a method and must be invoked using a colon (:).]rw]
+[![方法][此字段是一个方法，必须使用冒号 (:) 调用。]rw]
 
-Disables all active hotkeys. This allows you to override the value.
+禁用所有活动的热键。这允许您覆盖值。
 
-**Arguments**
+**参数**
 
-None.
+无。
 
-**Returns**
+**返回值**
 
-Nothing.
+无。
 
-**Example**
+**示例**
 
 ```lua
 ctrl:get_value():disable_hotkeys();
