@@ -90,3 +90,4 @@ local type = wep:get_type();
 
 ```lua
 local data = wep:get_data();
+```
